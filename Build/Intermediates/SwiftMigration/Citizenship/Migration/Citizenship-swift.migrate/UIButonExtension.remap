@@ -1,0 +1,53 @@
+[
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1032,
+    "text": "@objc "
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1820,
+    "remove": 5,
+    "text": "S"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1834,
+    "remove": 3,
+    "text": "dStringK"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1838,
+    "text": "y.font"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1895,
+    "remove": 1,
+    "text": "AttributedStringKey.f"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1909,
+    "remove": 14,
+    "text": "r"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 1995,
+    "remove": 5,
+    "text": "S"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 2009,
+    "remove": 3,
+    "text": "dStringK"
+  },
+  {
+    "file": "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Citizenship/UIButonExtension.swift",
+    "offset": 2013,
+    "text": "y.font"
+  }
+]

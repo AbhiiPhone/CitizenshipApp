@@ -1,0 +1,10 @@
+framework module ACFloatingTextfield_Swift {
+  umbrella header "ACFloatingTextfield-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ACFloatingTextfield_Swift.Swift {
+    header "ACFloatingTextfield_Swift-Swift.h"
+}

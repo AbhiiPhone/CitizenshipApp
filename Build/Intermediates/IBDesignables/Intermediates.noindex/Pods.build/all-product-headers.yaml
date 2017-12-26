@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ACFloatingTextfield-Swift-umbrella.h",
+          'external-contents': "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/Target Support Files/ACFloatingTextfield-Swift/ACFloatingTextfield-Swift-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "ACFloatingTextfield_Swift-Swift.h",
+          'external-contents': "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers/ACFloatingTextfield_Swift-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/IBDesignables/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/IBDesignables/Intermediates.noindex/Pods.build/Debug-iphonesimulator/ACFloatingTextfield-Swift.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

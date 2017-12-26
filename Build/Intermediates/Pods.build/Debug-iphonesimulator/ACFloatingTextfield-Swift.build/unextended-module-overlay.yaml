@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/Pods.build/Debug-iphonesimulator/ACFloatingTextfield-Swift.build/unextended-module.modulemap',
+    }]
+  }]
+}

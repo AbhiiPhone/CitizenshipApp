@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "1ce552a09c4a1424d3d50d99c1c4453e"
+build_time: [1509350604, 134361000]
+inputs:
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/ACFloatingTextfield-Swift/Source-Swift/ACFloatingTextfield.swift": [1507207498, 0]

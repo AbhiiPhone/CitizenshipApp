@@ -1,0 +1,318 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "HomeTableViewCell"
+provides-nominal:
+- "11Citizenship17HomeTableViewCellC"
+provides-member:
+- ["11Citizenship17HomeTableViewCellC", ""]
+provides-dynamic-lookup:
+- "arrowHeight"
+- "arrowImg"
+- "arrowTop"
+- "arrowTrailing"
+- "arrowWidth"
+- "awakeFromNib"
+- "bottomLbl"
+- "bottomLblHeight"
+- "bottomLblLeading"
+- "bottomLblTop"
+- "bottomLblWidth"
+- "homeImg"
+- "imgHeight"
+- "imgLeading"
+- "imgTop"
+- "imgTrailing"
+- "setSelected"
+- "topLbl"
+- "topLblHeight"
+- "topLblLeading"
+- "topLblTop"
+- "topLblTrailing"
+depends-top-level:
+- "Bool"
+- "HomeTableViewCell"
+- "NSLayoutConstraint"
+- "UIImageView"
+- "UILabel"
+- "UITableViewCell"
+depends-member:
+- !private ["So15CALayerDelegateP", "awakeFromNib"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "setSelected"]
+- ["So15CALayerDelegateP", ""]
+- !private ["s7CVarArgP", "awakeFromNib"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "setSelected"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "awakeFromNib"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "setSelected"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "awakeFromNib"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "setSelected"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9EquatableP", "awakeFromNib"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "setSelected"]
+- ["s9EquatableP", ""]
+- !private ["s8HashableP", "awakeFromNib"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "setSelected"]
+- ["s8HashableP", ""]
+- ["11Citizenship17HomeTableViewCellC", "Bool"]
+- ["11Citizenship17HomeTableViewCellC", "NSLayoutConstraint"]
+- ["11Citizenship17HomeTableViewCellC", "UIImageView"]
+- ["11Citizenship17HomeTableViewCellC", "UILabel"]
+- ["11Citizenship17HomeTableViewCellC", "arrowHeight"]
+- ["11Citizenship17HomeTableViewCellC", "arrowImg"]
+- ["11Citizenship17HomeTableViewCellC", "arrowTop"]
+- ["11Citizenship17HomeTableViewCellC", "arrowTrailing"]
+- ["11Citizenship17HomeTableViewCellC", "arrowWidth"]
+- ["11Citizenship17HomeTableViewCellC", "awakeFromNib"]
+- ["11Citizenship17HomeTableViewCellC", "bottomLbl"]
+- ["11Citizenship17HomeTableViewCellC", "bottomLblHeight"]
+- ["11Citizenship17HomeTableViewCellC", "bottomLblLeading"]
+- ["11Citizenship17HomeTableViewCellC", "bottomLblTop"]
+- ["11Citizenship17HomeTableViewCellC", "bottomLblWidth"]
+- ["11Citizenship17HomeTableViewCellC", "deinit"]
+- ["11Citizenship17HomeTableViewCellC", "homeImg"]
+- ["11Citizenship17HomeTableViewCellC", "imgHeight"]
+- ["11Citizenship17HomeTableViewCellC", "imgLeading"]
+- ["11Citizenship17HomeTableViewCellC", "imgTop"]
+- ["11Citizenship17HomeTableViewCellC", "imgTrailing"]
+- ["11Citizenship17HomeTableViewCellC", "init"]
+- ["11Citizenship17HomeTableViewCellC", "setSelected"]
+- ["11Citizenship17HomeTableViewCellC", "topLbl"]
+- ["11Citizenship17HomeTableViewCellC", "topLblHeight"]
+- ["11Citizenship17HomeTableViewCellC", "topLblLeading"]
+- ["11Citizenship17HomeTableViewCellC", "topLblTop"]
+- ["11Citizenship17HomeTableViewCellC", "topLblTrailing"]
+- !private ["So8NSCodingP", "awakeFromNib"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "setSelected"]
+- ["So8NSCodingP", ""]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "NSLayoutConstraint"]
+- ["So8NSObjectC", "UIImageView"]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "arrowHeight"]
+- ["So8NSObjectC", "arrowImg"]
+- ["So8NSObjectC", "arrowTop"]
+- ["So8NSObjectC", "arrowTrailing"]
+- ["So8NSObjectC", "arrowWidth"]
+- ["So8NSObjectC", "awakeFromNib"]
+- ["So8NSObjectC", "bottomLbl"]
+- ["So8NSObjectC", "bottomLblHeight"]
+- ["So8NSObjectC", "bottomLblLeading"]
+- ["So8NSObjectC", "bottomLblTop"]
+- ["So8NSObjectC", "bottomLblWidth"]
+- ["So8NSObjectC", "homeImg"]
+- ["So8NSObjectC", "imgHeight"]
+- ["So8NSObjectC", "imgLeading"]
+- ["So8NSObjectC", "imgTop"]
+- ["So8NSObjectC", "imgTrailing"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "setSelected"]
+- ["So8NSObjectC", "topLbl"]
+- ["So8NSObjectC", "topLblHeight"]
+- ["So8NSObjectC", "topLblLeading"]
+- ["So8NSObjectC", "topLblTop"]
+- ["So8NSObjectC", "topLblTrailing"]
+- !private ["So16NSObjectProtocolP", "awakeFromNib"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "setSelected"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "awakeFromNib"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "setSelected"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So12UIAppearanceP", "awakeFromNib"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "setSelected"]
+- ["So12UIAppearanceP", ""]
+- !private ["So21UIAppearanceContainerP", "awakeFromNib"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "setSelected"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So17UICoordinateSpaceP", "awakeFromNib"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "setSelected"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So13UIDynamicItemP", "awakeFromNib"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "setSelected"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So18UIFocusEnvironmentP", "awakeFromNib"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "setSelected"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "awakeFromNib"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "setSelected"]
+- ["So11UIFocusItemP", ""]
+- !private ["So27UIGestureRecognizerDelegateP", "awakeFromNib"]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
+- !private ["So27UIGestureRecognizerDelegateP", "setSelected"]
+- ["So27UIGestureRecognizerDelegateP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "awakeFromNib"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "NSLayoutConstraint"]
+- ["So11UIResponderC", "UIImageView"]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "arrowHeight"]
+- ["So11UIResponderC", "arrowImg"]
+- ["So11UIResponderC", "arrowTop"]
+- ["So11UIResponderC", "arrowTrailing"]
+- ["So11UIResponderC", "arrowWidth"]
+- ["So11UIResponderC", "awakeFromNib"]
+- ["So11UIResponderC", "bottomLbl"]
+- ["So11UIResponderC", "bottomLblHeight"]
+- ["So11UIResponderC", "bottomLblLeading"]
+- ["So11UIResponderC", "bottomLblTop"]
+- ["So11UIResponderC", "bottomLblWidth"]
+- ["So11UIResponderC", "homeImg"]
+- ["So11UIResponderC", "imgHeight"]
+- ["So11UIResponderC", "imgLeading"]
+- ["So11UIResponderC", "imgTop"]
+- ["So11UIResponderC", "imgTrailing"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "setSelected"]
+- ["So11UIResponderC", "topLbl"]
+- ["So11UIResponderC", "topLblHeight"]
+- ["So11UIResponderC", "topLblLeading"]
+- ["So11UIResponderC", "topLblTop"]
+- ["So11UIResponderC", "topLblTrailing"]
+- !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "setSelected"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "NSLayoutConstraint"]
+- ["So15UITableViewCellC", "UIImageView"]
+- ["So15UITableViewCellC", "UILabel"]
+- ["So15UITableViewCellC", "arrowHeight"]
+- ["So15UITableViewCellC", "arrowImg"]
+- ["So15UITableViewCellC", "arrowTop"]
+- ["So15UITableViewCellC", "arrowTrailing"]
+- ["So15UITableViewCellC", "arrowWidth"]
+- ["So15UITableViewCellC", "awakeFromNib"]
+- ["So15UITableViewCellC", "bottomLbl"]
+- ["So15UITableViewCellC", "bottomLblHeight"]
+- ["So15UITableViewCellC", "bottomLblLeading"]
+- ["So15UITableViewCellC", "bottomLblTop"]
+- ["So15UITableViewCellC", "bottomLblWidth"]
+- ["So15UITableViewCellC", "homeImg"]
+- ["So15UITableViewCellC", "imgHeight"]
+- ["So15UITableViewCellC", "imgLeading"]
+- ["So15UITableViewCellC", "imgTop"]
+- ["So15UITableViewCellC", "imgTrailing"]
+- ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "setSelected"]
+- ["So15UITableViewCellC", "topLbl"]
+- ["So15UITableViewCellC", "topLblHeight"]
+- ["So15UITableViewCellC", "topLblLeading"]
+- ["So15UITableViewCellC", "topLblTop"]
+- ["So15UITableViewCellC", "topLblTrailing"]
+- ["So15UITableViewCellC", ""]
+- !private ["So18UITraitEnvironmentP", "awakeFromNib"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "setSelected"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "NSLayoutConstraint"]
+- ["So6UIViewC", "UIImageView"]
+- ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "arrowHeight"]
+- ["So6UIViewC", "arrowImg"]
+- ["So6UIViewC", "arrowTop"]
+- ["So6UIViewC", "arrowTrailing"]
+- ["So6UIViewC", "arrowWidth"]
+- ["So6UIViewC", "awakeFromNib"]
+- ["So6UIViewC", "bottomLbl"]
+- ["So6UIViewC", "bottomLblHeight"]
+- ["So6UIViewC", "bottomLblLeading"]
+- ["So6UIViewC", "bottomLblTop"]
+- ["So6UIViewC", "bottomLblWidth"]
+- ["So6UIViewC", "homeImg"]
+- ["So6UIViewC", "imgHeight"]
+- ["So6UIViewC", "imgLeading"]
+- ["So6UIViewC", "imgTop"]
+- ["So6UIViewC", "imgTrailing"]
+- ["So6UIViewC", "init"]
+- ["So6UIViewC", "setSelected"]
+- ["So6UIViewC", "topLbl"]
+- ["So6UIViewC", "topLblHeight"]
+- ["So6UIViewC", "topLblLeading"]
+- ["So6UIViewC", "topLblTop"]
+- ["So6UIViewC", "topLblTrailing"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setSelected"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "awakeFromNib"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "11Citizenship17HomeTableViewCellC"
+- "So8NSCodingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So27UIGestureRecognizerDelegateP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So15UITableViewCellC"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules/ACFloatingTextfield_Swift.swiftmodule/x86_64.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers/ACFloatingTextfield-Swift-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers/ACFloatingTextfield_Swift-Swift.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Modules/module.modulemap"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules/module.modulemap"
+interface-hash: "fa367caa1760d06aa4271199b716f83c"

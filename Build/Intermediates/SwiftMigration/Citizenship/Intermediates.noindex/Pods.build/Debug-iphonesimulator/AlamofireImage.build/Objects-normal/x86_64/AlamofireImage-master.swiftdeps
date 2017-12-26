@@ -1,0 +1,13 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "03c1c73200170fc55062251ba739c76c"
+build_time: [1509350484, 699643000]
+inputs:
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/AFIError.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/Image.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/ImageCache.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/ImageDownloader.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/ImageFilter.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/Request+AlamofireImage.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/UIButton+AlamofireImage.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift": [1507206603, 0]
+  "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift": [1507206603, 0]

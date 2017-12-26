@@ -1,0 +1,433 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "jsonDataDelegate"
+- "JsonFetchClass"
+provides-nominal:
+- "11Citizenship16jsonDataDelegateP"
+- "11Citizenship14JsonFetchClassC"
+provides-member:
+- ["11Citizenship16jsonDataDelegateP", ""]
+- ["11Citizenship14JsonFetchClassC", ""]
+provides-dynamic-lookup:
+- "definedLink"
+- "fetchData"
+depends-top-level:
+- !private "+"
+- !private "=="
+- !private "Alamofire"
+- !private "AssignmentPrecedence"
+- !private "CastingPrecedence"
+- !private "CharacterSet"
+- "Dictionary"
+- !private "DispatchQueue"
+- "Error"
+- !private "JSONEncoding"
+- "JsonFetchClass"
+- !private "NSDictionary"
+- "NSObject"
+- !private "Reachability"
+- "String"
+- "StringLiteralType"
+- "URL"
+- "Void"
+- "jsonDataDelegate"
+- !private "print"
+- !private "||"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "addingPercentEncoding"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Alamofire"]
+- !private ["s7CVarArgP", "CharacterSet"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "JSONEncoding"]
+- !private ["s7CVarArgP", "NSDictionary"]
+- !private ["s7CVarArgP", "Reachability"]
+- ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "addingPercentEncoding"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "definedLink"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "jsonData"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "print"]
+- ["s7CVarArgP", ""]
+- !private ["10Foundation12CharacterSetV", "urlQueryAllowed"]
+- !private ["s10CollectionP", "addingPercentEncoding"]
+- ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "addingPercentEncoding"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Alamofire"]
+- !private ["s28CustomDebugStringConvertibleP", "CharacterSet"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "JSONEncoding"]
+- !private ["s28CustomDebugStringConvertibleP", "NSDictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "Reachability"]
+- ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "addingPercentEncoding"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "definedLink"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "failure"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonData"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "responseJSON"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
+- !private ["s28CustomDebugStringConvertibleP", "success"]
+- !private ["s28CustomDebugStringConvertibleP", "urlQueryAllowed"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "addingPercentEncoding"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "addingPercentEncoding"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Alamofire"]
+- !private ["s23CustomStringConvertibleP", "CharacterSet"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "JSONEncoding"]
+- !private ["s23CustomStringConvertibleP", "NSDictionary"]
+- !private ["s23CustomStringConvertibleP", "Reachability"]
+- ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addingPercentEncoding"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "definedLink"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "failure"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "jsonData"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "responseJSON"]
+- !private ["s23CustomStringConvertibleP", "result"]
+- !private ["s23CustomStringConvertibleP", "success"]
+- !private ["s23CustomStringConvertibleP", "urlQueryAllowed"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["9Alamofire11DataRequestC", "responseJSON"]
+- !private ["9Alamofire12DataResponseV", "result"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "addingPercentEncoding"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "urlQueryAllowed"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "addingPercentEncoding"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "urlQueryAllowed"]
+- !private ["s9EquatableP", "Alamofire"]
+- !private ["s9EquatableP", "CharacterSet"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "JSONEncoding"]
+- !private ["s9EquatableP", "NSDictionary"]
+- !private ["s9EquatableP", "Reachability"]
+- ["s9EquatableP", "URL"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addingPercentEncoding"]
+- !private ["s9EquatableP", "async"]
+- !private ["s9EquatableP", "definedLink"]
+- !private ["s9EquatableP", "get"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "jsonData"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "post"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "urlQueryAllowed"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "urlQueryAllowed"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "addingPercentEncoding"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "addingPercentEncoding"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "addingPercentEncoding"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["9Alamofire10HTTPMethodO", "get"]
+- !private ["9Alamofire10HTTPMethodO", "post"]
+- !private ["s8HashableP", "Alamofire"]
+- !private ["s8HashableP", "CharacterSet"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "JSONEncoding"]
+- !private ["s8HashableP", "NSDictionary"]
+- !private ["s8HashableP", "Reachability"]
+- ["s8HashableP", "URL"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addingPercentEncoding"]
+- !private ["s8HashableP", "async"]
+- !private ["s8HashableP", "definedLink"]
+- !private ["s8HashableP", "get"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "jsonData"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "post"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "urlQueryAllowed"]
+- ["s8HashableP", ""]
+- !private ["9Alamofire12JSONEncodingV", "default"]
+- !private ["11Citizenship14JsonFetchClassC", "Alamofire"]
+- !private ["11Citizenship14JsonFetchClassC", "CharacterSet"]
+- !private ["11Citizenship14JsonFetchClassC", "DispatchQueue"]
+- !private ["11Citizenship14JsonFetchClassC", "Error"]
+- !private ["11Citizenship14JsonFetchClassC", "JSONEncoding"]
+- !private ["11Citizenship14JsonFetchClassC", "NSDictionary"]
+- !private ["11Citizenship14JsonFetchClassC", "Reachability"]
+- ["11Citizenship14JsonFetchClassC", "String"]
+- ["11Citizenship14JsonFetchClassC", "URL"]
+- ["11Citizenship14JsonFetchClassC", "Void"]
+- ["11Citizenship14JsonFetchClassC", "definedLink"]
+- ["11Citizenship14JsonFetchClassC", "deinit"]
+- ["11Citizenship14JsonFetchClassC", "fetchData"]
+- ["11Citizenship14JsonFetchClassC", "init"]
+- ["11Citizenship14JsonFetchClassC", "jsonData"]
+- ["11Citizenship14JsonFetchClassC", "jsonDataDelegate"]
+- !private ["11Citizenship14JsonFetchClassC", "print"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "addingPercentEncoding"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "addingPercentEncoding"]
+- ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "addingPercentEncoding"]
+- ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "addingPercentEncoding"]
+- ["So9NSCopyingP", "init"]
+- !private ["So12NSDictionaryC", "init"]
+- !private ["So17NSFastEnumerationP", "init"]
+- !private ["So20NSFetchRequestResultP", "init"]
+- !private ["So21NSItemProviderReadingP", "addingPercentEncoding"]
+- ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "addingPercentEncoding"]
+- ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "addingPercentEncoding"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "Alamofire"]
+- !private ["So8NSObjectC", "CharacterSet"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "JSONEncoding"]
+- !private ["So8NSObjectC", "NSDictionary"]
+- !private ["So8NSObjectC", "Reachability"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "addingPercentEncoding"]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "definedLink"]
+- ["So8NSObjectC", "fetchData"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "jsonData"]
+- ["So8NSObjectC", "jsonDataDelegate"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "Alamofire"]
+- !private ["So16NSObjectProtocolP", "CharacterSet"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "JSONEncoding"]
+- !private ["So16NSObjectProtocolP", "NSDictionary"]
+- !private ["So16NSObjectProtocolP", "Reachability"]
+- ["So16NSObjectProtocolP", "URL"]
+- !private ["So16NSObjectProtocolP", "addingPercentEncoding"]
+- !private ["So16NSObjectProtocolP", "async"]
+- !private ["So16NSObjectProtocolP", "definedLink"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "jsonData"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "print"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "addingPercentEncoding"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "addingPercentEncoding"]
+- ["So8NSStringC", "init"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["9Alamofire17ParameterEncodingP", "default"]
+- !private ["s26RangeReplaceableCollectionP", "addingPercentEncoding"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "get"]
+- !private ["s16RawRepresentableP", "post"]
+- !private ["11Citizenship12ReachabilityC", "isConnectedToNetwork"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "urlQueryAllowed"]
+- !private ["9Alamofire7RequestC", "responseJSON"]
+- !private ["9Alamofire8ResponseP", "result"]
+- !private ["9Alamofire6ResultO", "error"]
+- !private ["9Alamofire6ResultO", "failure"]
+- !private ["9Alamofire6ResultO", "success"]
+- !private ["9Alamofire6ResultO", "value"]
+- !private ["s8SequenceP", "addingPercentEncoding"]
+- ["s8SequenceP", "init"]
+- !private ["s10SetAlgebraP", "urlQueryAllowed"]
+- !private ["SS", "addingPercentEncoding"]
+- ["SS", "init"]
+- !private ["s14StringProtocolP", "addingPercentEncoding"]
+- ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "addingPercentEncoding"]
+- ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "addingPercentEncoding"]
+- ["s20TextOutputStreamableP", "init"]
+- ["10Foundation3URLV", "init"]
+- !private ["9Alamofire14URLConvertibleP", "addingPercentEncoding"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- !private ["s23_BidirectionalIndexableP", "addingPercentEncoding"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "addingPercentEncoding"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "addingPercentEncoding"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "addingPercentEncoding"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "addingPercentEncoding"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "addingPercentEncoding"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "addingPercentEncoding"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "addingPercentEncoding"]
+- ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "addingPercentEncoding"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Alamofire"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CharacterSet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSONEncoding"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSDictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Reachability"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addingPercentEncoding"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "definedLink"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jsonData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "addingPercentEncoding"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "urlQueryAllowed"]
+- !private ["s26_RangeReplaceableIndexableP", "addingPercentEncoding"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "addingPercentEncoding"]
+- ["s16_SwiftStringViewP", "init"]
+- ["11Citizenship16jsonDataDelegateP", "Error"]
+- ["11Citizenship16jsonDataDelegateP", "String"]
+- ["11Citizenship16jsonDataDelegateP", "Void"]
+- ["11Citizenship16jsonDataDelegateP", "didFailedtoReceiveData"]
+- ["11Citizenship16jsonDataDelegateP", "didReceiveData"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "10Foundation12CharacterSetV"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "9Alamofire11DataRequestC"
+- !private "9Alamofire12DataResponseV"
+- "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "9Alamofire10HTTPMethodO"
+- "s8HashableP"
+- !private "9Alamofire12JSONEncodingV"
+- "11Citizenship14JsonFetchClassC"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So12NSDictionaryC"
+- !private "So17NSFastEnumerationP"
+- !private "So20NSFetchRequestResultP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "So9OS_objectC"
+- !private "9Alamofire17ParameterEncodingP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "11Citizenship12ReachabilityC"
+- "10Foundation20ReferenceConvertibleP"
+- !private "9Alamofire7RequestC"
+- !private "9Alamofire8ResponseP"
+- !private "9Alamofire6ResultO"
+- "s8SequenceP"
+- !private "s10SetAlgebraP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "10Foundation3URLV"
+- "9Alamofire14URLConvertibleP"
+- "s23_BidirectionalIndexableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+- "11Citizenship16jsonDataDelegateP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules/ACFloatingTextfield_Swift.swiftmodule/x86_64.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/macmini2/Desktop/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Headers/MBProgressHUD-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers/ACFloatingTextfield-Swift-umbrella.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Headers/ACFloatingTextfield_Swift-Swift.h"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/MBProgressHUD/MBProgressHUD.framework/Modules/module.modulemap"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/macmini2/Desktop/Abhi/A Projects/New 3/Citizenship/Build/Intermediates/SwiftMigration/Citizenship/Products/Debug-iphonesimulator/ACFloatingTextfield-Swift/ACFloatingTextfield_Swift.framework/Modules/module.modulemap"
+interface-hash: "486aa3218c29a36c0b0e1bdd68691666"
