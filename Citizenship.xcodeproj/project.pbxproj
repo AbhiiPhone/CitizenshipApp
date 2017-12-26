@@ -143,9 +143,6 @@
 		7AC5866C1FA8BE5700519870 /* close-round.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC586681FA8BB3500519870 /* close-round.png */; };
 		7AC5866D1FA8BE5700519870 /* if_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC586691FA8BB3500519870 /* if_check.png */; };
 		7AC5866E1FA8BE5700519870 /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AC586671FA8BB3500519870 /* Left.png */; };
-		7AEF8D9F1FAB34C000159935 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72A6699B1F8E0D3D001745D2 /* proximanova-regular-webfont.ttf */; };
-		7AEF8DA01FAB34C000159935 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72A6699C1F8E0D3D001745D2 /* proximanova-bold-webfont.ttf */; };
-		7AEF8DA31FAB49EE00159935 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7AEF8DA11FAB494B00159935 /* Georgia Regular font.ttf */; };
 		A2F978F88A0EC684ACEEEDFB /* Pods_Citizenship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDA69A171F11B09038DFD3A /* Pods_Citizenship.framework */; };
 		AAB427A51F67E3540090D149 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB427A41F67E3540090D149 /* FaqViewController.swift */; };
 		AAB427A71F67E8490090D149 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB427A61F67E8490090D149 /* QuestionViewController.swift */; };
@@ -391,8 +388,6 @@
 		7287F8D31F972F3C00BAEC15 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7287F8D51F973A4900BAEC15 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		7287F8D71F9740D000BAEC15 /* Chapter_1_-_Basic Rights_and_Responsibilities_of_Canadian Citizenship (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chapter_1_-_Basic Rights_and_Responsibilities_of_Canadian Citizenship (1).mp3"; sourceTree = "<group>"; };
-		72A6699B1F8E0D3D001745D2 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
-		72A6699C1F8E0D3D001745D2 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold-webfont.ttf"; sourceTree = "<group>"; };
 		72A6699D1F8E593E001745D2 /* FetchJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchJSON.swift; sourceTree = "<group>"; };
 		72A6699F1F8E5AF1001745D2 /* Network Check.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network Check.swift"; sourceTree = "<group>"; };
 		72E67C861F7006980015ABD6 /* UIButonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButonExtension.swift; sourceTree = "<group>"; };
@@ -409,7 +404,6 @@
 		7AC586681FA8BB3500519870 /* close-round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-round.png"; sourceTree = "<group>"; };
 		7AC586691FA8BB3500519870 /* if_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = if_check.png; sourceTree = "<group>"; };
 		7AC5866A1FA8BD8E00519870 /* radio-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-active.png"; sourceTree = SOURCE_ROOT; };
-		7AEF8DA11FAB494B00159935 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Regular font.ttf"; sourceTree = "<group>"; };
 		949CBCFE974E09C940EA2297 /* Pods-Citizenship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citizenship.release.xcconfig"; path = "Pods/Target Support Files/Pods-Citizenship/Pods-Citizenship.release.xcconfig"; sourceTree = "<group>"; };
 		AAB427A41F67E3540090D149 /* FaqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		AAB427A61F67E8490090D149 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -739,9 +733,6 @@
 		7AEF8DA21FAB49A300159935 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7AEF8DA11FAB494B00159935 /* Georgia Regular font.ttf */,
-				72A6699B1F8E0D3D001745D2 /* proximanova-regular-webfont.ttf */,
-				72A6699C1F8E0D3D001745D2 /* proximanova-bold-webfont.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1027,7 +1018,6 @@
 				726E65A51F6FB5DE007B6914 /* bullet.png in Resources */,
 				726E65B11F6FB5DE007B6914 /* mChapterExams.png in Resources */,
 				AAC721711F66966C0055896D /* img2.jpg in Resources */,
-				7AEF8DA01FAB34C000159935 /* proximanova-bold-webfont.ttf in Resources */,
 				AAC721681F66966C0055896D /* close.png in Resources */,
 				726E65BE1F6FB5DE007B6914 /* mLogout@2x.png in Resources */,
 				AAC7217D1F66966C0055896D /* signinbtn@3x (1).png in Resources */,
@@ -1150,7 +1140,6 @@
 				AAC7218E1F66966C0055896D /* mHome.png in Resources */,
 				AAC7220E1F6697D90055896D /* icon01.png in Resources */,
 				AAC721D91F66974F0055896D /* contact_active@3x.png in Resources */,
-				7AEF8DA31FAB49EE00159935 /* Georgia Regular font.ttf in Resources */,
 				7AB704581FF27D4500B19796 /* newbackgroundImg.png in Resources */,
 				AAC721D11F66974F0055896D /* free-test_active@2x.png in Resources */,
 				726E65C21F6FB5DE007B6914 /* mSimulationTest@3x.png in Resources */,
@@ -1187,7 +1176,6 @@
 				AAC721751F66966C0055896D /* mInfo (1).png in Resources */,
 				AAC721811F66966C0055896D /* mPurchase@2x.png in Resources */,
 				726E65AD1F6FB5DE007B6914 /* cheatSheetsActive@3x.png in Resources */,
-				7AEF8D9F1FAB34C000159935 /* proximanova-regular-webfont.ttf in Resources */,
 				AAC721D51F66974F0055896D /* free-test@3x.png in Resources */,
 				726E65D21F6FB5DE007B6914 /* simulationTest.png in Resources */,
 				AAC7216A1F66966C0055896D /* radio.png in Resources */,
