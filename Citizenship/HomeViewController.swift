@@ -212,7 +212,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
         
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        self.tabBarController?.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

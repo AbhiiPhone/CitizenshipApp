@@ -9,57 +9,61 @@
 import UIKit
 import WebKit
 
-class DetailViewController: UIViewController {
-
-    var webView: WKWebView!
-    
+class DetailViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+ 
     @IBOutlet weak var detailTblview: UITableView!
     @IBOutlet weak var showTitlelbl: UILabel!
-    override func loadView() {
-        let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
-        view = webView
-    }
+    
+    var isClick = Bool()
+    var getIndexPath = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backButtonSelector()
         
-        
-        
-        let myURL = URL(string: "https://www.apple.com")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
     
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 4
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        
+        let cell = detailTblview.dequeueReusableCell( withIdentifier: "DetailsViewCell", for: indexPath) as! DetailsViewCell
+        self.detailTblview.separatorColor = UIColor.clear
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        return cell
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        isClick = true
+        getIndexPath = indexPath.row
+        self.detailTblview.reloadData()
+        
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if (isClick == true)
+        {
+            if (indexPath.row == getIndexPath)
+            {
+                return 100
+            }
+            else
+            {
+                return 50
+            }
+        }
+        else
+        {
+            return 50
+        }
+    }
 }
 
-extension DetailViewController: WKUIDelegate, WKNavigationDelegate{
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
-        print("working")
-    }
-    
-   
-    
-}
+
 

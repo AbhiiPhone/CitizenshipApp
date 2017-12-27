@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsViewCell: UITableViewCell {
 
+    @IBOutlet weak var cellTitlelbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
