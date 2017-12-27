@@ -213,6 +213,13 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     }
     
     
+    @IBAction func registerBtnAction(_ sender: Any) {
+        
+        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
+        
+        self.navigationController?.present(registerVC, animated: true, completion: nil)
+        
+    }
     @IBAction func forgotBtnAction(_ sender: Any) {
     }
     
