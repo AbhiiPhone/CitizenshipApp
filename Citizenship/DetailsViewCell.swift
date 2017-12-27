@@ -1,5 +1,5 @@
 //
-//  DetailViewCell.swift
+//  DetailsViewCell.swift
 //  Citizenship
 //
 //  Created by Amit Kumar Poreli on 27/12/17.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class DetailViewCell: UITableViewCell {
+class DetailsViewCell: UITableViewCell {
 
-      
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

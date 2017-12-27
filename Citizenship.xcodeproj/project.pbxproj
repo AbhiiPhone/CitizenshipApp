@@ -266,7 +266,7 @@
 		B7D794671FF368FD00DABDD2 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */; };
 		B7D794681FF3690200DABDD2 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */; };
 		B7D794691FF3690800DABDD2 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794651FF368F500DABDD2 /* Georgia.ttf */; };
-		B7D7946B1FF36B9C00DABDD2 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */; };
+		B7D7946D1FF36F4600DABDD2 /* DetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */; };
 		B7F7B41A1FE25BC800DEE529 /* not_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F7B4191FE25BC400DEE529 /* not_visible.png */; };
 /* End PBXBuildFile section */
 
@@ -534,7 +534,7 @@
 		B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Regular font.ttf"; sourceTree = "<group>"; };
 		B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B7D794651FF368F500DABDD2 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Georgia.ttf; path = "../../Documents/Romio Practice/Clint Project/Citizenship/New 3/georgia/Georgia.ttf"; sourceTree = "<group>"; };
-		B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCell.swift; sourceTree = "<group>"; };
 		B7F7B4191FE25BC400DEE529 /* not_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_visible.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -733,7 +733,7 @@
 		7A9290A01FA7379500E876F0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */,
+				B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */,
 				AAC721231F6693AB0055896D /* HomeViewController.swift */,
 				AAC721251F6694210055896D /* HomeTableViewCell.swift */,
 				7A9290A21FA737E000E876F0 /* DetailViewController.swift */,
@@ -1301,6 +1301,7 @@
 				727169C01F84BCB3007FE3A9 /* Menu_SliderViewController.swift in Sources */,
 				B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */,
 				72E67C871F7006980015ABD6 /* UIButonExtension.swift in Sources */,
+				B7D7946D1FF36F4600DABDD2 /* DetailsViewCell.swift in Sources */,
 				72A6699E1F8E593E001745D2 /* FetchJSON.swift in Sources */,
 				727169C61F85114E007FE3A9 /* BlogViewController.swift in Sources */,
 				72A669A01F8E5AF1001745D2 /* Network Check.swift in Sources */,
@@ -1331,7 +1332,6 @@
 				AAC721171F6692EE0055896D /* Citizenship.xcdatamodeld in Sources */,
 				AAC7210F1F6692EE0055896D /* AppDelegate.swift in Sources */,
 				727169C21F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift in Sources */,
-				B7D7946B1FF36B9C00DABDD2 /* DetailViewCell.swift in Sources */,
 				7280919A1F70ED3600B8DD50 /* SimulationTableViewCell.swift in Sources */,
 				727D63D71F73AB7D00D65EF9 /* ChapterExamViewController.swift in Sources */,
 				AAC721241F6693AB0055896D /* HomeViewController.swift in Sources */,

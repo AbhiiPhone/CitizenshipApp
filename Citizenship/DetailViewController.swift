@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
 
     var webView: WKWebView!
     
+    @IBOutlet weak var detailTblview: UITableView!
+    @IBOutlet weak var showTitlelbl: UILabel!
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
