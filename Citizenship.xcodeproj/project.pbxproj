@@ -262,6 +262,11 @@
 		B7754AB91F99D7C100F30FCF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */; };
 		B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */; };
 		B796AF121FE16C6A0020A9E1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796AF111FE16C6A0020A9E1 /* RegisterController.swift */; };
+		B7D794661FF368FA00DABDD2 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */; };
+		B7D794671FF368FD00DABDD2 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */; };
+		B7D794681FF3690200DABDD2 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */; };
+		B7D794691FF3690800DABDD2 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794651FF368F500DABDD2 /* Georgia.ttf */; };
+		B7D7946B1FF36B9C00DABDD2 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */; };
 		B7F7B41A1FE25BC800DEE529 /* not_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F7B4191FE25BC400DEE529 /* not_visible.png */; };
 /* End PBXBuildFile section */
 
@@ -525,6 +530,11 @@
 		B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailsViewController.swift; sourceTree = "<group>"; };
 		B796AF111FE16C6A0020A9E1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold-webfont.ttf"; sourceTree = "<group>"; };
+		B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Regular font.ttf"; sourceTree = "<group>"; };
+		B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B7D794651FF368F500DABDD2 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Georgia.ttf; path = "../../Documents/Romio Practice/Clint Project/Citizenship/New 3/georgia/Georgia.ttf"; sourceTree = "<group>"; };
+		B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		B7F7B4191FE25BC400DEE529 /* not_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_visible.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -723,6 +733,7 @@
 		7A9290A01FA7379500E876F0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B7D7946A1FF36B9C00DABDD2 /* DetailViewCell.swift */,
 				AAC721231F6693AB0055896D /* HomeViewController.swift */,
 				AAC721251F6694210055896D /* HomeTableViewCell.swift */,
 				7A9290A21FA737E000E876F0 /* DetailViewController.swift */,
@@ -733,6 +744,10 @@
 		7AEF8DA21FAB49A300159935 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */,
+				B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */,
+				B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */,
+				B7D794651FF368F500DABDD2 /* Georgia.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1018,6 +1033,7 @@
 				726E65A51F6FB5DE007B6914 /* bullet.png in Resources */,
 				726E65B11F6FB5DE007B6914 /* mChapterExams.png in Resources */,
 				AAC721711F66966C0055896D /* img2.jpg in Resources */,
+				B7D794681FF3690200DABDD2 /* proximanova-bold-webfont.ttf in Resources */,
 				AAC721681F66966C0055896D /* close.png in Resources */,
 				726E65BE1F6FB5DE007B6914 /* mLogout@2x.png in Resources */,
 				AAC7217D1F66966C0055896D /* signinbtn@3x (1).png in Resources */,
@@ -1050,6 +1066,7 @@
 				AAC722031F6697D90055896D /* free-test_active (1)-min.png in Resources */,
 				726E65B61F6FB5DE007B6914 /* mCheatSheets@3x.png in Resources */,
 				AAC721DD1F66974F0055896D /* contact@3x.png in Resources */,
+				B7D794661FF368FA00DABDD2 /* proximanova-regular-webfont.ttf in Resources */,
 				726E66091F6FB5E4007B6914 /* cheatSheetsActive-min.png in Resources */,
 				726E65D91F6FB5DE007B6914 /* study.png in Resources */,
 				726E660C1F6FB5E4007B6914 /* logout-min.png in Resources */,
@@ -1076,6 +1093,7 @@
 				AAC721DE1F66974F0055896D /* contact@2x.png in Resources */,
 				726E65C71F6FB5DE007B6914 /* mSupport@2x.png in Resources */,
 				AAC721741F66966C0055896D /* mContact.png in Resources */,
+				B7D794691FF3690800DABDD2 /* Georgia.ttf in Resources */,
 				726E65A01F6FB5DE007B6914 /* adminActive@2x.png in Resources */,
 				AAC7216C1F66966C0055896D /* faqarrow (1).png in Resources */,
 				AAC721971F66966C0055896D /* mContact@2x.png in Resources */,
@@ -1115,6 +1133,7 @@
 				AAC721D01F66974F0055896D /* free-test_active@3x.png in Resources */,
 				AAC721CE1F66974F0055896D /* header.png in Resources */,
 				AAC721C61F66974F0055896D /* rarrow@2x.png in Resources */,
+				B7D794671FF368FD00DABDD2 /* Georgia Regular font.ttf in Resources */,
 				726E660D1F6FB5E4007B6914 /* logout@2x-min.png in Resources */,
 				726E65D01F6FB5DE007B6914 /* selectBox@2x.png in Resources */,
 				726E65AB1F6FB5DE007B6914 /* cheatSheetsActive.png in Resources */,
@@ -1312,6 +1331,7 @@
 				AAC721171F6692EE0055896D /* Citizenship.xcdatamodeld in Sources */,
 				AAC7210F1F6692EE0055896D /* AppDelegate.swift in Sources */,
 				727169C21F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift in Sources */,
+				B7D7946B1FF36B9C00DABDD2 /* DetailViewCell.swift in Sources */,
 				7280919A1F70ED3600B8DD50 /* SimulationTableViewCell.swift in Sources */,
 				727D63D71F73AB7D00D65EF9 /* ChapterExamViewController.swift in Sources */,
 				AAC721241F6693AB0055896D /* HomeViewController.swift in Sources */,
