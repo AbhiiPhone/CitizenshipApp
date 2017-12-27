@@ -27,7 +27,11 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
     
     
    // let targetArray : [Dictionary<String, String>] = [
-        
+    
+    var titleArray = ["Canadian Citizenship Test – What is it all about?","Canadian Citizenship Test – What happens if you fail it?","Canadian Citizenship Application – Understanding the process","Canadian Citizenship Test – How to prepare for it?","Canadian Citizenship Test – How to tackle this multiple choice test?","Canadian Citizenship– It's Benefits"]
+    
+//    var ansArray = 
+    
     var target=[
     
         Target(question : "Canadian Citizenship Test – What is it all about?",
@@ -98,15 +102,16 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
     func numberOfSections(in tableView: UITableView) -> Int {
         
      //  print(target.count)
-        return target.count
+       // return target.count
 
-        
+         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
        
-        return target[section].answer.count
+      //  return target[section].answer.count
+       return 6
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -147,7 +152,7 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         
         if (target[indexPath.section].expanded==false)
         {
-            return 0
+            return 48
         }
             
         else
@@ -156,36 +161,36 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        // return 44
-        
-        if ( UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad )
-        {
-            return 60
-        }
-        else
-        {
-            return 52
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//
+//        // return 44
+//
+//        if ( UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad )
+//        {
+//            return 60
+//        }
+//        else
+//        {
+//            return 52
+//        }
+//    }
 
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let header = ExpandGovtHeaderFooterView()
-        
-        header.customInit(title1: target[section].question, target: section, delegate: self as ExpandHeaderFooterViewDelegate1)
-        
-//        header.textLabel?.te
-        
-        return header
-        
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//
+//        let header = ExpandGovtHeaderFooterView()
+//
+//        header.customInit(title1: target[section].question, target: section, delegate: self as ExpandHeaderFooterViewDelegate1)
+//
+////        header.textLabel?.te
+//
+//        return header
+//
+//    }
     
     func toggleSection(header: ExpandGovtHeaderFooterView, section: Int) {
         
@@ -202,14 +207,6 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         testTableVw?.endUpdates()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
