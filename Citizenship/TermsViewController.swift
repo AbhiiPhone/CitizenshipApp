@@ -26,26 +26,22 @@ class TermsViewController: UIViewController,UIWebViewDelegate {
         self.title = "CITIZENSHIP"
         
         navigationController?.navigationBar.topItem?.title = ""
-
-        
-        parameter = ["actiontype" :  "termsandconditions",]
-        print(parameter)
-        jsonFetch.jsonData = self
-        
-        loadHtmlCode()
-        
-        let strLink =  "http://bestauctionsoftware.com/citi/json.php"
-        jsonFetch.fetchData(parameter , methodType: "POST", url: strLink, JSONName: "termsandconditions")
-        
         termsWeb.delegate=self
-       // termsWeb.loadRequest(URLRequest(url: URL(string:)!))
-
-        // Do any additional setup after loading the view.
+        featchData()
+       
+        
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   func featchData()
+   {
+    parameter = ["actiontype" :  "termsandconditions",]
+    print(parameter)
+    jsonFetch.jsonData = self
+    jsonFetch.fetchData(parameter , methodType: "POST", url: " ", JSONName: "termsandconditions")
+    
+    MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+    
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -60,7 +56,9 @@ class TermsViewController: UIViewController,UIWebViewDelegate {
         termsWeb.loadHTMLString(getv, baseURL: nil)
     }
 
-
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+    }
   
 }
 extension TermsViewController : jsonDataDelegate{

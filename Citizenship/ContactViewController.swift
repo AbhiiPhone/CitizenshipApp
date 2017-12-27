@@ -11,7 +11,7 @@ import ACFloatingTextfield_Swift
 import Alamofire
 import MBProgressHUD
 
-class ContactViewController: UIViewController,UITextFieldDelegate {
+class ContactViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
     
     @IBOutlet var lblDes: UILabel!
     @IBOutlet var sndBtn: UIButton!
@@ -19,27 +19,18 @@ class ContactViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var contactTop: NSLayoutConstraint!
     
-    @IBOutlet var lblLeading: NSLayoutConstraint!
-    @IBOutlet var lblTop: NSLayoutConstraint!
-    @IBOutlet var lblTrailing: NSLayoutConstraint!
-    
-    @IBOutlet var stackhHeight: NSLayoutConstraint!
-    @IBOutlet var stackVwTop: NSLayoutConstraint!
-    @IBOutlet var msgTop: NSLayoutConstraint!
-    @IBOutlet var msgHeight: NSLayoutConstraint!
-    
-    @IBOutlet var sndTop: NSLayoutConstraint!
-    @IBOutlet var contactLeading: NSLayoutConstraint!
    
-    
     var parameters: [String: String] = [:]
     var jsonFetch = JsonFetchClass()
     
-    @IBOutlet var nameTF: ACFloatingTextfield!
-    @IBOutlet var mailTF: ACFloatingTextfield!
-    @IBOutlet var subjectTF: ACFloatingTextfield!
-    @IBOutlet var msgTF: ACFloatingTextfield!
+   
+    @IBOutlet weak var nameTxt: UITextField!
     
+    @IBOutlet weak var emailTxt: UITextField!
+    
+    @IBOutlet weak var subjectTxt: UITextField!
+    
+    @IBOutlet weak var messageTxtview: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +40,10 @@ class ContactViewController: UIViewController,UITextFieldDelegate {
         
          jsonFetch.jsonData = self
         
-        nameTF.delegate=self
-        mailTF.delegate=self
-        subjectTF.delegate=self
-        msgTF.delegate=self
-        
-        
+        nameTxt.delegate = self
+        emailTxt.delegate = self
+        subjectTxt.delegate = self
+        messageTxtview.delegate = self
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
@@ -90,30 +79,45 @@ class ContactViewController: UIViewController,UITextFieldDelegate {
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         
-        if(textField == nameTF)
+        if(textField == nameTxt)
         {
-            nameTF.resignFirstResponder()
+            emailTxt.becomeFirstResponder()
         }
-        else if(textField == mailTF)
+        else if(textField == emailTxt)
         {
-            mailTF.resignFirstResponder()
+            subjectTxt.becomeFirstResponder()
         }
-        else if(textField == subjectTF)
-        {
-            subjectTF.resignFirstResponder()
-        }
+        
         else
         {
-            msgTF.resignFirstResponder()
+            subjectTxt.resignFirstResponder()
         }
         
         return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func textViewDidBeginEditing(_ textView: UITextView) {
+      
+         self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(-150), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
     }
+    
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        
+        //        composeTxview.resignFirstResponder()
+        
+          self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
+        return true
+        
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            messageTxtview.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
@@ -125,36 +129,26 @@ class ContactViewController: UIViewController,UITextFieldDelegate {
     @IBAction func sendBtnAction(_ sender: Any) {
         
         parameters = ["actiontype" :  "contact",
-                      "user_name" :  self.nameTF.text!,         // sss,
-                       "email" :     self.mailTF.text!,             //soumi.micronix@gmail.com!,
-                        "subject" :  self.subjectTF.text!,           //aaaaaaa,
-                        "message" :  self.msgTF.text!           //aaaaa
+                      "user_name" :  self.nameTxt.text!,         // sss,
+                       "email" :     self.emailTxt.text!,             //soumi.micronix@gmail.com!,
+                        "subject" :  self.subjectTxt.text!,           //aaaaaaa,
+                        "message" :  self.messageTxtview.text!           //aaaaa
                         ]
         
         print(parameters)
        
-        let strLink = "http://bestauctionsoftware.com/citi/json.php"
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "contact")
+       jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "contact")
 
         let alertController = UIAlertController(title: "Congratulation!!!", message: "thanks for your concern we will get back to you shortly", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: NSLocalizedString("OK", comment: "Cancel action"), style: .cancel, handler: {(_ action: UIAlertAction) -> Void in
             // NSLog(@"Cancel action");
         })
-//        alertController.addAction(cancelAction)
-//        present(alertController, animated: true) { _ in }
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
         
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
 extension ContactViewController : jsonDataDelegate{
@@ -165,14 +159,7 @@ extension ContactViewController : jsonDataDelegate{
         
         print(data)
         
-        /* Calling Serially as following
-         
-         1. FilterData
-         2. Reviewsdata
-         3. Bookie Slides
-         
-         */
-        
+       
         if data as? String ==  "NO INTERNET CONNECTION" {
             
             DispatchQueue.main.async {
@@ -180,14 +167,15 @@ extension ContactViewController : jsonDataDelegate{
                 MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
             }
             
-            //   showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1, selectorMethod: ())
+              showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
             
             
         }
-        else{  //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
+        else{
+            //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
             
-            print(((data as! NSDictionary).value(forKey: "success") as! String))
-            print(jsonName)
+//            print(((data as! NSDictionary).value(forKey: "success") as! String))
+//            print(jsonName)
             
   
             
@@ -208,9 +196,10 @@ extension ContactViewController : jsonDataDelegate{
     
     func didFailedtoReceiveData(_ error: Error) {
         
+          
         print(error)
         
-        //  showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1, selectorMethod:())
+         showAlert(title: "Error", message: "Something   going wrong,try again.. !", noOfButton: 1)
         
         DispatchQueue.main.async {
             

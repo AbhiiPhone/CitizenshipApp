@@ -211,7 +211,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
+        detailVC.getIndex = indexPath.row
         self.tabBarController?.navigationController?.pushViewController(detailVC, animated: true)
     }
     
