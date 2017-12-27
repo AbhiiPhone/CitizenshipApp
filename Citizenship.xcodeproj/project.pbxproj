@@ -262,20 +262,12 @@
 		B7754AB91F99D7C100F30FCF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */; };
 		B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */; };
 		B796AF121FE16C6A0020A9E1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796AF111FE16C6A0020A9E1 /* RegisterController.swift */; };
-		B7D794661FF368FA00DABDD2 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */; };
-		B7D794671FF368FD00DABDD2 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */; };
-		B7D794681FF3690200DABDD2 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */; };
-		B7D794691FF3690800DABDD2 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7D794651FF368F500DABDD2 /* Georgia.ttf */; };
 		B7D7946D1FF36F4600DABDD2 /* DetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */; };
 		B7F7B41A1FE25BC800DEE529 /* not_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F7B4191FE25BC400DEE529 /* not_visible.png */; };
-		B7F8773D1FF38A6E00E1EF88 /* Fonts copy in Resources */ = {isa = PBXBuildFile; fileRef = B7F8773C1FF38A6E00E1EF88 /* Fonts copy */; };
-		B7F877461FF38AC000E1EF88 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F8773F1FF38ABF00E1EF88 /* proximanova-bold-webfont.ttf */; };
-		B7F877471FF38AC000E1EF88 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877401FF38ABF00E1EF88 /* Georgia.ttf */; };
-		B7F877481FF38AC000E1EF88 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877411FF38ABF00E1EF88 /* OpenSans-Semibold.ttf */; };
-		B7F877491FF38AC000E1EF88 /* proximanova-regular-webfont copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877421FF38ABF00E1EF88 /* proximanova-regular-webfont copy.ttf */; };
-		B7F8774A1FF38AC000E1EF88 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877431FF38ABF00E1EF88 /* Georgia Regular font.ttf */; };
-		B7F8774B1FF38AC000E1EF88 /* proximanova-bold-webfont copy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877441FF38AC000E1EF88 /* proximanova-bold-webfont copy.ttf */; };
-		B7F8774C1FF38AC000E1EF88 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877451FF38AC000E1EF88 /* proximanova-regular-webfont.ttf */; };
+		B7F877531FF38CA400E1EF88 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F8774F1FF38CA400E1EF88 /* proximanova-bold-webfont.ttf */; };
+		B7F877541FF38CA400E1EF88 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877501FF38CA400E1EF88 /* proximanova-regular-webfont.ttf */; };
+		B7F877551FF38CA400E1EF88 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877511FF38CA400E1EF88 /* Georgia.ttf */; };
+		B7F877561FF38CA400E1EF88 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877521FF38CA400E1EF88 /* Georgia Regular font.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -538,20 +530,12 @@
 		B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailsViewController.swift; sourceTree = "<group>"; };
 		B796AF111FE16C6A0020A9E1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
-		B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold-webfont.ttf"; sourceTree = "<group>"; };
-		B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Regular font.ttf"; sourceTree = "<group>"; };
-		B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
-		B7D794651FF368F500DABDD2 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Georgia.ttf; path = "../../Documents/Romio Practice/Clint Project/Citizenship/New 3/georgia/Georgia.ttf"; sourceTree = "<group>"; };
 		B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCell.swift; sourceTree = "<group>"; };
 		B7F7B4191FE25BC400DEE529 /* not_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_visible.png; sourceTree = "<group>"; };
-		B7F8773C1FF38A6E00E1EF88 /* Fonts copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Fonts copy"; sourceTree = "<group>"; };
-		B7F8773F1FF38ABF00E1EF88 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold-webfont.ttf"; sourceTree = "<group>"; };
-		B7F877401FF38ABF00E1EF88 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Georgia.ttf; sourceTree = "<group>"; };
-		B7F877411FF38ABF00E1EF88 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		B7F877421FF38ABF00E1EF88 /* proximanova-regular-webfont copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont copy.ttf"; sourceTree = "<group>"; };
-		B7F877431FF38ABF00E1EF88 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Georgia Regular font.ttf"; sourceTree = "<group>"; };
-		B7F877441FF38AC000E1EF88 /* proximanova-bold-webfont copy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-bold-webfont copy.ttf"; sourceTree = "<group>"; };
-		B7F877451FF38AC000E1EF88 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "proximanova-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B7F8774F1FF38CA400E1EF88 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-bold-webfont.ttf"; path = "Citizenship/Fonts/proximanova-bold-webfont.ttf"; sourceTree = SOURCE_ROOT; };
+		B7F877501FF38CA400E1EF88 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular-webfont.ttf"; path = "Citizenship/Fonts/proximanova-regular-webfont.ttf"; sourceTree = SOURCE_ROOT; };
+		B7F877511FF38CA400E1EF88 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Georgia.ttf; path = Citizenship/Fonts/Georgia.ttf; sourceTree = SOURCE_ROOT; };
+		B7F877521FF38CA400E1EF88 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Georgia Regular font.ttf"; path = "Citizenship/Fonts/Georgia Regular font.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -760,10 +744,10 @@
 		7AEF8DA21FAB49A300159935 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				B7D794631FF368B900DABDD2 /* Georgia Regular font.ttf */,
-				B7D794621FF368AD00DABDD2 /* proximanova-bold-webfont.ttf */,
-				B7D794641FF368C400DABDD2 /* proximanova-regular-webfont.ttf */,
-				B7D794651FF368F500DABDD2 /* Georgia.ttf */,
+				B7F877521FF38CA400E1EF88 /* Georgia Regular font.ttf */,
+				B7F877511FF38CA400E1EF88 /* Georgia.ttf */,
+				B7F8774F1FF38CA400E1EF88 /* proximanova-bold-webfont.ttf */,
+				B7F877501FF38CA400E1EF88 /* proximanova-regular-webfont.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -939,8 +923,6 @@
 		AAC722151F66BF820055896D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B7F8773E1FF38A9300E1EF88 /* Test */,
-				B7F8773C1FF38A6E00E1EF88 /* Fonts copy */,
 				7AEF8DA21FAB49A300159935 /* Fonts */,
 			);
 			name = "Supporting Files";
@@ -977,20 +959,6 @@
 				72A6699F1F8E5AF1001745D2 /* Network Check.swift */,
 			);
 			name = "Extention File";
-			sourceTree = "<group>";
-		};
-		B7F8773E1FF38A9300E1EF88 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				B7F877431FF38ABF00E1EF88 /* Georgia Regular font.ttf */,
-				B7F877401FF38ABF00E1EF88 /* Georgia.ttf */,
-				B7F877411FF38ABF00E1EF88 /* OpenSans-Semibold.ttf */,
-				B7F877441FF38AC000E1EF88 /* proximanova-bold-webfont copy.ttf */,
-				B7F8773F1FF38ABF00E1EF88 /* proximanova-bold-webfont.ttf */,
-				B7F877421FF38ABF00E1EF88 /* proximanova-regular-webfont copy.ttf */,
-				B7F877451FF38AC000E1EF88 /* proximanova-regular-webfont.ttf */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1065,7 +1033,6 @@
 				726E65A51F6FB5DE007B6914 /* bullet.png in Resources */,
 				726E65B11F6FB5DE007B6914 /* mChapterExams.png in Resources */,
 				AAC721711F66966C0055896D /* img2.jpg in Resources */,
-				B7D794681FF3690200DABDD2 /* proximanova-bold-webfont.ttf in Resources */,
 				AAC721681F66966C0055896D /* close.png in Resources */,
 				726E65BE1F6FB5DE007B6914 /* mLogout@2x.png in Resources */,
 				AAC7217D1F66966C0055896D /* signinbtn@3x (1).png in Resources */,
@@ -1075,13 +1042,11 @@
 				AAC7211C1F6692EE0055896D /* LaunchScreen.storyboard in Resources */,
 				B733B8F31F7A5E1F007ED434 /* headerAdmin.png in Resources */,
 				AAC721C91F66974F0055896D /* home@2x.png in Resources */,
-				B7F877491FF38AC000E1EF88 /* proximanova-regular-webfont copy.ttf in Resources */,
 				AAC721A01F66966C0055896D /* login.png in Resources */,
 				726E65E11F6FB5DE007B6914 /* submitBtn@3x.png in Resources */,
 				726E65DF1F6FB5DE007B6914 /* submitBtn.png in Resources */,
 				726E66021F6FB5E4007B6914 /* audio@3x-min.png in Resources */,
 				AAC721E31F66974F0055896D /* purchase@3x.png in Resources */,
-				B7F877471FF38AC000E1EF88 /* Georgia.ttf in Resources */,
 				AAC721771F66966C0055896D /* paybutton.png in Resources */,
 				AAC721DB1F66974F0055896D /* contact_active@2x.png in Resources */,
 				726E65FE1F6FB5E3007B6914 /* adminActive@2x-min.png in Resources */,
@@ -1100,7 +1065,6 @@
 				AAC722031F6697D90055896D /* free-test_active (1)-min.png in Resources */,
 				726E65B61F6FB5DE007B6914 /* mCheatSheets@3x.png in Resources */,
 				AAC721DD1F66974F0055896D /* contact@3x.png in Resources */,
-				B7D794661FF368FA00DABDD2 /* proximanova-regular-webfont.ttf in Resources */,
 				726E66091F6FB5E4007B6914 /* cheatSheetsActive-min.png in Resources */,
 				726E65D91F6FB5DE007B6914 /* study.png in Resources */,
 				726E660C1F6FB5E4007B6914 /* logout-min.png in Resources */,
@@ -1109,6 +1073,7 @@
 				726E660B1F6FB5E4007B6914 /* cheatSheetsActive@3x-min.png in Resources */,
 				AAC721CA1F66974F0055896D /* purchase_active@2x.png in Resources */,
 				AAC7217C1F66966C0055896D /* noun_966551_cc@2x.png in Resources */,
+				B7F877531FF38CA400E1EF88 /* proximanova-bold-webfont.ttf in Resources */,
 				AAC7218D1F66966C0055896D /* mHome@2x.png in Resources */,
 				AAC721821F66966C0055896D /* mPurchase.png in Resources */,
 				726E65AF1F6FB5DE007B6914 /* logout@2x.png in Resources */,
@@ -1125,23 +1090,22 @@
 				AAC721CB1F66974F0055896D /* home (1).png in Resources */,
 				AAC721DA1F66974F0055896D /* img1.jpg in Resources */,
 				AAC721DE1F66974F0055896D /* contact@2x.png in Resources */,
-				B7F877481FF38AC000E1EF88 /* OpenSans-Semibold.ttf in Resources */,
 				726E65C71F6FB5DE007B6914 /* mSupport@2x.png in Resources */,
 				AAC721741F66966C0055896D /* mContact.png in Resources */,
-				B7D794691FF3690800DABDD2 /* Georgia.ttf in Resources */,
 				726E65A01F6FB5DE007B6914 /* adminActive@2x.png in Resources */,
 				AAC7216C1F66966C0055896D /* faqarrow (1).png in Resources */,
 				AAC721971F66966C0055896D /* mContact@2x.png in Resources */,
 				AAC721921F66966C0055896D /* mFaq@3x.png in Resources */,
+				B7F877551FF38CA400E1EF88 /* Georgia.ttf in Resources */,
 				726E65BC1F6FB5DE007B6914 /* mGovernment@3x.png in Resources */,
 				726E659F1F6FB5DE007B6914 /* adminActive.png in Resources */,
+				B7F877561FF38CA400E1EF88 /* Georgia Regular font.ttf in Resources */,
 				726E65CD1F6FB5DE007B6914 /* pdf@2x.png in Resources */,
 				726E65A61F6FB5DE007B6914 /* bullet@2x.png in Resources */,
 				726E65B81F6FB5DE007B6914 /* mDashboard@2x.png in Resources */,
 				726E66011F6FB5E4007B6914 /* audio@2x-min.png in Resources */,
 				726E65BD1F6FB5DE007B6914 /* mLogout.png in Resources */,
 				726E65A41F6FB5DE007B6914 /* audio@3x.png in Resources */,
-				B7F8773D1FF38A6E00E1EF88 /* Fonts copy in Resources */,
 				726E65BA1F6FB5DE007B6914 /* mGovernment.png in Resources */,
 				AAC7218F1F66966C0055896D /* mFreeTest@3x.png in Resources */,
 				AAC721881F66966C0055896D /* mLogin.png in Resources */,
@@ -1158,7 +1122,6 @@
 				726E659D1F6FB5DE007B6914 /* admin@2x.png in Resources */,
 				726E65C61F6FB5DE007B6914 /* mSupport.png in Resources */,
 				726E65CC1F6FB5DE007B6914 /* pdf.png in Resources */,
-				B7F8774B1FF38AC000E1EF88 /* proximanova-bold-webfont copy.ttf in Resources */,
 				AAC7217A1F66966C0055896D /* purchase.png in Resources */,
 				726E65C51F6FB5DE007B6914 /* mStudyMaterial@3x.png in Resources */,
 				AAC7220A1F6697D90055896D /* home (1)-min.png in Resources */,
@@ -1170,7 +1133,6 @@
 				AAC721D01F66974F0055896D /* free-test_active@3x.png in Resources */,
 				AAC721CE1F66974F0055896D /* header.png in Resources */,
 				AAC721C61F66974F0055896D /* rarrow@2x.png in Resources */,
-				B7D794671FF368FD00DABDD2 /* Georgia Regular font.ttf in Resources */,
 				726E660D1F6FB5E4007B6914 /* logout@2x-min.png in Resources */,
 				726E65D01F6FB5DE007B6914 /* selectBox@2x.png in Resources */,
 				726E65AB1F6FB5DE007B6914 /* cheatSheetsActive.png in Resources */,
@@ -1198,7 +1160,6 @@
 				AAC721D91F66974F0055896D /* contact_active@3x.png in Resources */,
 				7AB704581FF27D4500B19796 /* newbackgroundImg.png in Resources */,
 				AAC721D11F66974F0055896D /* free-test_active@2x.png in Resources */,
-				B7F8774A1FF38AC000E1EF88 /* Georgia Regular font.ttf in Resources */,
 				726E65C21F6FB5DE007B6914 /* mSimulationTest@3x.png in Resources */,
 				AAC721D41F66974F0055896D /* mTerm@3x.png in Resources */,
 				AAC721801F66966C0055896D /* mPurchase@3.png in Resources */,
@@ -1209,7 +1170,6 @@
 				AAC721951F66966C0055896D /* menu-border.png in Resources */,
 				726E65B71F6FB5DE007B6914 /* mDashboard.png in Resources */,
 				726E65C01F6FB5DE007B6914 /* mSimulationTest.png in Resources */,
-				B7F877461FF38AC000E1EF88 /* proximanova-bold-webfont.ttf in Resources */,
 				726E65BF1F6FB5DE007B6914 /* mLogout@3x.png in Resources */,
 				726E65E41F6FB5DE007B6914 /* textBox@3x.png in Resources */,
 				726E65DD1F6FB5DE007B6914 /* studyActive@2x.png in Resources */,
@@ -1218,6 +1178,7 @@
 				AAC721DC1F66974F0055896D /* contact_active.png in Resources */,
 				AAC721861F66966C0055896D /* mLogin@3x.png in Resources */,
 				726E65FF1F6FB5E4007B6914 /* adminActive@3x-min.png in Resources */,
+				B7F877541FF38CA400E1EF88 /* proximanova-regular-webfont.ttf in Resources */,
 				AAC721931F66966C0055896D /* mFaq@2x.png in Resources */,
 				726E65D31F6FB5DE007B6914 /* simulationTest@2x.png in Resources */,
 				AAC7218C1F66966C0055896D /* mHome@3x.png in Resources */,
@@ -1264,7 +1225,6 @@
 				AAC721C81F66974F0055896D /* rarrow.png in Resources */,
 				726E66031F6FB5E4007B6914 /* bullet-min.png in Resources */,
 				727D63D51F738B1E00D65EF9 /* dropdown.jpg in Resources */,
-				B7F8774C1FF38AC000E1EF88 /* proximanova-regular-webfont.ttf in Resources */,
 				726E65B51F6FB5DE007B6914 /* mCheatSheets@2x.png in Resources */,
 				726E65DC1F6FB5DE007B6914 /* studyActive.png in Resources */,
 				AAC721141F6692EE0055896D /* Main.storyboard in Resources */,
