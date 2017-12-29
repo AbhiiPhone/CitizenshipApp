@@ -26,6 +26,7 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
         jsonFetch.jsonData = self
         
          if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {

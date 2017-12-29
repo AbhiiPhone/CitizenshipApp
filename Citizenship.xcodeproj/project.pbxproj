@@ -254,6 +254,13 @@
 		AAC722101F669EF70055896D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC7220F1F669EF70055896D /* SignUpViewController.swift */; };
 		AAC722121F66A7780055896D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC722111F66A7780055896D /* Extension.swift */; };
 		AAC722141F66AEB60055896D /* FreeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC722131F66AEB60055896D /* FreeTestViewController.swift */; };
+		B70837EE1FF4C95A00724321 /* arr-min.png in Resources */ = {isa = PBXBuildFile; fileRef = B70837ED1FF4C95600724321 /* arr-min.png */; };
+		B70837F21FF4CCC400724321 /* rotate_arr.png in Resources */ = {isa = PBXBuildFile; fileRef = B70837F11FF4CCC000724321 /* rotate_arr.png */; };
+		B70837F41FF4D6EB00724321 /* header_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B70837F31FF4D6EA00724321 /* header_ipad.png */; };
+		B70837F61FF51C3B00724321 /* DetailChapterExamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70837F51FF51C3A00724321 /* DetailChapterExamCell.swift */; };
+		B70837F81FF51C8400724321 /* DetailChapterExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70837F71FF51C8400724321 /* DetailChapterExamController.swift */; };
+		B70F04E41FF529FD008CA175 /* radio_on.png in Resources */ = {isa = PBXBuildFile; fileRef = B70F04E21FF529F8008CA175 /* radio_on.png */; };
+		B70F04E51FF529FD008CA175 /* radio_off.png in Resources */ = {isa = PBXBuildFile; fileRef = B70F04E31FF529FD008CA175 /* radio_off.png */; };
 		B71677DA1FE3BCA10075BC94 /* SelectedChapterExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71677D91FE3BCA10075BC94 /* SelectedChapterExamController.swift */; };
 		B733B8F31F7A5E1F007ED434 /* headerAdmin.png in Resources */ = {isa = PBXBuildFile; fileRef = B733B8F21F7A5E1F007ED434 /* headerAdmin.png */; };
 		B733B8F51F7A617D007ED434 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B8F41F7A617D007ED434 /* SliderViewController.swift */; };
@@ -262,6 +269,8 @@
 		B7754AB91F99D7C100F30FCF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */; };
 		B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */; };
 		B796AF121FE16C6A0020A9E1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796AF111FE16C6A0020A9E1 /* RegisterController.swift */; };
+		B7C3558F1FF3DA8A00E7EE29 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C3558D1FF3DA8200E7EE29 /* minus.png */; };
+		B7C355901FF3DA8A00E7EE29 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C3558E1FF3DA8600E7EE29 /* plus.png */; };
 		B7D7946D1FF36F4600DABDD2 /* DetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */; };
 		B7F7B41A1FE25BC800DEE529 /* not_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = B7F7B4191FE25BC400DEE529 /* not_visible.png */; };
 		B7F877531FF38CA400E1EF88 /* proximanova-bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F8774F1FF38CA400E1EF88 /* proximanova-bold-webfont.ttf */; };
@@ -522,6 +531,13 @@
 		AAC7220F1F669EF70055896D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AAC722111F66A7780055896D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		AAC722131F66AEB60055896D /* FreeTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FreeTestViewController.swift; sourceTree = "<group>"; };
+		B70837ED1FF4C95600724321 /* arr-min.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arr-min.png"; sourceTree = "<group>"; };
+		B70837F11FF4CCC000724321 /* rotate_arr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotate_arr.png; sourceTree = "<group>"; };
+		B70837F31FF4D6EA00724321 /* header_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_ipad.png; sourceTree = "<group>"; };
+		B70837F51FF51C3A00724321 /* DetailChapterExamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChapterExamCell.swift; sourceTree = "<group>"; };
+		B70837F71FF51C8400724321 /* DetailChapterExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChapterExamController.swift; sourceTree = "<group>"; };
+		B70F04E21FF529F8008CA175 /* radio_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_on.png; sourceTree = "<group>"; };
+		B70F04E31FF529FD008CA175 /* radio_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_off.png; sourceTree = "<group>"; };
 		B71677D91FE3BCA10075BC94 /* SelectedChapterExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChapterExamController.swift; sourceTree = "<group>"; };
 		B733B8F21F7A5E1F007ED434 /* headerAdmin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerAdmin.png; sourceTree = "<group>"; };
 		B733B8F41F7A617D007ED434 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +546,8 @@
 		B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailsViewController.swift; sourceTree = "<group>"; };
 		B796AF111FE16C6A0020A9E1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		B7C3558D1FF3DA8200E7EE29 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		B7C3558E1FF3DA8600E7EE29 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		B7D7946C1FF36F4600DABDD2 /* DetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCell.swift; sourceTree = "<group>"; };
 		B7F7B4191FE25BC400DEE529 /* not_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_visible.png; sourceTree = "<group>"; };
 		B7F8774F1FF38CA400E1EF88 /* proximanova-bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-bold-webfont.ttf"; path = "Citizenship/Fonts/proximanova-bold-webfont.ttf"; sourceTree = SOURCE_ROOT; };
@@ -691,6 +709,8 @@
 		72811F201F874F3C0021A8CF /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				B70837F51FF51C3A00724321 /* DetailChapterExamCell.swift */,
+				B70837F71FF51C8400724321 /* DetailChapterExamController.swift */,
 				B71677D91FE3BCA10075BC94 /* SelectedChapterExamController.swift */,
 				7282A36C1F7A7539009A8239 /* MenuViewController.swift */,
 				B733B8F61F7A63F1007ED434 /* SliderTableViewCell.swift */,
@@ -780,13 +800,14 @@
 				AAC721101F6692EE0055896D /* ViewController.swift */,
 				7278C5201F963390000CACA2 /* AudioViewController.swift */,
 				7A77AB9A1F8CE15200E780BA /* AdminViewController.swift */,
-				B7340D831FED3ABE00034CB8 /* newtextbox.png */,
-				B7F7B4191FE25BC400DEE529 /* not_visible.png */,
-				7AB704571FF27D4500B19796 /* newbackgroundImg.png */,
 				727169C11F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift */,
 				727169BF1F84BCB3007FE3A9 /* Menu_SliderViewController.swift */,
 				AAC7220F1F669EF70055896D /* SignUpViewController.swift */,
 				727169BB1F84AF6A007FE3A9 /* TabViewController.swift */,
+				B70F04E31FF529FD008CA175 /* radio_off.png */,
+				B70F04E21FF529F8008CA175 /* radio_on.png */,
+				B70837F31FF4D6EA00724321 /* header_ipad.png */,
+				B70837F11FF4CCC000724321 /* rotate_arr.png */,
 				72F7ECD01F8B510A00BCAB70 /* ExpandGovt */,
 				7287F8D91F9740D500BAEC15 /* Audio */,
 				7272368C1F7249D700042236 /* ExpandableHeaderView */,
@@ -811,6 +832,12 @@
 				AAC721E41F6697D90055896D /* icon */,
 				7AC5866A1FA8BD8E00519870 /* radio-active.png */,
 				7AC586681FA8BB3500519870 /* close-round.png */,
+				B7C3558D1FF3DA8200E7EE29 /* minus.png */,
+				B7340D831FED3ABE00034CB8 /* newtextbox.png */,
+				B7F7B4191FE25BC400DEE529 /* not_visible.png */,
+				7AB704571FF27D4500B19796 /* newbackgroundImg.png */,
+				B70837ED1FF4C95600724321 /* arr-min.png */,
+				B7C3558E1FF3DA8600E7EE29 /* plus.png */,
 				7AC586691FA8BB3500519870 /* if_check.png */,
 				7AC586671FA8BB3500519870 /* Left.png */,
 				AAC721291F66966C0055896D /* menutab.png */,
@@ -1026,7 +1053,9 @@
 			files = (
 				AAC7216E1F66966C0055896D /* faqBg (2).png in Resources */,
 				726E65DA1F6FB5DE007B6914 /* study@2x.png in Resources */,
+				B7C355901FF3DA8A00E7EE29 /* plus.png in Resources */,
 				726E65CA1F6FB5DE007B6914 /* mTimePeriods@2x.png in Resources */,
+				B70837F41FF4D6EB00724321 /* header_ipad.png in Resources */,
 				726E65FD1F6FB5E3007B6914 /* adminActive-min.png in Resources */,
 				726E660A1F6FB5E4007B6914 /* cheatSheetsActive@2x-min.png in Resources */,
 				AAC721CD1F66974F0055896D /* purchase@2x.png in Resources */,
@@ -1054,6 +1083,7 @@
 				726E65CE1F6FB5DE007B6914 /* pdf@3x.png in Resources */,
 				726E65E01F6FB5DE007B6914 /* submitBtn@2x.png in Resources */,
 				AAC721941F66966C0055896D /* mFaq.png in Resources */,
+				B7C3558F1FF3DA8A00E7EE29 /* minus.png in Resources */,
 				726E65C81F6FB5DE007B6914 /* mSupport@3x.png in Resources */,
 				AAC721781F66966C0055896D /* signinbtn@2x.png in Resources */,
 				726E66081F6FB5E4007B6914 /* cheatSheets@3x-min.png in Resources */,
@@ -1092,7 +1122,9 @@
 				AAC721DE1F66974F0055896D /* contact@2x.png in Resources */,
 				726E65C71F6FB5DE007B6914 /* mSupport@2x.png in Resources */,
 				AAC721741F66966C0055896D /* mContact.png in Resources */,
+				B70837F21FF4CCC400724321 /* rotate_arr.png in Resources */,
 				726E65A01F6FB5DE007B6914 /* adminActive@2x.png in Resources */,
+				B70837EE1FF4C95A00724321 /* arr-min.png in Resources */,
 				AAC7216C1F66966C0055896D /* faqarrow (1).png in Resources */,
 				AAC721971F66966C0055896D /* mContact@2x.png in Resources */,
 				AAC721921F66966C0055896D /* mFaq@3x.png in Resources */,
@@ -1117,6 +1149,7 @@
 				726E65C91F6FB5DE007B6914 /* mTimePeriods.png in Resources */,
 				AAC721791F66966C0055896D /* purchase_active@3x.png in Resources */,
 				726E65BB1F6FB5DE007B6914 /* mGovernment@2x.png in Resources */,
+				B70F04E41FF529FD008CA175 /* radio_on.png in Resources */,
 				7AC5866E1FA8BE5700519870 /* Left.png in Resources */,
 				AAC7218B1F66966C0055896D /* mInfo.png in Resources */,
 				726E659D1F6FB5DE007B6914 /* admin@2x.png in Resources */,
@@ -1165,6 +1198,7 @@
 				AAC721801F66966C0055896D /* mPurchase@3.png in Resources */,
 				726E65E21F6FB5DE007B6914 /* textBox (1).png in Resources */,
 				726E65A71F6FB5DE007B6914 /* bullet@3x.png in Resources */,
+				B70F04E51FF529FD008CA175 /* radio_off.png in Resources */,
 				726E65C31F6FB5DE007B6914 /* mStudyMaterial.png in Resources */,
 				B7F7B41A1FE25BC800DEE529 /* not_visible.png in Resources */,
 				AAC721951F66966C0055896D /* menu-border.png in Resources */,
@@ -1308,6 +1342,7 @@
 				727236D01F72A19000042236 /* GovtTableViewCell.swift in Sources */,
 				728091981F70EB7800B8DD50 /* SimulationTestViewController.swift in Sources */,
 				72FF5A3E1F715A73002BE74F /* SupportViewController.swift in Sources */,
+				B70837F61FF51C3B00724321 /* DetailChapterExamCell.swift in Sources */,
 				7282A36D1F7A7539009A8239 /* MenuViewController.swift in Sources */,
 				727D63D91F73ABA700D65EF9 /* ChapterExamTableViewCell.swift in Sources */,
 				72F7ECCF1F8B50FF00BCAB70 /* ExpandGovtHeaderFooterView.swift in Sources */,
@@ -1320,6 +1355,7 @@
 				726E65511F6FAF2A007B6914 /* DashBoardViewController.swift in Sources */,
 				727169BC1F84AF6A007FE3A9 /* TabViewController.swift in Sources */,
 				7272368E1F724BBE00042236 /* Section.swift in Sources */,
+				B70837F81FF51C8400724321 /* DetailChapterExamController.swift in Sources */,
 				7A77AB9B1F8CE15200E780BA /* AdminViewController.swift in Sources */,
 				AAC722101F669EF70055896D /* SignUpViewController.swift in Sources */,
 				727169CA1F851310007FE3A9 /* TermsViewController.swift in Sources */,

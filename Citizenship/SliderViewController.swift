@@ -51,7 +51,7 @@ class SliderViewController: UIViewController,UITableViewDelegate,UITableViewData
         let cell = sliderTableVw.dequeueReusableCell( withIdentifier: "SliderCell", for: indexPath) as! SliderTableViewCell
         
          self.sliderTableVw.separatorColor = UIColor.clear
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
      //  self.sliderTableVw.sel
         

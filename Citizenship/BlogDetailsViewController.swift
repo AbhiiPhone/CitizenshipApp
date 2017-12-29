@@ -10,12 +10,9 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-
 class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDelegate {
     
-    @IBOutlet var blogTextVw: UITextView!
-    
-    
+   
     @IBOutlet var blogWeb: UIWebView!
 
     var parameters: [String: String] = [:]
@@ -24,42 +21,25 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
     var blogDetailArray = ""
    // var id: String = ""
      var id: String = " "
-    var getWebValue = ""
+     var getWebValue = ""
+     var getSelectedIndex = Int()
    
    
-    
+    @IBOutlet weak var shoeTitle: UILabel!
+    @IBOutlet weak var showImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
          print("\(id)")
        
-       loadHtmlCode()
-        
         self.title = "CITIZENSHIP"
         navigationController?.navigationBar.topItem?.title = ""
 
-        
-        parameters = ["actiontype" : "blog_details","blog_id" :  id]
-        print(parameters)
-        
         jsonFetch.jsonData = self
-        
-        //  http://bestauctionsoftware.com/citi/json.php
-        
-        let strLink =  "http://bestauctionsoftware.com/citi/json.php"
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "blog_details")
-        
-       // blogTextVw.delegate=self
-        
         blogWeb.delegate=self
         
-       // blogWeb.loadRequest(URLRequest(url: URL(string: getWebValue)!))
-        
-       // blogWeb.loadRequest(URLRequest(url: URL(string: "id")!))
-      
-       // blogTextVw.text=id
-        
+        featchData()
+       
  
     }
     
@@ -69,18 +49,27 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
         
        //  termsWeb.loadHTMLString(getv, baseURL: nil)
     }
-
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        DispatchQueue.main.async {
+            
+            MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+        }
+    }
+  func featchData()
+  {
+    parameters = ["actiontype" : "blog_details","blog_id" :  id]
+   
+    print(parameters)
+    jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "blog_details")
     
-
-//    func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
+    MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
     
-
-
-
-
+    }
+    @IBAction func continueAction(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 extension BlogDetailsViewController : jsonDataDelegate{
     
@@ -90,64 +79,42 @@ extension BlogDetailsViewController : jsonDataDelegate{
         
         print(data)
         
-        /* Calling Serially as following
-         
-         1. FilterData
-         2. Reviewsdata
-         3. Bookie Slides
-         
-         */
-        
+       
         if data as? String ==  "NO INTERNET CONNECTION" {
             
             DispatchQueue.main.async {
                 
                 MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
             }
+             showAlert(title: "Error", message: "No Internet connection,please check your network !", noOfButton: 1)
+        }
+        else{
             
+           if ((data as! NSDictionary).value(forKey: "success") as! String) == "yes"
+           {
+             getWebValue = ((data as! NSDictionary).value(forKey: "data") as! String)
+             loadHtmlCode()
+            }
+            else
+           {
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+             showAlert(title: "Error", message: "Something going wrong, try again..", noOfButton: 1)
+            
+            }
            
             
-            
-        }
-        else{  //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
-            
-            print(((data as! NSDictionary).value(forKey: "success") as! String))
-            
-          //  blogDetailArray = ((data as! NSDictionary).value(forKey: "data") as! NSArray)
-            
-            //self.getWebValue = ((data as! NSDictionary).value(forKey: "data") as! String)
-
-            
-            getWebValue = ((data as! NSDictionary).value(forKey: "data") as! String)
-            
-            loadHtmlCode()
-
-            
-            
-        
-            
-            
-            
         }
         
-    }
-    
-    
-    func showAlertMessage(alertTitle: String, alertMsg : String)
-    {
-        let alertController = UIAlertController(title: alertTitle, message: alertMsg, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) {
-            (action: UIAlertAction) in
-        }
-        alertController.addAction(OKAction)
-        self.present(alertController, animated: true, completion: nil)
     }
     
     func didFailedtoReceiveData(_ error: Error) {
         
         print(error)
         
-        //  showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1, selectorMethod:())
+         showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1)
         
         DispatchQueue.main.async {
             

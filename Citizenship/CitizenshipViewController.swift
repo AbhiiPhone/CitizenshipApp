@@ -154,6 +154,14 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
 //            cell.queNewLbl.font = cell.headingLbl.font.withSize(12)
         }
         
+        if(indexPath.row == getIndexPath)
+        {
+            cell.clickImg.image = UIImage(named: "minus.png")
+        }
+        else
+        {
+            cell.clickImg.image = UIImage(named: "plus.png")
+        }
         return cell
     }
 
@@ -194,13 +202,13 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         else
         
         {
-             return 55
+             return 50
         }
     }
     
    else
     {
-        return 55
+        return 50
         
     }
     

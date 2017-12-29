@@ -16,9 +16,7 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let navBackgroundImage:UIImage! = UIImage(named: "header")
-        self.navigationController?.navigationBar.setBackgroundImage(navBackgroundImage,for: .default)
-        self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
+       
 
         
         self.delegate = self
@@ -31,6 +29,10 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
+            let navBackgroundImage:UIImage! = UIImage(named: "header_ipad.png")
+            self.navigationController?.navigationBar.setBackgroundImage(navBackgroundImage,for: .default)
+            self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
+            
              menu_SliderVC = self.storyboard?.instantiateViewController(withIdentifier: "Menu_SliderViewController") as! Menu_SliderViewController
              menu_SliderVC.view.frame = CGRect(x: CGFloat(-350), y: CGFloat(((self.navigationController?.navigationBar.frame.size.height)!+20)), width: CGFloat(350), height: CGFloat(self.view.frame.size.height))
             
@@ -38,7 +40,10 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
         }
       
         else {
-          
+            let navBackgroundImage:UIImage! = UIImage(named: "header")
+            self.navigationController?.navigationBar.setBackgroundImage(navBackgroundImage,for: .default)
+            self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
+            
              menu_SliderVC = self.storyboard?.instantiateViewController(withIdentifier: "Menu_SliderViewController") as! Menu_SliderViewController
             menu_SliderVC.view.frame = CGRect(x: CGFloat(-250), y: CGFloat(((self.navigationController?.navigationBar.frame.size.height)!+20)), width: CGFloat(250), height: CGFloat(self.view.frame.size.height))
         }

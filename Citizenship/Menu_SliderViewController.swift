@@ -97,6 +97,11 @@ class Menu_SliderViewController: UIViewController,UITableViewDataSource,UITableV
             
             
         }
+        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
+            
+            return 50
+            
+        }
         else
         {
              return 60

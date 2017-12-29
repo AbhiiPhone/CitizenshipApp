@@ -39,7 +39,7 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
         
         webView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.white
     featchData()
         
     }
@@ -95,6 +95,11 @@ extension DetailViewController : jsonDataDelegate{
         }
         else{
             
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+            
             if(((data as! NSDictionary).value(forKey: "success") as! NSString)) == "yes"
             {
                 if(getIndex == 0)
@@ -115,6 +120,7 @@ extension DetailViewController : jsonDataDelegate{
            else
             {
                  showAlert(title: " Wait !", message: "Somthing going wrong ,try again..", noOfButton: 1)
+                
             }
             }
             

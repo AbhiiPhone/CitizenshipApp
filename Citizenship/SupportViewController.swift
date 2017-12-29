@@ -11,7 +11,7 @@ import ACFloatingTextfield_Swift
 import Alamofire
 import MBProgressHUD
 
-class SupportViewController: UIViewController,UITextFieldDelegate {
+class SupportViewController: UIViewController,UITextFieldDelegate,UITextViewDelegate {
     
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var emailTF: UITextField!
@@ -33,18 +33,14 @@ class SupportViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var txtFieldImgviewHiCons: NSLayoutConstraint!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
-         jsonFetch.jsonData = self
+        jsonFetch.jsonData = self
         nameTF.delegate = self
         emailTF.delegate = self
         subTF.delegate = self
-        
+        msgTxtview.delegate = self
         
         
         
@@ -98,22 +94,69 @@ class SupportViewController: UIViewController,UITextFieldDelegate {
     }
     
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if(textField == subTF)
+        {
+             self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(-50), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
+        }
+        
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+       self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
+        return true
+    }
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(-150), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
+    }
+    
+    
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        
+        //        composeTxview.resignFirstResponder()
+        
+        self.view.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(self.view.frame.size.width), height: CGFloat(self.view.frame.size.height))
+        return true
+        
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            msgTxtview.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
     @IBAction func sendBtnAction(_ sender: Any) {
-        
-        parameters = ["actiontype" :  "support",
-                      "user_name" :  self.nameTF.text!,                     // soumi,
-                       "email" :     self.emailTF.text!,             //aa@gmail.com!,
-                        "subject" :  self.subTF.text!,           //hi,
-                        "message" :  self.msgTxtview.text!           //hi!
-        ]
-        
-        print(parameters)
-  
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "support")
-
-        
-
+    
+        if (self.nameTF.text?.isEmpty)! || (emailTF.text?.isEmpty)! || (subTF.text?.isEmpty)!
+            
+        {
+            showAlert(title: "Error", message: "Fields are empty.", noOfButton: 1)
+        }
+        else if (isValidEmail(testStr: (emailTF.text)!)) == false
+            
+        {
+            showAlert(title: "Error", message: "Invalid Email id.", noOfButton: 1)
+        }
+            
+        else
+        {
+            
+            parameters = ["actiontype" :  "support",
+                          "user_name" :  self.nameTF.text!,                     // soumi,
+                "email" :     self.emailTF.text!,             //aa@gmail.com!,
+                "subject" :  self.subTF.text!,           //hi,
+                "message" :  self.msgTxtview.text!           //hi!
+            ]
+           
+            
+            jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "SIGNIN_Recruiter")
+            MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+        }
+       
     }
 
     
@@ -136,19 +179,13 @@ extension SupportViewController : jsonDataDelegate{
             
                showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
             
-            
-        }
-        else{  //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
-            
-           // print(((data as! NSDictionary).value(forKey: "success") as! String))      //
-            print(jsonName)
-            
+          }
+        else{
+          
             if(((data as! NSDictionary).value(forKey: "succes") as! String) == "yes")
             {
-               
-                 showAlert(title: "Congratulation !", message: "thanks for your concern we will get back to you shortly!", noOfButton: 1)
-                
-            }
+                  showAlert(title: "Congratulation !", message: "thanks for your concern we will get back to you shortly!", noOfButton: 1)
+             }
         }
         
     }
@@ -157,7 +194,7 @@ extension SupportViewController : jsonDataDelegate{
         
         print(error)
         
-          showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1)
+          showAlert(title: "Error", message: "Something going wrong,try again.. !", noOfButton: 1)
         
         DispatchQueue.main.async {
             

@@ -37,27 +37,26 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        // jsonFetch.jsonData = self
         blogTableVw.tableFooterView = UIView(frame: .zero)
         
-        parameters = ["actiontype" :  "blog_title"]
-    
-        print(parameters)
+       
+        featchData()
         
-        jsonFetch.jsonData = self
-        
-        let strLink =  "http://bestauctionsoftware.com/citi/json.php"
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "blog_title")
-        
-        
-        
-
-        
-
-        
-        
-        self.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
+  
+//        self.title = "CITIZENSHIP"
+//        navigationController?.navigationBar.topItem?.title = " "
+//        navigationController?.navigationBar.tintColor = UIColor.white
         
         // Do any additional setup after loading the view.
+    }
+    
+    func featchData()
+    {
+        parameters = ["actiontype" :  "blog_title"]
+        
+       
+        jsonFetch.jsonData = self
+        
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "blog_title")
+        
     }
     
 
@@ -78,10 +77,10 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell = blogTableVw.dequeueReusableCell( withIdentifier: "BlogCell", for: indexPath) as! BlogTableViewCell
         
-        
-        cell.blogLbl.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "title") as! String)
+         cell.titleLbl.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "title") as! String)
        
-        
+        self.blogTableVw.separatorColor = UIColor.clear
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         return cell
     }
@@ -89,73 +88,36 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          print("index path => ",indexPath.row)
         
-            let blogDetail = self.storyboard?.instantiateViewController(withIdentifier: "BlogDetailsViewController") as! BlogDetailsViewController
-        
-        if(indexPath.row==0)
-        {
-           p=idArray[indexPath.row] as! String
-            print(p)
-        }
-       else if(indexPath.row==1)
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-
-        else if(indexPath.row==2)
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-        else if(indexPath.row==3)
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-        else if(indexPath.row==4)
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-        else if(indexPath.row==5)
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-        else
-        {
-            p=idArray[indexPath.row] as! String
-            print(p)
-        }
-
-
-        
-
-        
-        
-        
-          // blogDetail?.id = idArray[indexPath.row] as! String
-        
-          print(idArray[indexPath.row])
-        
-          //  blogDetail?.id = idArray[indexPath.row] as! String
-        
-          //  blogDetail?.id = p as! String
-        
-      // blogDetail?.id = idArray as! String
-        
-      
-        
-      // print (blogDetail?.id)
-       //
-        
+        let blogDetail = self.storyboard?.instantiateViewController(withIdentifier: "BlogDetailsViewController") as! BlogDetailsViewController
+       
         blogDetail.id = idArray[indexPath.row] as! String
-        
-            self.navigationController?.pushViewController(blogDetail, animated: true)
+        blogDetail.getSelectedIndex = indexPath.row
+        self.navigationController?.pushViewController(blogDetail, animated: true)
             
         
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+            
+            return 500
+        }
+//        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
+//        }
+//
+//        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
+//
+//        }
+//        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
+//
+//        }
 
+        else
+        
+        {
+            return 320
+        }
+    }
 
     }
     
@@ -168,13 +130,7 @@ extension BlogViewController : jsonDataDelegate{
         
         print(data)
         
-        /* Calling Serially as following
-         
-         1. FilterData
-         2. Reviewsdata
-         3. Bookie Slides
-         
-         */
+       
         
         if data as? String ==  "NO INTERNET CONNECTION" {
             
@@ -183,7 +139,7 @@ extension BlogViewController : jsonDataDelegate{
                 MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
             }
             
-            //   showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1, selectorMethod: ())
+               showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
             
             
         }
@@ -231,7 +187,7 @@ extension BlogViewController : jsonDataDelegate{
         
         print(error)
         
-        //  showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1, selectorMethod:())
+          showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1)
         
         DispatchQueue.main.async {
             

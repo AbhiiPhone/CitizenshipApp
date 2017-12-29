@@ -28,20 +28,21 @@ class FaqViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         
         faqTableVw.tableFooterView = UIView(frame: .zero)
         
-       // self.title = "CITIZENSHIP"
-       // navigationController?.navigationBar.topItem?.title = ""
+      
 
         // Do any additional setup after loading the view.
+        
     }
 
    
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
         
+         self.title = "CITIZENSHIP"
+         navigationController?.navigationBar.topItem?.title = ""
         
-        changeTabTitleName(title:" CITIZENSHIP ")
+       
     }
     
 

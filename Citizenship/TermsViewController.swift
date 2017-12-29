@@ -12,8 +12,6 @@ import MBProgressHUD
 
 class TermsViewController: UIViewController,UIWebViewDelegate {
 
-    @IBOutlet var termsTextVw: UITextView!
-    
     @IBOutlet var termsWeb: UIWebView!
     var parameter: [String: String] = [:]
     

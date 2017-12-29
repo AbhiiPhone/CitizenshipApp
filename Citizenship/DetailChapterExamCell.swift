@@ -1,20 +1,23 @@
 //
-//  CityTableViewCell.swift
+//  DetailChapterExamCell.swift
 //  Citizenship
 //
-//  Created by MAC MINI3 on 09/10/17.
+//  Created by Amit Kumar Poreli on 28/12/17.
 //  Copyright © 2017 Basir. All rights reserved.
 //
 
 import UIKit
 
-class CityTableViewCell: UITableViewCell {
-    
-    
-    @IBOutlet var queNewLbl: UILabel!
-    @IBOutlet var clickImg: UIImageView!
-    @IBOutlet var headingLbl: UILabel!
+class DetailChapterExamCell: UITableViewCell {
 
+    @IBOutlet weak var radioImg: UIImageView!
+    @IBOutlet weak var questionlbl: UILabel!
+   
+    
+    @IBOutlet weak var dividerView: UIView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

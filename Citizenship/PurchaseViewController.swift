@@ -121,6 +121,11 @@ class PurchaseViewController: UIViewController {
     @IBOutlet var paypalHeight: NSLayoutConstraint!
     
     
+    @IBOutlet weak var titlelblTopcons: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var iconTopcons: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -240,6 +245,10 @@ class PurchaseViewController: UIViewController {
 //            lbl2Leading.constant=.0
 //            lbl2Trailing.constant=10.0
 //            lbl2Top.constant=10.0
+            
+            titlelblTopcons.constant = 75.0
+            iconTopcons.constant = 10.0
+            
         }
             
             
@@ -303,12 +312,12 @@ class PurchaseViewController: UIViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-//
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
    
-    changeTabTitleName(title: "CITIZENSHIP")
+   // changeTabTitleName(title: "CITIZENSHIP")
     
     
     

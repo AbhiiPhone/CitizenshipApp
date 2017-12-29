@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 class RegisterController: UIViewController,UITextFieldDelegate {
 
@@ -19,6 +21,11 @@ class RegisterController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var alreadylblLeadingCons: NSLayoutConstraint!
     var isPasswordBtnClick = Bool()
     var isConfoPasswordEyeBtn = Bool()
+   
+    var parameters: [String: String] = [:]
+    var jsonFetch = JsonFetchClass()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +37,7 @@ class RegisterController: UIViewController,UITextFieldDelegate {
         
         isPasswordBtnClick = false
         isConfoPasswordEyeBtn = false
-        
+        jsonFetch.jsonData = self
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
@@ -93,7 +100,52 @@ class RegisterController: UIViewController,UITextFieldDelegate {
     
     @IBAction func registerBtnAction(_ sender: Any) {
         
-        self.navigationController?.popViewController(animated: true)
+        
+        if (self.userTxtField.text?.isEmpty)! || (emailTxtField.text?.isEmpty)! || (passwordTxtField.text?.isEmpty)!||(confirmTxtField.text?.isEmpty)!
+            
+        {
+           
+             showAlert(title: "Error", message: "Fields are empty.", noOfButton: 1)
+        }
+            
+       
+            
+        else if (isValidEmail(testStr: (emailTxtField.text)!)) == false
+            
+        {
+            showAlert(title: "Error", message: "Invalid Email id.", noOfButton: 1)
+        }
+            
+         else if(self.passwordTxtField.text !=  self.confirmTxtField.text )
+            
+        {
+            showAlert(title: "Error", message: "password ,confirm password does match..", noOfButton: 1)
+        }
+   
+        else
+        {
+          
+            
+            //actiontype'=>'register',
+           // 'user_name'=>'aaa',
+            //'email'=>'aa@gmail.com',
+            //'password'=>'aaa'
+            parameters = ["actiontype" :  "register",
+                          "user_name" : self.userTxtField.text!,
+                          "email"  : self.emailTxtField.text!,
+                          "password"  : self.passwordTxtField.text!
+                         
+                
+            ]
+            
+            print(parameters)
+            
+           
+            jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "SIGNIN_Recruiter")
+            MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+        }
+        
+     
     }
     @IBAction func loginBtnAction(_ sender: Any) {
          self.navigationController?.popViewController(animated: true)
@@ -118,4 +170,63 @@ class RegisterController: UIViewController,UITextFieldDelegate {
         }
         return true
     }
+}
+extension RegisterController : jsonDataDelegate{
+    
+    func didReceiveData(_ data: Any, jsonName: String) {
+        
+        print(jsonName)
+        
+        print(data)
+        
+        
+        if data as? String ==  "NO INTERNET CONNECTION" {
+            
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+            
+            showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
+            
+            
+        }
+        else{
+                if (((data as! NSDictionary).value(forKey: "success") as! String)) == "yes"
+                    
+                {
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                    
+                     showAlert(title: "Congratulation", message: "You sucessfully register..", noOfButton: 1)
+                    self.navigationController?.popViewController(animated: true)
+                    
+                }
+                    
+                else
+                {
+                    //self.showAlertMessage(alertTitle: "Error!", alertMsg: "you enter wrong data..")
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                     showAlert(title: "Wait", message: "Something going wrong,try again..", noOfButton: 1)
+                    
+                    
+                }
+                
+            }
+            
+        }
+        
+    
+    func didFailedtoReceiveData(_ error: Error) {
+        
+        print(error)
+        
+        showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1)
+        
+        DispatchQueue.main.async {
+            
+            MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+        }
+    }
+    
+    
 }

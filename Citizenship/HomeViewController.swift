@@ -7,13 +7,19 @@
 //
 
 import UIKit
-
+import  Alamofire
+import MBProgressHUD
+import SDWebImage
 class HomeViewController: UIViewController{
     
     @IBOutlet var homeTableVw: UITableView!
     @IBOutlet var tableVwTop: NSLayoutConstraint!
     @IBOutlet var tableVwTrailing: NSLayoutConstraint!
     @IBOutlet var tableVwLeading: NSLayoutConstraint!
+    
+    var parameters: [String: String] = [:]
+    var jsonFetch = JsonFetchClass()
+    var getAllData = NSArray()
     
     
     let imgArray: NSMutableArray = ["img1.jpg","img2.jpg","img2.jpg"]
@@ -28,7 +34,7 @@ class HomeViewController: UIViewController{
         
         homeTableVw.delegate = self
         homeTableVw.dataSource = self
-        
+        jsonFetch.jsonData = self
         
 //        for family in UIFont.familyNames {
 //            print("\(family)")
@@ -71,10 +77,21 @@ class HomeViewController: UIViewController{
         //
         //        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         //        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        
+        featchData()
     }
     
-   
+  func featchData()
     
+  {
+    //details
+    parameters = ["actiontype" :  "details",]
+    
+    jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "simulation_list")
+    MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+    
+    
+    }
     override func viewWillAppear(_ animated: Bool) {
       //  self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
@@ -96,16 +113,18 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return imgArray.count
+        return getAllData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
         let cell = homeTableVw.dequeueReusableCell( withIdentifier: "HomeCell", for: indexPath) as! HomeTableViewCell
         
-        cell.topLbl.text = topArray[indexPath.row] as? String
-        cell.bottomLbl.text = bottomArray[indexPath.row] as? String
-        cell.homeImg.image = UIImage.init(named: imgArray[indexPath.row] as! String)
+      
+        cell.topLbl.text    = (((getAllData[indexPath.row] ) as AnyObject).value(forKey: "heading") as! String)
+        cell.bottomLbl.text = (((getAllData[indexPath.row] ) as AnyObject).value(forKey: "text") as! String)
+         cell.homeImg.sd_setImage(with: URL(string: ((getAllData[indexPath.row]) as AnyObject).value(forKey: "image") as! String), placeholderImage: UIImage(named:""))
+        
         self.homeTableVw.separatorColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
@@ -230,7 +249,68 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
     }
 }
 
-
+extension HomeViewController : jsonDataDelegate{
+    
+    func didReceiveData(_ data: Any, jsonName: String) {
+        
+        print(jsonName)
+        
+        print(data)
+        
+        
+        if data as? String ==  "NO INTERNET CONNECTION" {
+            
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+            
+            showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
+            
+            
+        }
+        else{  //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
+            
+         //   print(((data as! NSDictionary).value(forKey: "success") as! String))
+           
+            getAllData = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
+            homeTableVw.reloadData()
+            
+            
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+            
+        }
+        
+    }
+    
+    
+    func showAlertMessage(alertTitle: String, alertMsg : String)
+    {
+        let alertController = UIAlertController(title: alertTitle, message: alertMsg, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) {
+            (action: UIAlertAction) in
+        }
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func didFailedtoReceiveData(_ error: Error) {
+        
+        print(error)
+        
+        showAlert(title: "Error", message: "Something going wrong try again !", noOfButton: 1)
+        
+        DispatchQueue.main.async {
+            
+            MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+        }
+    }
+    
+    
+}
 
 
 

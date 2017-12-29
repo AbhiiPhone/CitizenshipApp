@@ -10,6 +10,7 @@ import UIKit
 
 class ChapterExamTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dividerView: UIView!
     
     @IBOutlet var chapterLbl: UILabel!
     

@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!, NSAttributedStringKey.foregroundColor:UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = attributes
         
-//        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-//        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
         
         return true
     }

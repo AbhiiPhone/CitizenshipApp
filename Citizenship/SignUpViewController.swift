@@ -53,9 +53,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         
         jsonFetch.jsonData = self
        
-     
-        
-        
         self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
         
         self.navigationItem.setHidesBackButton(true, animated:true)
@@ -96,21 +93,17 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     closeBtnHeight.constant=10.0
     closeBtnWidth.constant=10.0
 //
-    logoHeightConst.constant=100.0
-    logoTopConst.constant=30.0
+    logoHeightConst.constant=80.0
+    logoTopConst.constant=20.0
     logoLeadingConst.constant=79.0
     logoTrailingConst.constant=79.0
     signBtnHeight.constant = 50.0
     forgotLeading.constant = 24.0
     forgotTrailing.constant = 24.0
-    accountTop.constant=50.0
+    accountTop.constant=20.0
         
   }
-    
-    
-    
-    
-    else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
+else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
     
     
         signTrailing.constant=60.0
@@ -119,7 +112,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         closeBtnHeight.constant=15.0
         closeBtnWidth.constant=15.0
         //
-        logoHeightConst.constant=160.0
+        logoHeightConst.constant=120.0
         logoTopConst.constant=40.0
         logoLeadingConst.constant=75.0
         logoTrailingConst.constant=75.0
@@ -127,7 +120,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
        forgotLeading.constant = 24.0
         forgotTrailing.constant = 24.0
      
-        accountTop.constant=70.0
+        accountTop.constant=50.0
         //
 //
     }
@@ -154,8 +147,6 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         //
     }
         
-       
-        
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -172,9 +163,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
-
-    
-    
+  
     @IBAction func backBtnAction(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
@@ -183,7 +172,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     @IBAction func signInBtnAction(_ sender: Any) {
         
         
-      /*  parameters = ["actiontype" :  "admin_login",
+        parameters = ["actiontype" :  "user_login",
                       "user_name" :   self.userTF.text!,           //"chandradip1",
                       "password" :  self.passwordTF.text!               //"woulverine1"
             
@@ -191,35 +180,13 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         
         print(parameters)
         
-        
-        let strLink = "http://bestauctionsoftware.com/citi/json.php"
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "LOGIN")
-        
-*/
-        
-        
-//        http://appsforcompany.com/citizenship/json.php'
-//        'user_name'=>'chandradip1',
-//        
-//        'password'=>'woulverine1'
-//        'actiontype'=>'admin_login'
-        
- 
-        
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "LOGIN")
         let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-        
         self.navigationController?.present(adminVC, animated: true, completion: nil)
+       
     }
     
-    
-    @IBAction func registerBtnAction(_ sender: Any) {
-        
-        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
-        
-        self.navigationController?.present(registerVC, animated: true, completion: nil)
-        
-    }
+   
     @IBAction func forgotBtnAction(_ sender: Any) {
     }
     
@@ -231,8 +198,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         self.navigationController?.pushViewController(registerVC, animated: true)
         
     }
-    
-
+   
 }
 
 extension SignUpViewController : jsonDataDelegate{
@@ -297,18 +263,13 @@ extension SignUpViewController : jsonDataDelegate{
                     
                 {
                     MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
-                
+                  self.showAlertMessage(alertTitle: "Congratulation", alertMsg: " You successfully logged in")
                     
-   //     let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-                    
-       //     self.navigationController?.present(adminVC, animated: true, completion: nil)
+                   presentController()
                 }
                     
                 else
                 {
-                    //self.showAlertMessage(alertTitle: "Error!", alertMsg: "you enter wrong data..")
-                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
-                    
                     self.showAlertMessage(alertTitle: "Error!", alertMsg: "you entered wrong data...")
                     
                 }
@@ -318,7 +279,11 @@ extension SignUpViewController : jsonDataDelegate{
         }
         
     }
-        
+       func presentController()
+       {
+//        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+//        self.navigationController?.present(adminVC, animated: true, completion: nil)
+    }
 
     func showAlertMessage(alertTitle: String, alertMsg : String)
     {

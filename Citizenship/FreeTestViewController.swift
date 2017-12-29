@@ -21,7 +21,9 @@ class FreeTestViewController: UIViewController {
      @IBOutlet var firstVwHeight: NSLayoutConstraint!
      @IBOutlet var secondVwTop: NSLayoutConstraint!
     
-   
+    @IBOutlet weak var fstviewLcons: NSLayoutConstraint!
+    
+    @IBOutlet weak var fstviewTcons: NSLayoutConstraint!
     
     
     @IBAction func startBtn(_ sender: Any) {
@@ -89,12 +91,15 @@ class FreeTestViewController: UIViewController {
         }
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
             
-            firstVwTop.constant=10.0
-            firstVwHeight.constant=160.0
+            firstVwTop.constant=0.0
+            firstVwHeight.constant=175.0
            
-            secondVwTop.constant=60.0
-           
+            secondVwTop.constant = 40.0
+           firstVwLbl.font = firstVwLbl.font.withSize(11)
          
+            fstviewLcons.constant = 8
+            fstviewTcons.constant = 8
+            
         }
             
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{

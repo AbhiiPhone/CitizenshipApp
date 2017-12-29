@@ -49,6 +49,7 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
     //  var ansArray: NSArray = ["option1","option2","option3","option4"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.backButtonSelector()
         parameters = ["actiontype" : "chapter_ques",]
         print(parameters)

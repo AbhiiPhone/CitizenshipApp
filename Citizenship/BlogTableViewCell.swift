@@ -10,7 +10,14 @@ import UIKit
 
 class BlogTableViewCell: UITableViewCell {
 
-    @IBOutlet var blogLbl: UILabel!
+    @IBOutlet weak var titleImg: UIImageView!
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    
+    @IBOutlet weak var aboutTitle: UITextView!
+    
+    @IBOutlet weak var readingBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
