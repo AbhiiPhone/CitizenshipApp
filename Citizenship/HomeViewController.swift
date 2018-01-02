@@ -165,7 +165,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
             //                        cell.bottomLblTop.constant = 10.0
             //                        cell.bottomLblLeading.constant = 8.0
             //                        cell.bottomLblHeight.constant = 40.0
-            cell.bottomLblWidth.constant = 280.0
+        
             
             cell.arrowTrailing.constant = 16.0
             cell.arrowHeight.constant=15.0
@@ -231,6 +231,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
         
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailVC.getIndex = indexPath.row
+        detailVC.getAllDetailsValue = self.getAllData
         self.tabBarController?.navigationController?.pushViewController(detailVC, animated: true)
     }
     

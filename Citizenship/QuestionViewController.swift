@@ -43,19 +43,34 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
     var selectedBtnIndex: Int = 2000
     var tagCount: Int = 0
     var isAnsChecked = false
-    
+    var getBtnValue = " "
     
     var dataQuestionSet = NSArray()
+    var selectedOptionValue = NSMutableArray()
+    var getOptionValue = Int()
+    var scoreValue = Int()
+    
     //  var ansArray: NSArray = ["option1","option2","option3","option4"]
+    
+    /*
+     
+     <<<chapter test>> actiontype=chapter_ques
+     <<simulation test>> 'actiontype'=>'simulation_ques'
+ */
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.backButtonSelector()
-        parameters = ["actiontype" : "chapter_ques",]
-        print(parameters)
+        
+        featchData()
+       
         jsonFetch.jsonData = self
         
-        jsonFetch.fetchData(parameters , methodType: "POST", url: "", JSONName: "chapter_ques")
+       
         
         chkBtn.setTitle("CHECK", for: .normal)
         
@@ -88,7 +103,24 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
         }
     }
     
-   
+   func featchData()
+   {
+    
+    if (getBtnValue == "ChapterQuestion")
+    {
+        parameters = ["actiontype" : "chapter_ques",]
+        print(parameters)
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "chapter_ques")
+    }
+    else
+    {
+        parameters = ["actiontype" : "simulation_ques",]
+        print(parameters)
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "simulation_ques")
+        
+    }
+    
+    }
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
@@ -107,14 +139,26 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
                     
                     print(((dataQuestionSet.object(at: chkBtn.tag) as? NSDictionary)?.object(forKey: "correct_answer") as? String)!)
                     
+                    selectedOptionValue.insert(getOptionValue, at: tagCount)
+                     print(getOptionValue)
                     if ((dataQuestionSet.object(at: chkBtn.tag) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(selectedBtnIndex + 1) {
                         
                         print("working")
+                        scoreValue = scoreValue + 1
+                        
                         
                     }
                     else{
                         
                         print("not")
+                        
+                       
+//                        let blogDetail = self.storyboard?.instantiateViewController(withIdentifier: "ExamResultController") as! ExamResultController
+//
+//                        blogDetail.getSelectedOptionValue = selectedOptionValue
+//                        blogDetail.getResultType  = getBtnValue
+//
+//                        self.tabBarController?.navigationController?.pushViewController(blogDetail, animated: true)
                     }
                     
                     isAnsChecked = true
@@ -148,6 +192,19 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
                     else{
                         
                         print("Tag Count")
+                        
+                       //  showAlert(title: "Alert!", message: "You process all question", noOfButton: 1)
+                      //  self.navigationController?.popViewController(animated: true)
+                       
+                        // push will be excute here
+                        let blogDetail = self.storyboard?.instantiateViewController(withIdentifier: "ExamResultController") as! ExamResultController
+                     
+                        blogDetail.getSelectedOptionValue = selectedOptionValue
+                        blogDetail.getResultType  = getBtnValue
+                        blogDetail.getScoreValue = scoreValue
+                        
+                        self.tabBarController?.navigationController?.pushViewController(blogDetail, animated: true)
+                        
                         
                     }
                 }
@@ -206,6 +263,9 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
 //                cell.imgVRightOrWrong.backgroundColor = UIColor.green
                 
                 cell.imgVRightOrWrong.image = UIImage.init(named: "if_check.png")
+                
+                
+                
             }
             else{
                 
@@ -247,7 +307,7 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
         
         cell.ansLbl.text = ((((dataQuestionSet.object(at: chkBtn.tag) as! NSDictionary).object(forKey: "option") as! NSArray).object(at: indexPath.row) as! String).uppercased())
      
-        print(((((dataQuestionSet.object(at: chkBtn.tag) as! NSDictionary).object(forKey: "option") as! NSArray).object(at: indexPath.row) as! String).uppercased()))
+     ///   print(((((dataQuestionSet.object(at: chkBtn.tag) as! NSDictionary).object(forKey: "option") as! NSArray).object(at: indexPath.row) as! String).uppercased()))
         return cell
     }
     
@@ -258,8 +318,10 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
         else{
             
             selectedBtnIndex = indexPath.row
+            
             questionTableVw.reloadData()
         }
+        getOptionValue = indexPath.row
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -324,6 +386,25 @@ extension QuestionViewController : jsonDataDelegate{
             }
             else
             {
+                print(data)
+                if (((data as! NSDictionary).object(forKey: "success") as! String) == "yes"){
+                    
+                    dataQuestionSet = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
+                    
+                    print("dataQuestionSet.count:\(dataQuestionSet.count)")
+                    
+                    print(dataQuestionSet)
+                    
+                    lblTotalQuestions.text = String(dataQuestionSet.count)
+                    lblQuestionNo.text = "1"
+                    questionLbl.text = (((dataQuestionSet.object(at: 0) as! NSDictionary).object(forKey: "question") as! String).uppercased())
+                    print((((dataQuestionSet.object(at: 0) as! NSDictionary).object(forKey: "question") as! String).uppercased()))
+                    
+                    
+                    questionTableVw.delegate=self
+                    questionTableVw.dataSource=self
+                }
+                
             }
             
             questionTableVw.reloadData()

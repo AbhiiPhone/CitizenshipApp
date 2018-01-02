@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var accountTop: NSLayoutConstraint!
      var parameters: [String: String] = [:]
     var jsonFetch = JsonFetchClass()
-    
+    var getforgotpasswordEmail = " "
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,13 +181,67 @@ else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
         print(parameters)
         
         jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "LOGIN")
-        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-        self.navigationController?.present(adminVC, animated: true, completion: nil)
+        
+//        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+//        self.navigationController?.present(adminVC, animated: true, completion: nil)
        
     }
     
    
     @IBAction func forgotBtnAction(_ sender: Any) {
+        
+        //'actiontype'=>'forgotpass',
+        //'email'=>'soumi.micronix@gmail.com'
+        
+        let alert = UIAlertController(title: "Reset your password",
+                                      message: nil,
+                                      preferredStyle: .alert)
+        // Submit button
+        let submitAction = UIAlertAction(title: "Submit", style: .default, handler: { (action) -> Void in
+            // Get 1st TextField's text
+            let textField = alert.textFields![0]
+            
+            self.getforgotpasswordEmail = textField.text!
+            
+            self.forgotData()
+            
+            
+        })
+        
+        // Cancel button
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        
+        // Add 1 textField and customize it
+        alert.addTextField { (textField: UITextField) in
+            textField.keyboardAppearance = .dark
+            textField.keyboardType = .default
+            textField.autocorrectionType = .default
+            textField.placeholder = "Enter your email id."
+            textField.clearButtonMode = .whileEditing
+        }
+        
+        // Add action buttons and present the Alert
+        alert.addAction(submitAction)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+
+    
+    func forgotData()
+    {
+        /*"email" =>"soumi.micronix@gmail.com","user_type"=>"recruiter","actiontype"=>"forgotpass"" */
+        
+        parameters = ["actiontype" :  "forgotpass",
+                      "email" : getforgotpasswordEmail,
+                      
+            
+        ]
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "ForgetPassword")
+        
+        print(parameters)
     }
     
     
@@ -223,13 +277,13 @@ extension SignUpViewController : jsonDataDelegate{
         }
         else{  //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
             
-            print(((data as! NSDictionary).value(forKey: "success") as! String))
-            print(jsonName)
+          //  print(((data as! NSDictionary).value(forKey: "success") as! String))
+            //print(jsonName)
             
-            if(jsonName == "Forgot Password")
+            if(jsonName == "ForgetPassword")
             {
                 
-                if (((data as! NSDictionary).value(forKey: "data") as! NSDictionary).value(forKey: "status") as! NSString) == "Invalid email"
+                if ((data as! NSDictionary).value(forKey: "Status") as! NSString) == "Invalid email"
                     
                     
                 {
@@ -263,7 +317,7 @@ extension SignUpViewController : jsonDataDelegate{
                     
                 {
                     MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
-                  self.showAlertMessage(alertTitle: "Congratulation", alertMsg: " You successfully logged in")
+//                  self.showAlertMessage(alertTitle: "Congratulation", alertMsg: " You successfully logged in")
                     
                    presentController()
                 }
@@ -281,8 +335,8 @@ extension SignUpViewController : jsonDataDelegate{
     }
        func presentController()
        {
-//        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
-//        self.navigationController?.present(adminVC, animated: true, completion: nil)
+        let adminVC = self.storyboard?.instantiateViewController(withIdentifier: "AdminViewController") as! AdminViewController
+        self.navigationController?.present(adminVC, animated: true, completion: nil)
     }
 
     func showAlertMessage(alertTitle: String, alertMsg : String)

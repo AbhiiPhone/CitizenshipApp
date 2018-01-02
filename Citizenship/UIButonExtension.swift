@@ -43,7 +43,7 @@ extension UIViewController{
             let tlbl = UILabel()
             
             tlbl.text = title
-            tlbl.font = UIFont(name:"ProximaNova-Bold",size:30)
+            tlbl.font = UIFont(name:"Georgia",size:30)
             tlbl.sizeToFit()
             tlbl.textColor = UIColor.white
             self.tabBarController?.navigationItem.titleView = tlbl
@@ -53,7 +53,7 @@ extension UIViewController{
         {
             let tlbl = UILabel()
             tlbl.text = title
-            tlbl.font = UIFont(name:" ProximaNova-Bold",size:22)
+            tlbl.font = UIFont(name:"Georgia",size:22)
             tlbl.sizeToFit()
             tlbl.textColor = UIColor.white
             self.tabBarController?.navigationItem.titleView = tlbl
@@ -77,20 +77,23 @@ extension UIViewController{
                 let tlbl = UILabel()
                 
                 tlbl.text = title
-                tlbl.font = UIFont(name:"ProximaNova-Bold",size:30)
+                tlbl.font = UIFont(name:"Georgia",size:30)
                 tlbl.sizeToFit()
                 tlbl.textColor = UIColor.white
-                self.tabBarController?.navigationItem.titleView = tlbl
+                self.navigationController?.navigationItem.titleView = tlbl
+                
+                self.title = title
                 
             }
             else
             {
                 let tlbl = UILabel()
                 tlbl.text = title
-                tlbl.font = UIFont(name:" ProximaNova-Bold",size:22)
+                tlbl.font = UIFont(name:"Georgia",size:22)
                 tlbl.sizeToFit()
                 tlbl.textColor = UIColor.white
-                self.tabBarController?.navigationItem.titleView = tlbl
+                self.navigationController?.navigationItem.titleView = tlbl
+                self.navigationController?.navigationBar.topItem?.titleView = tlbl
             }
     }
     

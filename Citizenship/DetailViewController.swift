@@ -23,6 +23,9 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
     var parameters: [String: String] = [:]
     var jsonFetch = JsonFetchClass()
     var getIndex = Int()
+    var getAllDetailsValue = NSArray()
+   
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +36,17 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
        // webView.uiDelegate = self as! WKUIDelegate
         webView.navigationDelegate = self
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.frame = CGRect(origin: CGPoint(x: 10, y: 16), size:  CGSize(width: (self.view.frame.size.width - 10), height: self.view.frame.size.height - 20))
+        webView.frame = CGRect(origin: CGPoint(x: 16, y: 70), size:  CGSize(width: (self.view.frame.size.width - 10), height: self.view.frame.size.height - 20))
         
         self.view.addSubview(webView)
         
         webView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.backgroundColor = UIColor.white
+        
+        titleLabel.text = (((getAllDetailsValue[getIndex] ) as AnyObject).value(forKey: "heading") as! String)
+        print(titleLabel.text!)
+        
     featchData()
         
     }
@@ -47,10 +54,15 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
   func  featchData()
     
   {
-    parameters = ["actiontype" :  "readmore",
+    parameters = ["actiontype" : "readmore" ]
+        
+        print(parameters)
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "readmore")
+        
+        MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
                   
         
-    ]
+    
     
     print(parameters)
     
@@ -102,9 +114,11 @@ extension DetailViewController : jsonDataDelegate{
             
             if(((data as! NSDictionary).value(forKey: "success") as! NSString)) == "yes"
             {
+                
+                
                 if(getIndex == 0)
                 {
-                   
+
                     webView.loadHTMLString((((data as! NSDictionary).value(forKey: "data") as! NSString) as String), baseURL: nil)
                 }
                 else if(getIndex == 1)

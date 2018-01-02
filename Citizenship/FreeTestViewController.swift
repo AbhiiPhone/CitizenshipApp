@@ -27,7 +27,11 @@ class FreeTestViewController: UIViewController {
     
     
     @IBAction func startBtn(_ sender: Any) {
+        
+        // Chaptre question Btn Action
         let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+        qusVC.getBtnValue = "ChapterQuestion"
+        
         self.navigationController?.pushViewController(qusVC, animated: true)
         
     }
@@ -36,8 +40,12 @@ class FreeTestViewController: UIViewController {
     @IBAction func startNowBtn(_ sender: Any) {
         
         let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+         qusVC.getBtnValue = "SimulationQuestion"
         self.navigationController?.pushViewController(qusVC, animated: true)
     }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         

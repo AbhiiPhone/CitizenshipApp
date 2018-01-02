@@ -78,6 +78,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cell = blogTableVw.dequeueReusableCell( withIdentifier: "BlogCell", for: indexPath) as! BlogTableViewCell
         
          cell.titleLbl.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "title") as! String)
+         cell.titleImg.sd_setImage(with: URL(string: ((blogArray[indexPath.row]) as AnyObject).value(forKey: "image") as! String), placeholderImage: UIImage(named:""))
        
         self.blogTableVw.separatorColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
@@ -92,6 +93,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
         blogDetail.id = idArray[indexPath.row] as! String
         blogDetail.getSelectedIndex = indexPath.row
+        blogDetail.getImglink =  (((blogArray[indexPath.row]) as AnyObject).value(forKey: "image") as! String)
         self.navigationController?.pushViewController(blogDetail, animated: true)
             
         

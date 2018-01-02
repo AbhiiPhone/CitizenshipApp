@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import MBProgressHUD
-
+import SDWebImage
 class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDelegate {
     
    
@@ -23,7 +23,7 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
      var id: String = " "
      var getWebValue = ""
      var getSelectedIndex = Int()
-   
+   var getImglink = ""
    
     @IBOutlet weak var shoeTitle: UILabel!
     @IBOutlet weak var showImg: UIImageView!
@@ -35,11 +35,17 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
         self.title = "CITIZENSHIP"
         navigationController?.navigationBar.topItem?.title = ""
 
+        
+        
         jsonFetch.jsonData = self
         blogWeb.delegate=self
+      
+        //self.showImg.sd_setImage(with: URL(String:getImglink), placeholderImage: UIImage(named:""))
+        self.showImg.sd_setImage(with: URL(string: getImglink), placeholderImage: UIImage(named:""))
         
+       // cell.titleImg.sd_setImage(with: URL(string: ((blogArray[indexPath.row]) as AnyObject).value(forKey: "image") as! String), placeholderImage: UIImage(named:""))
         featchData()
-       
+     
  
     }
     
@@ -93,6 +99,9 @@ extension BlogDetailsViewController : jsonDataDelegate{
            if ((data as! NSDictionary).value(forKey: "success") as! String) == "yes"
            {
              getWebValue = ((data as! NSDictionary).value(forKey: "data") as! String)
+            shoeTitle.text = ((data as! NSDictionary).value(forKey: "title") as! String)
+           
+            
              loadHtmlCode()
             }
             else

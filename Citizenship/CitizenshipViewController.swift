@@ -78,9 +78,7 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
-        
+     
         
         testTableVw.delegate=self
         testTableVw.dataSource=self
@@ -90,18 +88,17 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         testTableVw.rowHeight = UITableViewAutomaticDimension
         isClick = false
         
-        // Do any additional setup after loading the view.
+        getIndexPath = 10
+       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+         navigationController?.navigationBar.topItem?.title = ""
     }
     
     
@@ -156,7 +153,15 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         
         if(indexPath.row == getIndexPath)
         {
-            cell.clickImg.image = UIImage(named: "minus.png")
+            if(isClick == false)
+            {
+                cell.clickImg.image = UIImage(named: "plus.png")
+            }
+            else
+            {
+                cell.clickImg.image = UIImage(named: "minus.png")
+            }
+            
         }
         else
         {
@@ -214,36 +219,13 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
     
     }
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//
-//        // return 44
-//
-//        if ( UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad )
-//        {
-//            return 60
-//        }
-//        else
-//        {
-//            return 52
-//        }
-//    }
 
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 1
     }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        let header = ExpandGovtHeaderFooterView()
-//
-//        header.customInit(title1: target[section].question, target: section, delegate: self as ExpandHeaderFooterViewDelegate1)
-//
-////        header.textLabel?.te
-//
-//        return header
-//
-//    }
+
     
     func toggleSection(header: ExpandGovtHeaderFooterView, section: Int) {
         

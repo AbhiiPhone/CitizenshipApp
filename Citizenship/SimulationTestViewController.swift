@@ -155,9 +155,9 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
     @objc func testBtnAction(_ sender : UIButton)
         {
      
-            let timeVC = self.storyboard?.instantiateViewController(withIdentifier: "TimePeriodViewController") as! TimePeriodViewController
+            let takeTestVC = self.storyboard?.instantiateViewController(withIdentifier: "TakeTestController") as! TakeTestController
             
-            self.tabBarController?.navigationController?.pushViewController(timeVC, animated: true)
+            self.tabBarController?.navigationController?.pushViewController(takeTestVC, animated: true)
     }
     
 
