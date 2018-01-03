@@ -38,11 +38,7 @@ class FaqViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
-//         self.title = "CITIZENSHIP"
-//         navigationController?.navigationBar.topItem?.title = ""
-        changeTitleName(title: "CITIZENSHIP")
-       
+         changeTabTitleName(title: "CITIZENSHIP")
     }
     
 

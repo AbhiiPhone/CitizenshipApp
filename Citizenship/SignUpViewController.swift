@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var accountTop: NSLayoutConstraint!
      var parameters: [String: String] = [:]
-    var jsonFetch = JsonFetchClass()
+     var jsonFetch = JsonFetchClass()
     var getforgotpasswordEmail = " "
 
     override func viewDidLoad() {
@@ -87,20 +87,20 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     
     
   //  signInHConst.constant = 20
-    signTrailing.constant=60.0
+    signTrailing.constant = 60.0
     signLeading.constant = 25.0
     
-    closeBtnHeight.constant=10.0
-    closeBtnWidth.constant=10.0
+    closeBtnHeight.constant = 10.0
+    closeBtnWidth.constant = 10.0
 //
-    logoHeightConst.constant=80.0
-    logoTopConst.constant=20.0
-    logoLeadingConst.constant=79.0
-    logoTrailingConst.constant=79.0
+    logoHeightConst.constant = 80.0
+    logoTopConst.constant = 20.0
+    logoLeadingConst.constant = 79.0
+    logoTrailingConst.constant = 79.0
     signBtnHeight.constant = 50.0
     forgotLeading.constant = 24.0
     forgotTrailing.constant = 24.0
-    accountTop.constant=20.0
+    accountTop.constant = 0.0
         
   }
 else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
@@ -120,7 +120,7 @@ else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
        forgotLeading.constant = 24.0
         forgotTrailing.constant = 24.0
      
-        accountTop.constant=50.0
+        accountTop.constant=20.0
         //
 //
     }
@@ -143,7 +143,7 @@ else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
         forgotLeading.constant = 24.0
         forgotTrailing.constant = 24.0
        
-        accountTop.constant=90.0
+        accountTop.constant=60.0
         //
     }
         
@@ -252,6 +252,27 @@ else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
         self.navigationController?.pushViewController(registerVC, animated: true)
         
     }
+    
+    
+    @IBAction func ChangePasswordAction(_ sender: Any) {
+        
+        if ( UserDefaults.standard.value(forKey:"user_id" ) != nil) {
+           
+            let changePassVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangePasswordController") as! ChangePasswordController
+            
+            self.navigationController?.pushViewController(changePassVC, animated: true)
+            
+        }
+        
+        else
+        {
+             showAlert(title: "Alert !", message: "Please login first..", noOfButton: 1)
+        }
+    }
+    
+    
+    
+    
    
 }
 
@@ -318,7 +339,7 @@ extension SignUpViewController : jsonDataDelegate{
                 {
                     MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
 //                  self.showAlertMessage(alertTitle: "Congratulation", alertMsg: " You successfully logged in")
-                    
+                     UserDefaults.standard.set(((data as! NSDictionary).value(forKey: "id") as! String), forKey: "user_id")
                    presentController()
                 }
                     

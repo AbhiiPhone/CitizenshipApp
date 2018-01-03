@@ -123,6 +123,12 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
     }
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        
         
 //        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
 //        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]

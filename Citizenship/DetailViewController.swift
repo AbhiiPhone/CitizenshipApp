@@ -72,6 +72,13 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
     override func viewWillAppear(_ animated: Bool) {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
     }
    
     

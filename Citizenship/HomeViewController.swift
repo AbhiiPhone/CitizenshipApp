@@ -139,7 +139,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate{
             cell.imgHeight.constant = 300.0
          
             cell.bottomLblLeading.constant = 16.0
-            cell.bottomLblWidth.constant = 670.0
+          //  cell.bottomLblWidth.constant = 670.0
          
             cell.arrowTrailing.constant = 16.0
             cell.arrowHeight.constant=25.0

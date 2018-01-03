@@ -65,7 +65,7 @@ extension UIViewController{
         {
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-            
+
             navigationController?.navigationBar.tintColor = UIColor.white
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
             navigationController?.navigationBar.topItem?.title = " "
@@ -74,26 +74,33 @@ extension UIViewController{
             {
                 //ProximaNova-Bold
                 // ProximaNova-Regular
-                let tlbl = UILabel()
+
                 
-                tlbl.text = title
-                tlbl.font = UIFont(name:"Georgia",size:30)
-                tlbl.sizeToFit()
-                tlbl.textColor = UIColor.white
-                self.navigationController?.navigationItem.titleView = tlbl
-                
-                self.title = title
+                self.title = "CITIZENSHIP"
+                let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 30)!, NSAttributedStringKey.foregroundColor:UIColor.white]
+                //UINavigationBar.appearance().titleTextAttributes = attributes
+                navigationController?.navigationBar.titleTextAttributes = attributes
+                let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+            //    UINavigationBar.appearance().titleTextAttributes = textAttributes
+                navigationController?.navigationBar.titleTextAttributes = textAttributes
                 
             }
             else
             {
-                let tlbl = UILabel()
-                tlbl.text = title
-                tlbl.font = UIFont(name:"Georgia",size:22)
-                tlbl.sizeToFit()
-                tlbl.textColor = UIColor.white
-                self.navigationController?.navigationItem.titleView = tlbl
-                self.navigationController?.navigationBar.topItem?.titleView = tlbl
+          
+                 self.title = "CITIZENSHIP"
+//                let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!, NSAttributedStringKey.foregroundColor:UIColor.white]
+//                UINavigationBar.appearance().titleTextAttributes = attributes
+//
+//                let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+//                UINavigationBar.appearance().titleTextAttributes = textAttributes
+                
+                let attrs = [
+                    NSAttributedStringKey.foregroundColor: UIColor.white,
+                    NSAttributedStringKey.font: UIFont(name: "Georgia", size: 30)!
+                ]
+                
+                UINavigationBar.appearance().titleTextAttributes = attrs
             }
     }
     
@@ -250,73 +257,7 @@ extension UIViewController{
         return emailTest.evaluate(with: testStr)
         
     }
-//    func getSliderIndex(index: NSInteger) {
-//
-//        print(index)
-//         let menuVC = MenuViewController()
-//
-//        if index >= 4 {
-//
-//
-//            menuVC.moreNavigationController.navigationBar.isHidden = true
-//            //self.moreNavigationController.tabBar.isHidden = true
-//        }
-//        if(index == 4)
-//        {
-//            print("Soumi")
-//
-//            menuVC.selectedIndex = 3
-//
-//
-//        }
-//        else if (index == 3)  {
-//
-//            let examVC = self.storyboard?.instantiateViewController(withIdentifier: "ChapterExamViewController") as! ChapterExamViewController
-//
-//            self.navigationController?.pushViewController(examVC, animated: true)
-//
-//        }
-//        else if (index == 5) {
-//
-//            let timeVC = self.storyboard?.instantiateViewController(withIdentifier: "TimePeriodViewController") as! TimePeriodViewController
-//
-//            self.navigationController?.pushViewController(timeVC, animated: true)
-//
-//        }
-//
-//        else if(index == 6)
-//        {
-//
-//            let govtVC = self.storyboard?.instantiateViewController(withIdentifier: "GovernmentViewController") as! GovernmentViewController
-//
-//            self.navigationController?.pushViewController(govtVC, animated: true)
-//
-//        }
-//        else if(index == 7) {
-//
-//            let supportVC = self.storyboard?.instantiateViewController(withIdentifier: "SupportViewController") as! SupportViewController
-//
-//            self.navigationController?.pushViewController(supportVC, animated: true)
-//
-//        }
-//            //
-//        else if (index == 8){
-//
-//            let logoutVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
-//
-//            self.navigationController?.pushViewController(logoutVC, animated: true)
-//
-//        }
-//
-//
-//        else
-//        {
-//            menuVC.selectedIndex = index
-//        }
-//
-//
-//        newSlideViewHideAnimation()
-//    }
+
     
 }
 
@@ -393,49 +334,4 @@ extension UIView {
         self.layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
-//extension UIDevice{
-//    
-//    public enum DisplayType {
-//        case unknown
-//        case iphone4
-//        case iphone5
-//        case iphone6
-//        case iphone6plus
-//        static let iphone7 = iphone6
-//        static let iphone7plus = iphone6plus
-//        case ipad
-//    }
-//    
-//    public final class Display {
-//        
-//        class var width:CGFloat { return UIScreen.main.bounds.size.width }
-//        class var height:CGFloat { return UIScreen.main.bounds.size.height }
-//        class var maxLength:CGFloat { return max(width, height) }
-//        class var minLength:CGFloat { return min(width, height) }
-//        class var zoomed:Bool { return UIScreen.main.nativeScale >= UIScreen.main.scale }
-//        class var retina:Bool { return UIScreen.main.scale >= 2.0 }
-//        class var phone:Bool { return UIDevice.current.userInterfaceIdiom == .phone }
-//        class var pad:Bool { return UIDevice.current.userInterfaceIdiom == .pad }
-//        class var carplay:Bool { return UIDevice.current.userInterfaceIdiom == .carPlay }
-//        class var tv:Bool { return UIDevice.current.userInterfaceIdiom == .tv }
-//        
-//        class var typeIsLike:DisplayType {
-//            if phone && maxLength < 568 {
-//                return .iphone4
-//            }
-//            else if phone && maxLength == 568 {
-//                return .iphone5
-//            }
-//            else if phone && maxLength == 667 {
-//                return .iphone6
-//            }
-//            else if phone && maxLength == 736 {
-//                return .iphone6plus
-//            }
-//            else if pad && maxLength >= 1024 {
-//                return .ipad
-//            }
-//            return .unknown
-//        }
-//    }
-//}
+

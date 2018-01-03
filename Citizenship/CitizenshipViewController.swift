@@ -94,11 +94,9 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
 
    
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+       
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-         navigationController?.navigationBar.topItem?.title = ""
+        
     }
     
     
@@ -207,13 +205,34 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
         else
         
         {
-             return 50
+            if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+                
+                return 68
+            }
+               
+                
+            else
+                
+            {
+                return 50
+            }
+            
         }
     }
     
    else
     {
-        return 50
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+            
+            return 68
+        }
+            
+            
+        else
+            
+        {
+            return 50
+        }
         
     }
     

@@ -32,9 +32,7 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
 
          print("\(id)")
        
-        self.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
-
+        
         
         
         jsonFetch.jsonData = self

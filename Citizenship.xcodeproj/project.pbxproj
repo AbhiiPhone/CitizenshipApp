@@ -270,6 +270,9 @@
 		B7754AB91F99D7C100F30FCF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */; };
 		B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */; };
 		B796AF121FE16C6A0020A9E1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B796AF111FE16C6A0020A9E1 /* RegisterController.swift */; };
+		B7BE05B01FFBA9B600C3E8FA /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE05AF1FFBA9B600C3E8FA /* AudioController.swift */; };
+		B7BE05B21FFBAF4400C3E8FA /* ShowPDFController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE05B11FFBAF4400C3E8FA /* ShowPDFController.swift */; };
+		B7BE05B41FFBC2A300C3E8FA /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BE05B31FFBC2A300C3E8FA /* ChangePasswordController.swift */; };
 		B7C3558F1FF3DA8A00E7EE29 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C3558D1FF3DA8200E7EE29 /* minus.png */; };
 		B7C355901FF3DA8A00E7EE29 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C3558E1FF3DA8600E7EE29 /* plus.png */; };
 		B7D47B661FF62A6400AC457C /* TakeTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D47B651FF62A6400AC457C /* TakeTestCell.swift */; };
@@ -556,6 +559,9 @@
 		B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailsViewController.swift; sourceTree = "<group>"; };
 		B796AF111FE16C6A0020A9E1 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		B7BE05AF1FFBA9B600C3E8FA /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		B7BE05B11FFBAF4400C3E8FA /* ShowPDFController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPDFController.swift; sourceTree = "<group>"; };
+		B7BE05B31FFBC2A300C3E8FA /* ChangePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		B7C3558D1FF3DA8200E7EE29 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		B7C3558E1FF3DA8600E7EE29 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		B7D47B651FF62A6400AC457C /* TakeTestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestCell.swift; sourceTree = "<group>"; };
@@ -727,6 +733,7 @@
 		72811F201F874F3C0021A8CF /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				B7BE05AF1FFBA9B600C3E8FA /* AudioController.swift */,
 				B7D47B651FF62A6400AC457C /* TakeTestCell.swift */,
 				B7EE25F11FF6257B0022461F /* TakeTestController.swift */,
 				B70837F51FF51C3A00724321 /* DetailChapterExamCell.swift */,
@@ -748,6 +755,7 @@
 				726E66121F6FE795007B6914 /* CheatSheetsViewController.swift */,
 				726E66101F6FDB13007B6914 /* StudyMaterialTableViewCell.swift */,
 				726E660E1F6FD098007B6914 /* StudyMaterialViewController.swift */,
+				B7BE05B11FFBAF4400C3E8FA /* ShowPDFController.swift */,
 				726E65501F6FAF2A007B6914 /* DashBoardViewController.swift */,
 			);
 			name = Admin;
@@ -824,6 +832,7 @@
 				727169C11F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift */,
 				727169BF1F84BCB3007FE3A9 /* Menu_SliderViewController.swift */,
 				AAC7220F1F669EF70055896D /* SignUpViewController.swift */,
+				B7BE05B31FFBC2A300C3E8FA /* ChangePasswordController.swift */,
 				727169BB1F84AF6A007FE3A9 /* TabViewController.swift */,
 				72F7ECD01F8B510A00BCAB70 /* ExpandGovt */,
 				7287F8D91F9740D500BAEC15 /* Audio */,
@@ -1371,6 +1380,7 @@
 				72A6699E1F8E593E001745D2 /* FetchJSON.swift in Sources */,
 				727169C61F85114E007FE3A9 /* BlogViewController.swift in Sources */,
 				72A669A01F8E5AF1001745D2 /* Network Check.swift in Sources */,
+				B7BE05B21FFBAF4400C3E8FA /* ShowPDFController.swift in Sources */,
 				727236D01F72A19000042236 /* GovtTableViewCell.swift in Sources */,
 				728091981F70EB7800B8DD50 /* SimulationTestViewController.swift in Sources */,
 				72FF5A3E1F715A73002BE74F /* SupportViewController.swift in Sources */,
@@ -1395,6 +1405,7 @@
 				72F7ECCD1F8B4FB600BCAB70 /* CityTableViewCell.swift in Sources */,
 				72FF5A3C1F71500E002BE74F /* TimePeriodTableViewCell.swift in Sources */,
 				AAC721261F6694210055896D /* HomeTableViewCell.swift in Sources */,
+				B7BE05B41FFBC2A300C3E8FA /* ChangePasswordController.swift in Sources */,
 				AAB427A51F67E3540090D149 /* FaqViewController.swift in Sources */,
 				727169C41F850F19007FE3A9 /* CitizenshipViewController.swift in Sources */,
 				AAC722141F66AEB60055896D /* FreeTestViewController.swift in Sources */,
@@ -1404,6 +1415,7 @@
 				B7D47B681FF64FBD00AC457C /* ExamResultCell.swift in Sources */,
 				727169C21F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift in Sources */,
 				7280919A1F70ED3600B8DD50 /* SimulationTableViewCell.swift in Sources */,
+				B7BE05B01FFBA9B600C3E8FA /* AudioController.swift in Sources */,
 				727D63D71F73AB7D00D65EF9 /* ChapterExamViewController.swift in Sources */,
 				AAC721241F6693AB0055896D /* HomeViewController.swift in Sources */,
 				72F7ECCB1F8B4D6E00BCAB70 /* Target.swift in Sources */,

@@ -102,7 +102,7 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
-            return 500
+            return 600
         }
 //        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
 //        }

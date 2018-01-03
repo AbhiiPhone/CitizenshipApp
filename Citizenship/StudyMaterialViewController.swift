@@ -274,7 +274,22 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
                 hud.hide(animated:true)
                 if response.error == nil,let filePath = response.destinationURL?.path
                 {
-                    print("***sgs",filePath)
+//                    print("***sgs",filePath)
+//                    let viewResumeVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
+//
+//                    viewResumeVC.getDownloadlink = filePath
+//
+//                    UIView.transition(with: self.view, duration: 1.0, options: UIViewAnimationOptions.transitionCurlUp,
+//                                      animations: {self.view.addSubview(viewResumeVC.view)}, completion: nil)
+//
+//                    viewResumeVC.view.frame = CGRect(x: 0, y: 10 , width: self.view.frame.size.width, height: self.view.frame.size.height)
+               
+                    let showPDFVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
+                    
+                    showPDFVC.getDownloadlink = filePath
+                    
+                    self.navigationController?.pushViewController(showPDFVC, animated: true)
+                
                 }
                 
             }
@@ -295,7 +310,7 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
         print(audioUrl)
       //let getPeriorStr = audioUrl.removingPercentEncoding
         let url = URL.init(string: audioUrl)//(string: audioUrl)
-        print(url!)
+      //  print(url!)
         let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
             player = AVPlayer(playerItem: playerItem)
             

@@ -810,7 +810,7 @@
                                                         </variation>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCq-KS-clb">
-                                                        <rect key="frame" x="209" y="2.6666666666666288" width="161" height="37"/>
+                                                        <rect key="frame" x="209" y="3" width="161" height="36"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                                         <state key="normal" title="Login">
                                                             <color key="titleColor" red="0.99006583120000002" green="0.97642635030000002" blue="0.93612236550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1107,6 +1107,9 @@
                                                         </constraint>
                                                     </constraints>
                                                     <state key="normal" backgroundImage="audio.png"/>
+                                                    <connections>
+                                                        <segue destination="WcN-Wa-vA9" kind="presentation" modalPresentationStyle="currentContext" id="Tkv-GK-aXa"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1173,7 +1176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyH-lw-46d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14465.21739130435" y="1972.826086956522"/>
+            <point key="canvasLocation" x="-14759" y="1961"/>
         </scene>
         <!--Simulation Test View Controller-->
         <scene sceneID="GNa-gg-ggR">
@@ -1631,7 +1634,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-Rh-wmm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-Rh-wmm">
                                 <rect key="frame" x="16" y="40" width="382" height="45"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1645,17 +1648,17 @@
                                 </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8bx-LD-KUH">
-                                <rect key="frame" x="2" y="101" width="410" height="200"/>
+                                <rect key="frame" x="16" y="101" width="382" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="5BA-4w-WcZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ep9-U7-WJ2"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailChapterExamCell" rowHeight="50" id="Ws1-tn-3uV" customClass="DetailChapterExamCell" customModule="Citizenship" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="410" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="382" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ws1-tn-3uV" id="jcH-Gr-q1Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="410" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="5mO-Bw-cb5">
@@ -1666,13 +1669,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-ox-SD2">
-                                                    <rect key="frame" x="48" y="15.666666666666664" width="346" height="20"/>
+                                                    <rect key="frame" x="48" y="15.666666666666664" width="318" height="20"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vnb-HF-Dfp">
-                                                    <rect key="frame" x="0.0" y="48.666666666666664" width="410" height="1"/>
+                                                    <rect key="frame" x="0.0" y="48.666666666666664" width="382" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="a7d-gk-6On"/>
@@ -1722,14 +1725,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8bx-LD-KUH" firstAttribute="leading" secondItem="HPW-Rq-AKr" secondAttribute="leading" constant="2" id="1n0-h4-3iQ"/>
+                            <constraint firstItem="8bx-LD-KUH" firstAttribute="leading" secondItem="nkV-Rh-wmm" secondAttribute="leading" id="5mK-1k-Faf"/>
+                            <constraint firstItem="8bx-LD-KUH" firstAttribute="top" secondItem="nkV-Rh-wmm" secondAttribute="bottom" constant="16" id="9d3-cH-iuS"/>
+                            <constraint firstItem="L1O-jy-zAL" firstAttribute="top" secondItem="8bx-LD-KUH" secondAttribute="bottom" constant="32" id="HIJ-5c-5C8"/>
                             <constraint firstItem="nkV-Rh-wmm" firstAttribute="leading" secondItem="HPW-Rq-AKr" secondAttribute="leading" constant="16" id="InI-wn-ycj"/>
                             <constraint firstItem="nkV-Rh-wmm" firstAttribute="top" secondItem="lV2-1X-G3w" secondAttribute="bottom" constant="20" id="MGd-5b-WlQ"/>
-                            <constraint firstItem="L1O-jy-zAL" firstAttribute="top" secondItem="8bx-LD-KUH" secondAttribute="bottom" constant="32" id="RoY-ti-5SR"/>
-                            <constraint firstItem="8bx-LD-KUH" firstAttribute="top" secondItem="nkV-Rh-wmm" secondAttribute="bottom" constant="16" id="Z0L-A9-nOO"/>
+                            <constraint firstItem="L1O-jy-zAL" firstAttribute="centerX" secondItem="8bx-LD-KUH" secondAttribute="centerX" id="cXL-R2-tfn"/>
                             <constraint firstAttribute="trailing" secondItem="nkV-Rh-wmm" secondAttribute="trailing" constant="16" id="f6a-aT-7O2"/>
-                            <constraint firstItem="L1O-jy-zAL" firstAttribute="centerX" secondItem="8bx-LD-KUH" secondAttribute="centerX" id="kGb-Ab-AjW"/>
-                            <constraint firstAttribute="trailing" secondItem="8bx-LD-KUH" secondAttribute="trailing" constant="2" id="r4C-5y-HnV"/>
+                            <constraint firstAttribute="trailing" secondItem="8bx-LD-KUH" secondAttribute="trailing" constant="16" id="rQN-aL-dph"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1773,6 +1776,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlT-tE-jQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-14465" y="2625"/>
+        </scene>
+        <!--ShowPDF Controller-->
+        <scene sceneID="gVt-tP-HeP">
+            <objects>
+                <viewController storyboardIdentifier="ShowPDFController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="90q-d7-wuX" customClass="ShowPDFController" customModule="Citizenship" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IiZ-hW-Nei"/>
+                        <viewControllerLayoutGuide type="bottom" id="dOd-Xf-Les"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Krg-Zr-80x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUW-2d-3IV">
+                                <rect key="frame" x="357" y="33" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="gZJ-8d-sZC"/>
+                                    <constraint firstAttribute="height" constant="34" id="n1V-sr-wvR"/>
+                                </constraints>
+                                <state key="normal" image="close.png"/>
+                                <connections>
+                                    <action selector="closeAction:" destination="90q-d7-wuX" eventType="touchUpInside" id="Dr8-0J-UlO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cUW-2d-3IV" secondAttribute="trailing" constant="23" id="TiY-hn-KF4"/>
+                            <constraint firstItem="cUW-2d-3IV" firstAttribute="top" secondItem="IiZ-hW-Nei" secondAttribute="bottom" constant="13" id="nhk-d1-esi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gED-MF-Ofe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13620.289855072464" y="2607.880434782609"/>
         </scene>
         <!--Support View Controller-->
         <scene sceneID="3zs-Jm-3uv">
@@ -2129,6 +2167,73 @@
             </objects>
             <point key="canvasLocation" x="-13078.260869565218" y="3443.4782608695655"/>
         </scene>
+        <!--Audio Controller-->
+        <scene sceneID="186-Qp-i0E">
+            <objects>
+                <viewController storyboardIdentifier="AudioController" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WcN-Wa-vA9" customClass="AudioController" customModule="Citizenship" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ybz-9W-UVs"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOw-5k-AdG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S7l-r0-T6v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FvL-zZ-fJh">
+                                <rect key="frame" x="30" y="129" width="354" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="F0c-ad-Yvd"/>
+                                </constraints>
+                                <color key="thumbTintColor" red="0.53354148435557924" green="1" blue="0.89976005486208632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="WcN-Wa-vA9" eventType="valueChanged" id="K92-Gn-G4i"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg0-aC-KCv">
+                                <rect key="frame" x="147" y="198" width="120" height="45"/>
+                                <color key="backgroundColor" red="0.38305468793965836" green="1" blue="0.91270369653866801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xPa-yM-xqX"/>
+                                    <constraint firstAttribute="width" constant="120" id="yzS-3R-TJy"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playBtnAction:" destination="WcN-Wa-vA9" eventType="touchUpInside" id="VTe-T3-Hnk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCB-ov-OOH">
+                                <rect key="frame" x="360" y="60" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="EkT-8C-1gV"/>
+                                    <constraint firstAttribute="height" constant="30" id="onh-xd-s2N"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="close.png"/>
+                                <connections>
+                                    <action selector="crossAction:" destination="WcN-Wa-vA9" eventType="touchUpInside" id="oDJ-8S-dJL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FvL-zZ-fJh" firstAttribute="top" secondItem="kCB-ov-OOH" secondAttribute="bottom" constant="39" id="2sI-ic-0jp"/>
+                            <constraint firstItem="Jg0-aC-KCv" firstAttribute="top" secondItem="FvL-zZ-fJh" secondAttribute="bottom" constant="34" id="4pA-Vv-d98"/>
+                            <constraint firstAttribute="trailing" secondItem="kCB-ov-OOH" secondAttribute="trailing" constant="8" id="8Tm-oh-KoR"/>
+                            <constraint firstItem="kCB-ov-OOH" firstAttribute="top" secondItem="ybz-9W-UVs" secondAttribute="bottom" constant="16" id="HmM-lZ-Ghx"/>
+                            <constraint firstItem="Jg0-aC-KCv" firstAttribute="centerX" secondItem="FvL-zZ-fJh" secondAttribute="centerX" id="mqn-L4-Ng3"/>
+                            <constraint firstItem="FvL-zZ-fJh" firstAttribute="leading" secondItem="S7l-r0-T6v" secondAttribute="leading" constant="32" id="oLv-z2-gkj"/>
+                            <constraint firstAttribute="trailing" secondItem="FvL-zZ-fJh" secondAttribute="trailing" constant="32" id="xjB-JA-OEn"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="450"/>
+                    <connections>
+                        <outlet property="audioSlider" destination="FvL-zZ-fJh" id="BEZ-j2-GHK"/>
+                        <outlet property="playBtn" destination="Jg0-aC-KCv" id="0nb-Bb-rQU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgP-6E-tUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14105.797101449276" y="1844.021739130435"/>
+        </scene>
         <!--Item-->
         <scene sceneID="78l-7c-jTF">
             <objects>
@@ -2180,7 +2285,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cdghfghhjguhyugbnvfrsdseazdsxzcvcgtrtyyghnbn" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksR-v2-xjB">
-                                                    <rect key="frame" x="8" y="67" width="311" height="51"/>
+                                                    <rect key="frame" x="8" y="67" width="310.33333333333331" height="51"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -2189,7 +2294,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBu-Nt-DX1">
-                                                    <rect key="frame" x="342.33333333333331" y="56" width="43.666666666666686" height="31"/>
+                                                    <rect key="frame" x="341.66666666666669" y="56" width="45" height="31"/>
                                                     <string key="text"> Cheats
  Sheet</string>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
@@ -2270,7 +2375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp4-mS-jBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13613.04347826087" y="1972.826086956522"/>
+            <point key="canvasLocation" x="-13464" y="1917"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nsv-Ku-qGw">
@@ -2341,13 +2446,13 @@
                                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any individual who is applying for the Canadian Citizenship or retaining it needs to pass a citizenship coaching test. The" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-fL-i3V">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any individual who is applying for the Canadian Citizenship or retaining it needs to pass a citizenship coaching test. The" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcC-fL-i3V">
                                                     <rect key="frame" x="8" y="205" width="349" height="47.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                     </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rarrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="klT-tX-00F">
@@ -2449,7 +2554,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter test to be familiarize you with the important questions of each chapter." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmd-V2-1l7">
-                                <rect key="frame" x="42" y="177" width="356" height="28.666666666666657"/>
+                                <rect key="frame" x="42" y="177" width="356" height="28"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2467,7 +2572,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39I-jq-MEh">
-                                <rect key="frame" x="42" y="259" width="356" height="42.666666666666686"/>
+                                <rect key="frame" x="42" y="259" width="356" height="42"/>
                                 <string key="text">Cheat Sheet section provides a compress version of each chapter featuring the main points. This section is really helpful if you are doing last minute test preparations. </string>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2477,7 +2582,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItL-nf-lNj">
-                                <rect key="frame" x="42" y="351" width="356" height="42.666666666666686"/>
+                                <rect key="frame" x="42" y="351" width="356" height="42"/>
                                 <string key="text">Government section lists all the important details about the current Canadian Government. This is an important resource as otherwise you will need to search the detail online.</string>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2487,7 +2592,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Guide provides the chapters in both PDF and Audio formats." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-Dc-sNk">
-                                <rect key="frame" x="42" y="407" width="356" height="14.333333333333314"/>
+                                <rect key="frame" x="42" y="407" width="356" height="28"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2552,7 +2657,7 @@
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-Gc-xhf">
-                                <rect key="frame" x="187.66666666666666" y="473" width="40.666666666666657" height="16.666666666666686"/>
+                                <rect key="frame" x="186.33333333333334" y="473" width="43" height="16.666666666666686"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2680,6 +2785,137 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtZ-kH-N0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-613.04347826086962" y="1395.6521739130435"/>
+        </scene>
+        <!--Change Password Controller-->
+        <scene sceneID="Grc-ci-cKK">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zK6-ar-G8O" customClass="ChangePasswordController" customModule="Citizenship" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWg-2h-r3M"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ma8-nT-wEa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MwP-pl-dmC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter OTP" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-sQ-ZK7">
+                                <rect key="frame" x="35.000000000000007" y="50" width="78.666666666666686" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="textBox (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-f0-r1u">
+                                <rect key="frame" x="35" y="80" width="359" height="40"/>
+                                <color key="backgroundColor" red="0.38305468790000002" green="1" blue="0.91270369650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="12G-yd-XfW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="55"/>
+                                    </constraint>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DxG-kL-pyP">
+                                <rect key="frame" x="35" y="130" width="120" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="textBox (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="bhg-lQ-c0s">
+                                <rect key="frame" x="35" y="160" width="359" height="40"/>
+                                <color key="backgroundColor" red="0.38305468790000002" green="1" blue="0.91270369650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw4-wF-l8Z">
+                                <rect key="frame" x="35" y="210" width="140.66666666666666" height="20"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" background="textBox (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="b9m-8M-ODr">
+                                <rect key="frame" x="35" y="240" width="359" height="40"/>
+                                <color key="backgroundColor" red="0.38305468790000002" green="1" blue="0.91270369650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-gM-qub">
+                                <rect key="frame" x="35" y="325" width="359" height="40"/>
+                                <color key="backgroundColor" red="0.38305468790000002" green="1" blue="0.91270369650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <state key="normal" title="SUBMITE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                </variation>
+                                <connections>
+                                    <action selector="submiteAction:" destination="zK6-ar-G8O" eventType="touchUpInside" id="crF-ae-wsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bhg-lQ-c0s" firstAttribute="top" secondItem="DxG-kL-pyP" secondAttribute="bottom" constant="10" id="26Z-m3-Lok"/>
+                            <constraint firstItem="Qc9-gM-qub" firstAttribute="trailing" secondItem="b9m-8M-ODr" secondAttribute="trailing" id="2va-zT-8TU"/>
+                            <constraint firstItem="KoK-f0-r1u" firstAttribute="top" secondItem="1VN-sQ-ZK7" secondAttribute="bottom" constant="10" id="4mZ-gZ-EbG"/>
+                            <constraint firstItem="bhg-lQ-c0s" firstAttribute="height" secondItem="KoK-f0-r1u" secondAttribute="height" id="8RV-cc-SfO"/>
+                            <constraint firstAttribute="trailing" secondItem="KoK-f0-r1u" secondAttribute="trailing" constant="20" id="Hyd-9D-nKL"/>
+                            <constraint firstItem="DxG-kL-pyP" firstAttribute="leading" secondItem="KoK-f0-r1u" secondAttribute="leading" id="JYf-ec-p1k"/>
+                            <constraint firstItem="b9m-8M-ODr" firstAttribute="height" secondItem="bhg-lQ-c0s" secondAttribute="height" id="RfE-kE-xpb"/>
+                            <constraint firstItem="bhg-lQ-c0s" firstAttribute="trailing" secondItem="KoK-f0-r1u" secondAttribute="trailing" id="Sht-5N-9DH"/>
+                            <constraint firstItem="DxG-kL-pyP" firstAttribute="top" secondItem="KoK-f0-r1u" secondAttribute="bottom" constant="10" id="TSa-wg-ldy"/>
+                            <constraint firstItem="b9m-8M-ODr" firstAttribute="trailing" secondItem="bhg-lQ-c0s" secondAttribute="trailing" id="VcY-bm-XGF"/>
+                            <constraint firstItem="uw4-wF-l8Z" firstAttribute="top" secondItem="bhg-lQ-c0s" secondAttribute="bottom" constant="10" id="WfH-qy-mpJ"/>
+                            <constraint firstItem="1VN-sQ-ZK7" firstAttribute="leading" secondItem="MwP-pl-dmC" secondAttribute="leading" constant="35" id="X40-lg-Aoi">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="b9m-8M-ODr" firstAttribute="top" secondItem="uw4-wF-l8Z" secondAttribute="bottom" constant="10" id="ch4-1R-vMn"/>
+                            <constraint firstItem="Qc9-gM-qub" firstAttribute="height" secondItem="b9m-8M-ODr" secondAttribute="height" id="cyA-ye-uHC"/>
+                            <constraint firstItem="KoK-f0-r1u" firstAttribute="leading" secondItem="1VN-sQ-ZK7" secondAttribute="leading" id="ecg-bX-haB"/>
+                            <constraint firstItem="bhg-lQ-c0s" firstAttribute="leading" secondItem="DxG-kL-pyP" secondAttribute="leading" id="gz2-BS-T2Q"/>
+                            <constraint firstItem="Qc9-gM-qub" firstAttribute="leading" secondItem="b9m-8M-ODr" secondAttribute="leading" id="htc-9N-OlL"/>
+                            <constraint firstItem="1VN-sQ-ZK7" firstAttribute="top" secondItem="PWg-2h-r3M" secondAttribute="bottom" constant="30" id="jaq-mK-aJO">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="Qc9-gM-qub" firstAttribute="top" secondItem="b9m-8M-ODr" secondAttribute="bottom" constant="45" id="pGN-ch-OYx">
+                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="b9m-8M-ODr" firstAttribute="leading" secondItem="uw4-wF-l8Z" secondAttribute="leading" id="qRN-1y-843"/>
+                            <constraint firstItem="uw4-wF-l8Z" firstAttribute="leading" secondItem="bhg-lQ-c0s" secondAttribute="leading" id="vKB-M5-XjZ"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="600"/>
+                    <connections>
+                        <outlet property="confirmTxtField" destination="b9m-8M-ODr" id="ehd-Lc-UyD"/>
+                        <outlet property="otpTxtfield" destination="KoK-f0-r1u" id="G7s-sk-zEI"/>
+                        <outlet property="passwordTxtField" destination="bhg-lQ-c0s" id="obh-dt-nPL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGX-Vi-CtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2755" y="1923"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="mhE-ap-iDq">
@@ -3224,7 +3460,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVe-7R-tCo">
-                                <rect key="frame" x="84" y="654" width="246" height="35"/>
+                                <rect key="frame" x="84" y="631" width="246" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="raV-PZ-GMc">
                                         <variation key="heightClass=regular-widthClass=regular" constant="55"/>
@@ -3241,6 +3477,19 @@
                                     <action selector="accountBtnAction:" destination="50C-40-ri2" eventType="touchUpInside" id="uJa-de-TZW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6km-0Q-RuL">
+                                <rect key="frame" x="84" y="542" width="246" height="25"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
+                                <state key="normal" title="Change password?">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="19"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ChangePasswordAction:" destination="50C-40-ri2" eventType="touchUpInside" id="dsE-wC-LLS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3248,14 +3497,16 @@
                             <constraint firstAttribute="trailing" secondItem="KyN-lY-EcU" secondAttribute="trailing" constant="84" id="2Ye-3k-dB2"/>
                             <constraint firstItem="pVe-7R-tCo" firstAttribute="centerX" secondItem="KyN-lY-EcU" secondAttribute="centerX" id="480-kV-yqp"/>
                             <constraint firstItem="hGq-g8-zXg" firstAttribute="leading" secondItem="K6R-6E-Er9" secondAttribute="leading" constant="50" id="4lo-Ze-eX7"/>
+                            <constraint firstItem="6km-0Q-RuL" firstAttribute="leading" secondItem="KyN-lY-EcU" secondAttribute="leading" id="7DV-Sk-uRs"/>
                             <constraint firstItem="KtQ-Qc-rNH" firstAttribute="top" secondItem="5wJ-pU-wAX" secondAttribute="bottom" constant="27" id="BkF-01-z7D"/>
                             <constraint firstItem="KtQ-Qc-rNH" firstAttribute="trailing" secondItem="5wJ-pU-wAX" secondAttribute="trailing" id="HQq-mc-YeF"/>
                             <constraint firstItem="NAi-mY-HiO" firstAttribute="leading" secondItem="hGq-g8-zXg" secondAttribute="leading" id="ICX-V0-dSr"/>
                             <constraint firstItem="NAi-mY-HiO" firstAttribute="trailing" secondItem="hGq-g8-zXg" secondAttribute="trailing" id="M16-pF-0oz"/>
+                            <constraint firstItem="pVe-7R-tCo" firstAttribute="top" secondItem="6km-0Q-RuL" secondAttribute="bottom" constant="64" id="Mgz-0O-YyN"/>
                             <constraint firstAttribute="trailing" secondItem="Y0p-nT-X2F" secondAttribute="trailing" constant="30" id="NCi-Yp-bC1"/>
                             <constraint firstItem="KtQ-Qc-rNH" firstAttribute="leading" secondItem="5wJ-pU-wAX" secondAttribute="leading" id="QD0-CM-Vyf"/>
-                            <constraint firstItem="pVe-7R-tCo" firstAttribute="top" secondItem="KyN-lY-EcU" secondAttribute="bottom" constant="120" id="Rlx-XT-twN"/>
                             <constraint firstItem="NAi-mY-HiO" firstAttribute="top" secondItem="5wJ-pU-wAX" secondAttribute="top" id="TdQ-yL-gDs"/>
+                            <constraint firstItem="6km-0Q-RuL" firstAttribute="top" secondItem="KyN-lY-EcU" secondAttribute="bottom" constant="8" id="Uu9-dD-PP9"/>
                             <constraint firstItem="pVe-7R-tCo" firstAttribute="trailing" secondItem="KyN-lY-EcU" secondAttribute="trailing" id="ViT-JG-UfE"/>
                             <constraint firstItem="Fm9-jE-yRP" firstAttribute="top" secondItem="ETI-bu-xfg" secondAttribute="bottom" constant="17" id="W3U-Hc-r2c"/>
                             <constraint firstItem="5wJ-pU-wAX" firstAttribute="height" secondItem="Y0p-nT-X2F" secondAttribute="height" id="Y7p-vI-Auv"/>
@@ -3271,9 +3522,11 @@
                             <constraint firstItem="xGY-ZH-PeE" firstAttribute="leading" secondItem="Fm9-jE-yRP" secondAttribute="trailing" constant="115" id="osy-P5-zNB"/>
                             <constraint firstItem="xGY-ZH-PeE" firstAttribute="top" secondItem="ETI-bu-xfg" secondAttribute="bottom" constant="19" id="pyD-Jv-3bk"/>
                             <constraint firstAttribute="trailing" secondItem="rH9-SJ-W9g" secondAttribute="trailing" constant="95.5" id="q5E-2f-2y2"/>
+                            <constraint firstItem="6km-0Q-RuL" firstAttribute="height" secondItem="KyN-lY-EcU" secondAttribute="height" id="qeo-VF-jRq"/>
                             <constraint firstItem="NAi-mY-HiO" firstAttribute="height" secondItem="hGq-g8-zXg" secondAttribute="height" id="r60-gl-iyv"/>
                             <constraint firstItem="rH9-SJ-W9g" firstAttribute="centerX" secondItem="K6R-6E-Er9" secondAttribute="centerX" id="rn6-Nu-x1a"/>
                             <constraint firstItem="rH9-SJ-W9g" firstAttribute="top" secondItem="xGY-ZH-PeE" secondAttribute="bottom" constant="40.5" id="vrN-7W-jIa"/>
+                            <constraint firstItem="6km-0Q-RuL" firstAttribute="trailing" secondItem="KyN-lY-EcU" secondAttribute="trailing" id="wHS-fa-Mij"/>
                             <constraint firstItem="5wJ-pU-wAX" firstAttribute="trailing" secondItem="Y0p-nT-X2F" secondAttribute="trailing" id="wm9-Pi-reN"/>
                             <constraint firstItem="rH9-SJ-W9g" firstAttribute="leading" secondItem="K6R-6E-Er9" secondAttribute="leading" constant="94.5" id="xMW-hu-LCn"/>
                             <constraint firstAttribute="trailing" secondItem="hGq-g8-zXg" secondAttribute="trailing" constant="30" id="z43-k0-px0"/>
@@ -3281,7 +3534,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="accountTop" destination="Rlx-XT-twN" id="qv9-mL-ie9"/>
+                        <outlet property="accountTop" destination="Mgz-0O-YyN" id="y2M-aS-h7h"/>
                         <outlet property="closeBtnHeight" destination="F1f-K3-M8n" id="YN3-ca-3EE"/>
                         <outlet property="closeBtnWidth" destination="eLy-HR-DA8" id="plO-WI-iH1"/>
                         <outlet property="forgotLeading" destination="YGg-Y1-Z6d" id="tL6-s5-pUX"/>
@@ -3350,7 +3603,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start this free chapter test and try 20 questions from " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ab-TZ-IJr">
-                                        <rect key="frame" x="44.666666666666686" y="60" width="287" height="14"/>
+                                        <rect key="frame" x="41" y="60" width="294" height="14"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3359,7 +3612,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chapter one of the study guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBi-gF-wca">
-                                        <rect key="frame" x="100.33333333333331" y="82" width="175" height="15.666666666666671"/>
+                                        <rect key="frame" x="98.666666666666686" y="82" width="178" height="15.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3368,7 +3621,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-eK-Dlb">
-                                        <rect key="frame" x="44.666666666666686" y="118" width="287" height="36"/>
+                                        <rect key="frame" x="41" y="118" width="294" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="ktI-b4-9W5">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="60"/>
@@ -3408,7 +3661,7 @@
                                 <rect key="frame" x="20" y="384" width="374" height="196"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FREE SIMULATION TEST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-u3-IZO">
-                                        <rect key="frame" x="98" y="19" width="179" height="18.666666666666671"/>
+                                        <rect key="frame" x="96.333333333333314" y="19" width="182" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -3417,7 +3670,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start this free simulation test and try 20 questions from" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkW-e3-GE5">
-                                        <rect key="frame" x="45" y="52" width="287" height="14"/>
+                                        <rect key="frame" x="41.333333333333343" y="52" width="294" height="14"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3426,7 +3679,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHi-Wq-S18">
-                                        <rect key="frame" x="45" y="109.66666666666669" width="287" height="36"/>
+                                        <rect key="frame" x="41.333333333333343" y="109.66666666666669" width="294" height="36"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="16"/>
                                         <state key="normal" title="START NOW" backgroundImage="startBtn.png">
                                             <color key="titleColor" red="0.055722656249999947" green="0.020486225542403209" blue="0.012160903132648025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3439,7 +3692,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chapter one of the study guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-JG-NE5">
-                                        <rect key="frame" x="101.66666666666669" y="74" width="175" height="15.666666666666671"/>
+                                        <rect key="frame" x="100" y="74" width="178" height="15.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3941,7 +4194,7 @@
                                     <constraint firstItem="ftL-Gw-2Y4" firstAttribute="top" secondItem="qJQ-mI-z5J" secondAttribute="bottom" constant="2" id="DRE-Wf-rjO"/>
                                     <constraint firstAttribute="trailing" secondItem="ftL-Gw-2Y4" secondAttribute="trailing" constant="8" id="Rg9-OB-lfX"/>
                                     <constraint firstItem="qJQ-mI-z5J" firstAttribute="top" secondItem="qeK-Q7-ID6" secondAttribute="top" constant="36" id="hxy-XA-aMV">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                     </constraint>
                                     <constraint firstItem="ftL-Gw-2Y4" firstAttribute="leading" secondItem="qJQ-mI-z5J" secondAttribute="leading" id="kO4-Xc-epr"/>
                                 </constraints>
@@ -3978,15 +4231,19 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC3-qj-HTJ">
                                 <rect key="frame" x="14" y="28" width="180" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="Ogc-Kz-Sss"/>
-                                    <constraint firstAttribute="height" constant="30" id="mwp-b6-u6A"/>
+                                    <constraint firstAttribute="width" constant="180" id="Ogc-Kz-Sss">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="mwp-b6-u6A">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                                 <state key="normal" title="Continue reading">
                                     <color key="titleColor" red="1" green="0.19657606559999999" blue="0.1353374436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="26"/>
                                 </variation>
                                 <connections>
                                     <action selector="continueAction:" destination="H2C-Su-1th" eventType="touchUpInside" id="PbM-YO-KPq"/>
@@ -3995,17 +4252,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rotate_arr.png" translatesAutoresizingMaskIntoConstraints="NO" id="7yW-yz-pdi">
                                 <rect key="frame" x="14" y="38.666666666666664" width="30" height="10"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="WhK-bL-z8Q"/>
-                                    <constraint firstAttribute="height" constant="10" id="xMd-gY-fhB"/>
+                                    <constraint firstAttribute="width" constant="30" id="WhK-bL-z8Q">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="10" id="xMd-gY-fhB">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="22"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="o35-0w-k7A">
                                 <rect key="frame" x="14" y="72" width="386" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="KOM-GQ-7dV"/>
+                                    <constraint firstAttribute="height" constant="200" id="KOM-GQ-7dV">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citizenship Practice Test- Know About Canada and Its Details" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGc-i6-Z2G">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citizenship Practice Test- Know About Canada and Its Details" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGc-i6-Z2G">
                                 <rect key="frame" x="14" y="278" width="386" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Al-zh-RUm"/>
@@ -4085,7 +4348,7 @@
                                                     <rect key="frame" x="12" y="148" width="390" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="fku-O9-tVe">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="75"/>
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
@@ -4116,7 +4379,7 @@
                                                             <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                                                         </constraint>
                                                         <constraint firstAttribute="width" constant="185" id="ZdC-kK-R8b">
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="250"/>
                                                         </constraint>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
@@ -4124,7 +4387,7 @@
                                                         <color key="titleColor" red="1" green="0.19657606559999999" blue="0.1353374436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
+                                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="26"/>
                                                     </variation>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arr-min.png" translatesAutoresizingMaskIntoConstraints="NO" id="6jD-I1-5Vx">
@@ -4233,7 +4496,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-nU-v95">
-                                <rect key="frame" x="152.33333333333334" y="81" width="111.33333333333334" height="27"/>
+                                <rect key="frame" x="150" y="81" width="116.33333333333331" height="27"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -4387,7 +4650,7 @@ Please take a moment to fill out the form below and we will get back to you as s
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                         </variation>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LPh-Jr-rW2">
@@ -4405,13 +4668,15 @@ Please take a moment to fill out the form below and we will get back to you as s
                                                             <rect key="frame" x="39" y="-5" width="344" height="45"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="45" id="wWE-2R-Mjr"/>
+                                                                <constraint firstAttribute="height" constant="45" id="wWE-2R-Mjr">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="65"/>
+                                                                </constraint>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="25"/>
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zt-uY-jqf">
@@ -4421,14 +4686,18 @@ Please take a moment to fill out the form below and we will get back to you as s
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="heightClass=regular-widthClass=regular">
-                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
                                                             </variation>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon01.png" translatesAutoresizingMaskIntoConstraints="NO" id="HnP-8L-CPx">
                                                             <rect key="frame" x="16" y="10" width="15" height="15"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="15" id="DTg-LZ-4Ms"/>
-                                                                <constraint firstAttribute="height" constant="15" id="cTM-es-tkZ"/>
+                                                                <constraint firstAttribute="width" constant="15" id="DTg-LZ-4Ms">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="height" constant="15" id="cTM-es-tkZ">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                                </constraint>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-border.png" translatesAutoresizingMaskIntoConstraints="NO" id="MjE-UE-vZX">
@@ -4440,15 +4709,21 @@ Please take a moment to fill out the form below and we will get back to you as s
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2P-ZU-aSx">
                                                             <rect key="frame" x="391" y="10.333333333333336" width="15" height="15"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="15" id="H2O-mT-9tP"/>
-                                                                <constraint firstAttribute="width" constant="15" id="bdq-ud-zSL"/>
+                                                                <constraint firstAttribute="height" constant="15" id="H2O-mT-9tP">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                </constraint>
+                                                                <constraint firstAttribute="width" constant="15" id="bdq-ud-zSL">
+                                                                    <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                </constraint>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="MjE-UE-vZX" secondAttribute="trailing" id="Ayg-3l-Yp8"/>
-                                                        <constraint firstItem="HnP-8L-CPx" firstAttribute="leading" secondItem="1Hh-Dc-gMH" secondAttribute="leading" constant="16" id="Dbd-ZQ-cZz"/>
+                                                        <constraint firstItem="HnP-8L-CPx" firstAttribute="leading" secondItem="1Hh-Dc-gMH" secondAttribute="leading" constant="16" id="Dbd-ZQ-cZz">
+                                                            <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                        </constraint>
                                                         <constraint firstItem="7zt-uY-jqf" firstAttribute="leading" secondItem="KZv-W7-9gJ" secondAttribute="leading" id="E3D-PU-yXN"/>
                                                         <constraint firstItem="KZv-W7-9gJ" firstAttribute="leading" secondItem="HnP-8L-CPx" secondAttribute="trailing" constant="8" id="G2Z-vo-YmP"/>
                                                         <constraint firstAttribute="trailing" secondItem="7zt-uY-jqf" secondAttribute="trailing" constant="8" id="Jlc-aQ-Fqk"/>

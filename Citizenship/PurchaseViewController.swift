@@ -130,8 +130,6 @@ class PurchaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             introLbl.font = introLbl.font.withSize(30)
@@ -312,12 +310,9 @@ class PurchaseViewController: UIViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
    
-   // changeTabTitleName(title: "CITIZENSHIP")
+    changeTabTitleName(title: "CITIZENSHIP")
     
     
     
