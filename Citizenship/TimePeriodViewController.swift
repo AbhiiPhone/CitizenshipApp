@@ -35,8 +35,8 @@ class TimePeriodViewController: UIViewController,UITableViewDataSource,UITableVi
         timePeriodTableVw.dataSource=self
         
         
-        self.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
+//        self.title = "CITIZENSHIP"
+//        navigationController?.navigationBar.topItem?.title = ""
         
         jsonFetch.jsonData = self
         
@@ -49,12 +49,7 @@ class TimePeriodViewController: UIViewController,UITableViewDataSource,UITableVi
         print(parameters)
         
         
-        let strLink =  "http://bestauctionsoftware.com/citi/json.php"
-        
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "date_list")
-        
-        
-        
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "date_list")
         
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
@@ -70,14 +65,11 @@ class TimePeriodViewController: UIViewController,UITableViewDataSource,UITableVi
             
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
             
-           
-            
-
+         
         }
             
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
             
-           
             
         }
          UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
@@ -86,6 +78,7 @@ class TimePeriodViewController: UIViewController,UITableViewDataSource,UITableVi
         timePeriodTableVw.rowHeight = UITableViewAutomaticDimension
         timePeriodTableVw.estimatedRowHeight = 78
         
+         
         
         // Do any additional setup after loading the view.
     }
@@ -93,13 +86,12 @@ class TimePeriodViewController: UIViewController,UITableViewDataSource,UITableVi
    
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        }
-    
-    
+
+        navigationController?.navigationBar.tintColor = UIColor.white
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+       
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

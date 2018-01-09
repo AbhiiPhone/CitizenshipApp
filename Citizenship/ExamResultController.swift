@@ -24,6 +24,9 @@ class ExamResultController: UIViewController {
     var getSelectedOptionValue = NSMutableArray()
     var correctOption = Int()
     var getScoreValue = Int()
+    var getChaptervalue = String()
+    var chapterId = Int()
+    var scoreValue = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +37,55 @@ class ExamResultController: UIViewController {
         self.ansView.layer.cornerRadius = 8
         self.ansView.layer.borderColor = UIColor.darkGray.cgColor
         
-        fstAnslbl.text = "You have attempt 20 question"
-        secondAnslbl.text = "your score is" + " " + String(getScoreValue * 5) + "%" + " " +  String(getScoreValue) + "out of 20"
+        
+       
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad
+        {
+            examTblview.layer.borderWidth = 2;
+           // self.examTblview.layer.cornerRadius = 15
+            self.examTblview.layer.borderColor = UIColor.darkGray.cgColor
+            
+            
+            let image = UIImage(named: "Back.png")
+            let buttonFrame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(45), height: CGFloat(35))
+            let button = UIButton(frame: buttonFrame)
+            button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+            button.setImage(image, for: .normal)
+            let item = UIBarButtonItem(customView: button)
+            self.navigationItem.leftBarButtonItem = item
+        }
+        else
+        {
+            examTblview.layer.borderWidth = 1;
+           // self.examTblview.layer.cornerRadius = 8
+            self.examTblview.layer.borderColor = UIColor.darkGray.cgColor
+            
+            let image = UIImage(named: "Back.png")
+            let buttonFrame = CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(15), height: CGFloat(15))
+            let button = UIButton(frame: buttonFrame)
+            button.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+            button.setImage(image, for: .normal)
+            let item = UIBarButtonItem(customView: button)
+            self.navigationItem.leftBarButtonItem = item
+        }
+       
         jsonFetch.jsonData = self
-        
-        //self.fstAnslbl.text = String(getScoreValue)
-        //self.secondAnslbl.text = String(getScoreValue/20)
         print(getSelectedOptionValue)
-        
         featchData()
+    }
+    
+    @objc func backAction()
+    {
+          self.popCurrentViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
+        navigationController?.navigationBar.tintColor = UIColor.white
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+        
     }
     func featchData()
     {
@@ -53,12 +96,31 @@ class ExamResultController: UIViewController {
             print(parameters)
             jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "chapter_ques")
         }
-        else
+        else if(getResultType == "SimulationQuestion")
         {
             parameters = ["actiontype" : "simulation_ques",]
             print(parameters)
             jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "simulation_ques")
             
+        }
+            else if (getResultType == "TakeTestChapter")
+        {
+            parameters = ["actiontype" :  "take_test",
+                          "chapter_id"  : String(chapterId + 1)
+            ]
+            print(parameters)
+            jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "take_test")
+            MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+        }
+        else{
+            parameters = ["actiontype" :  "chapter_exam",
+                          "chapter_id" : String(getChaptervalue)
+            ]
+            print(parameters)
+            jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "chapter_exam")
+            
+            
+            MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
         }
         
     }
@@ -69,17 +131,6 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        
-        //        if ((dataQuestionSet.object(at: chkBtn.tag) as? NSDictionary)?.object(forKey: "option") as? NSArray) ==  nil {
-        //
-        //            print("novalue")
-        //            return 0
-        //        }
-        //        else{
-        //
-        //            print(((dataQuestionSet.object(at: chkBtn.tag) as! NSDictionary).object(forKey: "option") as! NSArray))
-        //            return ((dataQuestionSet.object(at: chkBtn.tag) as! NSDictionary).object(forKey: "option") as! NSArray).count
-        //        }
         
         return dataQuestionSet.count
     }
@@ -97,10 +148,14 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
         
         correctOption  = getSelectedOptionValue[indexPath.row] as! Int
         correctOption = correctOption + 1
+        
+        print(correctOption)
+        print((((dataQuestionSet.object(at: indexPath.row) as! NSDictionary).object(forKey: "correct_answer") as! String)))
+        
+        
+        
         if ((((dataQuestionSet.object(at: indexPath.row) as! NSDictionary).object(forKey: "correct_answer") as! String))) == String(correctOption)
         {
-            
-            
             
             if(correctOption == 1)
             {
@@ -108,6 +163,8 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 cell.option2Img.image = UIImage.init(named: "red-min.png")
                 cell.option3Img.image = UIImage.init(named: "red-min.png")
                 cell.option4Img.image = UIImage.init(named: "red-min.png")
+                
+                scoreValue = scoreValue + 1
                 
             }
             else if(correctOption == 2)
@@ -117,6 +174,8 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 cell.option2Img.image = UIImage.init(named: "green_tick-min.png")
                 cell.option3Img.image = UIImage.init(named: "red-min.png")
                 cell.option4Img.image = UIImage.init(named: "red-min.png")
+                
+                scoreValue = scoreValue + 1
             }
                 
             else if(correctOption == 3)
@@ -126,6 +185,7 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 cell.option2Img.image = UIImage.init(named: "red-min.png")
                 cell.option3Img.image = UIImage.init(named: "green_tick-min.png")
                 cell.option4Img.image = UIImage.init(named: "red-min.png")
+                scoreValue = scoreValue + 1
             }
             else
                 
@@ -134,12 +194,18 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 cell.option2Img.image = UIImage.init(named: "red-min.png")
                 cell.option3Img.image = UIImage.init(named: "red-min.png")
                 cell.option4Img.image = UIImage.init(named: "green_tick-min.png")
+                scoreValue = scoreValue + 1
             }
+            
+           
+            
         }
             
         else
         {
-            if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(0))
+            print(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String))
+            
+            if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(1))
             {
                 cell.option1Img.image =  UIImage.init(named: "green-min.png")
                 
@@ -163,7 +229,7 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 }
                 print(getSelectedOptionValue[indexPath.row])
             }
-            else if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(1))
+            else if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(2))
                 
             {
                 
@@ -191,7 +257,7 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 print(getSelectedOptionValue[indexPath.row])
             }
                 
-            else if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(2))
+            else if(((dataQuestionSet.object(at: indexPath.row) as? NSDictionary)?.object(forKey: "correct_answer") as? String) == String(3))
                 
             {
                 
@@ -208,7 +274,7 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 {
                     cell.option1Img.image = UIImage.init(named: "red-min.png")
                     cell.option2Img.image =  UIImage.init(named: "red_cross-min.png")
-                    cell.option3Img.image = UIImage.init(named: "red-min.png")
+                    cell.option4Img.image = UIImage.init(named: "red-min.png")
                     
                 }
                 else
@@ -221,7 +287,7 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                 
                 
                 
-                print(getSelectedOptionValue[indexPath.row])
+               // print(getSelectedOptionValue[indexPath.row])
             }
             else
                 
@@ -249,12 +315,13 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
                     cell.option3Img.image = UIImage.init(named: "red_cross-min.png")
                 }
                 
-                print(getSelectedOptionValue[indexPath.row])
+               // print(getSelectedOptionValue[indexPath.row])
             }
         }
         
         self.examTblview.separatorColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+       
         
         return cell
     }
@@ -268,22 +335,12 @@ extension ExamResultController : UITableViewDataSource,UITableViewDelegate
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
-            return 430
+            return 350
+          
         }
-            //        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
-            //        }
-            //
-            //        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
-            //
-            //        }
-            //        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
-            //
-            //        }
-            
         else
-            
         {
-            return 210
+            return 255
         }
     }
     
@@ -310,7 +367,11 @@ extension ExamResultController : jsonDataDelegate{
             if(jsonName == "chapter_ques")
             {
                 if (((data as! NSDictionary).object(forKey: "success") as! String) == "yes"){
-                    
+                   
+                    DispatchQueue.main.async {
+                        
+                        MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                    }
                     dataQuestionSet = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
                     
                     //  print("dataQuestionSet.count:\(dataQuestionSet.count)")
@@ -323,9 +384,13 @@ extension ExamResultController : jsonDataDelegate{
                     examTblview.dataSource=self
                 }
             }
-            else
+            else if(jsonName == "simulation_ques")
             {
                 print(data)
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
                 if (((data as! NSDictionary).object(forKey: "success") as! String) == "yes"){
                     
                     dataQuestionSet = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
@@ -335,6 +400,44 @@ extension ExamResultController : jsonDataDelegate{
                 }
                 
             }
+            
+            else if(jsonName == "chapter_exam")
+            {
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
+                if (((data as! NSDictionary).object(forKey: "success") as! String) == "yes"){
+                    
+                    dataQuestionSet = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
+                    // print(((dataQuestionSet ).value(forKey: "correct_answer")))
+                    
+                print(dataQuestionSet.count)
+                    examTblview.delegate=self
+                    examTblview.dataSource=self
+                }
+            }
+            
+            
+            else
+            {
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
+                if (((data as! NSDictionary).object(forKey: "success") as! String) == "yes"){
+                    
+                    dataQuestionSet = ((data as! NSDictionary).object(forKey: "data") as! NSArray)
+                    // print(((dataQuestionSet ).value(forKey: "correct_answer")))
+                    
+                    print(dataQuestionSet.count)
+                    examTblview.delegate=self
+                    examTblview.dataSource=self
+                }
+            }
+            
+            fstAnslbl.text = "You have attempt " + " " + String(dataQuestionSet.count) + " " +  "question"
+            secondAnslbl.text = "your score is " + " " + String(getScoreValue * 100/dataQuestionSet.count) + "%" + " " +  String(getScoreValue) + "out of " + " " + String(dataQuestionSet.count)
             
             examTblview.reloadData()
         }

@@ -14,7 +14,7 @@ class BlogTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLbl: UILabel!
     
-    @IBOutlet weak var aboutTitle: UITextView!
+    @IBOutlet weak var descricptionView: UITextView!
     
     @IBOutlet weak var readingBtn: UIButton!
     

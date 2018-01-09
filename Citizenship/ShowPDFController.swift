@@ -1,4 +1,4 @@
-//
+////
 //  ShowPDFController.swift
 //  Citizenship
 //
@@ -13,7 +13,10 @@ import Alamofire
 
 class ShowPDFController: UIViewController,WKUIDelegate, WKNavigationDelegate {
  var webView: WKWebView!
- var getDownloadlink = " "
+ var getDownloadlink = String()
+    
+    @IBOutlet weak var containerView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,24 +26,43 @@ class ShowPDFController: UIViewController,WKUIDelegate, WKNavigationDelegate {
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         webView.navigationDelegate = self
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.frame = CGRect(origin: CGPoint(x: 0, y: 80), size:  CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height - 70))
-        
-        self.view.addSubview(webView)
-        
+
+//        webView.backgroundColor = UIColor.blue
         webView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.backgroundColor = UIColor.lightGray
+       self.containerView.addSubview(webView)
         
+        
+        
+        containerView.backgroundColor = UIColor.lightGray
         print(getDownloadlink)
-        let fileURL = URL(fileURLWithPath: getDownloadlink )
+        let fileURL = URL(fileURLWithPath: getDownloadlink  )
         print(fileURL)
-        webView.loadFileURL(fileURL, allowingReadAccessTo: fileURL)
+      
+        webView.loadFileURL(fileURL, allowingReadAccessTo: fileURL )
+        
+        MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+        
     }
     
     @IBAction func closeAction(_ sender: Any) {
-        self.view.removeFromSuperview()
+       
+        self.navigationController?.popViewController(animated: true)
         
     }
-    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        
+        print("file should be loaded")
+        
+        MBProgressHUD.hide(for:(self.navigationController?.view)! , animated: true)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+        
+    }
 }

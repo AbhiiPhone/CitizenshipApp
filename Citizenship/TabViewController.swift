@@ -16,16 +16,9 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
-        
         self.delegate = self
         
-       
-      
-        /*
-         menu_SliderVC.view.frame = CGRect(x: CGFloat(-264), y: CGFloat(((self.navigationController?.navigationBar.frame.size.height)!+20)), width: CGFloat((self.navigationController?.navigationBar.frame.size.width)!), height: CGFloat(self.view.frame.size.height-60))
- */
+     
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
@@ -33,9 +26,17 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
             self.navigationController?.navigationBar.setBackgroundImage(navBackgroundImage,for: .default)
             self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
             
+//            self.navigationController?.navigationBar.barTintColor = UIColor.red
+            
              menu_SliderVC = self.storyboard?.instantiateViewController(withIdentifier: "Menu_SliderViewController") as! Menu_SliderViewController
              menu_SliderVC.view.frame = CGRect(x: CGFloat(-350), y: CGFloat(((self.navigationController?.navigationBar.frame.size.height)!+20)), width: CGFloat(350), height: CGFloat(self.view.frame.size.height))
             
+         /*   let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 30)!, NSAttributedStringKey.foregroundColor:UIColor.white]
+            UINavigationBar.appearance().titleTextAttributes = attributes
+            
+            let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+            UINavigationBar.appearance().titleTextAttributes = textAttributes*/
+            //self.title = "CITIZENSHIP"
             
         }
       
@@ -44,8 +45,21 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
             self.navigationController?.navigationBar.setBackgroundImage(navBackgroundImage,for: .default)
             self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
             
+            self.navigationController?.navigationBar.barTintColor = UIColor.white
+ 
              menu_SliderVC = self.storyboard?.instantiateViewController(withIdentifier: "Menu_SliderViewController") as! Menu_SliderViewController
             menu_SliderVC.view.frame = CGRect(x: CGFloat(-250), y: CGFloat(((self.navigationController?.navigationBar.frame.size.height)!+20)), width: CGFloat(250), height: CGFloat(self.view.frame.size.height))
+            
+            
+             //self.title = "CITIZENSHIP"
+//            self.tabBarController?.navigationController?.title = "CITIZENSHIP"
+//
+//            UINavigationBar.appearance().titleTextAttributes = [
+//                NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!,NSAttributedStringKey.foregroundColor:UIColor.white
+//            ]
+//             navigationController?.navigationBar.tintColor = UIColor.white
+            
+            
         }
        
         
@@ -62,6 +76,8 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
         
         // Do any additional setup after loading the view.
     }
+    
+    
     
     @objc func enableMenuButton(notification: NSNotification) -> Void {
         
@@ -87,15 +103,39 @@ class TabViewController: UITabBarController,UITabBarControllerDelegate,sliderInd
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+      
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+            
+//            self.title = "CITIZENSHIP"
+//
+//            UINavigationBar.appearance().titleTextAttributes = [
+//                NSAttributedStringKey.font: UIFont(name: "Georgia", size: 30)!,NSAttributedStringKey.foregroundColor:UIColor.white
+//            ]
+            
+        }
+            
+        else {
+            
+            
+           // self.title = "CITIZENSHIP"
+//            self.tabBarController?.navigationController?.title = "CITIZENSHIP"
+//
+//            UINavigationBar.appearance().titleTextAttributes = [
+//                NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!,NSAttributedStringKey.foregroundColor:UIColor.white
+//            ]
+            
+        }
+        
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+   /* func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
         print(viewController.self);
         print("controller class: \(String(describing: viewController.self))")
         print("controller title: \(String(describing: viewController.title))")
         
-    }
+    }*/
     /*func enableMenuButton(notification: NSNotification) -> Void {
         
         let str : String = notification.name.rawValue

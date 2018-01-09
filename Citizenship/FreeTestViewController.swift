@@ -26,77 +26,31 @@ class FreeTestViewController: UIViewController {
     @IBOutlet weak var fstviewTcons: NSLayoutConstraint!
     
     
-    @IBAction func startBtn(_ sender: Any) {
-        
-        // Chaptre question Btn Action
-        let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
-        qusVC.getBtnValue = "ChapterQuestion"
-        
-        self.navigationController?.pushViewController(qusVC, animated: true)
-        
-    }
-    
-    
-    @IBAction func startNowBtn(_ sender: Any) {
-        
-        let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
-         qusVC.getBtnValue = "SimulationQuestion"
-        self.navigationController?.pushViewController(qusVC, animated: true)
-    }
-    
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
      
-//        firstVw.layer.shadowColor = UIColor.lightGray.cgColor
-//        firstVw.layer.shadowOpacity = 1
-//        firstVw.layer.shadowOffset = CGSize.zero
-//        firstVw.layer.shadowRadius = 12
-//        firstVw.layer.cornerRadius=8
-//
-//        secondVw.layer.shadowColor = UIColor.lightGray.cgColor
-//        secondVw.layer.shadowOpacity = 1
-//        secondVw.layer.shadowOffset = CGSize.zero
-//        secondVw.layer.shadowRadius = 12
-//        secondVw.layer.cornerRadius=8
+//        firstVw.layer.masksToBounds = false
+        firstVw.layer.shadowColor = UIColor.darkGray.cgColor
+        firstVw.layer.shadowOpacity = 0.5
+        firstVw.layer.shadowRadius = 6
+        firstVw.layer.cornerRadius = 6
+       // firstVw.layer.shouldRasterize = true
         
-//        firstVw.layer.shadowColor = UIColor(white: 0.0, alpha: 0.5).cgColor
-//        firstVw.layer.shadowOffset = CGSize.zero
-//        firstVw.layer.shadowOpacity = 1.0
-//        firstVw.layer.shadowRadius = 6.0
-//        firstVw.layer.cornerRadius = 8.0
+       // secondVw.layer.masksToBounds = true
+        secondVw.layer.shadowColor = UIColor.darkGray.cgColor
+        secondVw.layer.shadowOpacity = 0.5
+        secondVw.layer.shadowRadius = 6
+        firstVw.layer.cornerRadius = 6
+       secondVw.layer.shouldRasterize = false
         
-        firstVw.layer.borderWidth = 5;
-        firstVw.layer.shadowRadius = 12.0
-        firstVw.layer.cornerRadius = 15
-        firstVw.layer.borderColor = UIColor.lightGray.cgColor
-        
-        secondVw.layer.borderWidth = 5;
-        secondVw.layer.shadowRadius = 12.0
-        secondVw.layer.cornerRadius = 15
-        secondVw.layer.borderColor = UIColor.lightGray.cgColor
-        
-        
+
+       
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
             firstVwTop.constant = 80.0
             firstVwHeight.constant=300.0
             secondVwTop.constant=80.0
-           
-         
-           
-        }
+       }
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
             
             firstVwTop.constant=0.0
@@ -132,6 +86,26 @@ class FreeTestViewController: UIViewController {
         }
         
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+    }
+    @IBAction func startBtn(_ sender: Any) {
+        
+        // Chaptre question Btn Action
+        let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+        qusVC.getBtnValue = "ChapterQuestion"
+        
+        self.tabBarController?.navigationController?.pushViewController(qusVC, animated: true)
+        
+    }
+    
+    
+    @IBAction func startNowBtn(_ sender: Any) {
+        
+        let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+        qusVC.getBtnValue = "SimulationQuestion"
+        self.tabBarController?.navigationController?.pushViewController(qusVC, animated: true)
+    }
     
 }

@@ -67,13 +67,12 @@ class RegisterController: UIViewController,UITextFieldDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
         self.title = "CITIZENSHIP"
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         navigationController?.navigationBar.topItem?.title = " "
-        
-        self.navigationController?.navigationBar.barTintColor = UIColor.hexStringToUIColor(hex: "#FFFFFF")
-        
-        self.navigationItem.setHidesBackButton(true, animated:true)
+//        self.navigationItem.setHidesBackButton(true, animated:true)
     }
     @IBAction func passwordEyeBtnAction(_ sender: Any) {
         
@@ -88,9 +87,9 @@ class RegisterController: UIViewController,UITextFieldDelegate {
     }
     @IBAction func confoPasswordEyeBtnAction(_ sender: Any) {
         
-        if(isConfoPasswordEyeBtn == false) {
-            confirmTxtField.isSecureTextEntry = true
-            isPasswordBtnClick = true
+        if(isConfoPasswordEyeBtn == true) {
+            confirmTxtField.isSecureTextEntry = false
+            isPasswordBtnClick = false
         } else {
             confirmTxtField.isSecureTextEntry = true
             isPasswordBtnClick = true
@@ -148,7 +147,10 @@ class RegisterController: UIViewController,UITextFieldDelegate {
      
     }
     @IBAction func loginBtnAction(_ sender: Any) {
-         self.navigationController?.popViewController(animated: true)
+//         self.navigationController?.popViewController(animated: true)
+
+        let signVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+        self.navigationController?.pushViewController(signVC, animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

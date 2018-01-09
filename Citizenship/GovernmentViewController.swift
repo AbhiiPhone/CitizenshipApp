@@ -69,8 +69,8 @@ class GovernmentViewController: UIViewController,UITableViewDataSource,UITableVi
 //        self.title="CITIZENSHIP"
 //        navigationController?.navigationBar.topItem?.title = ""
         
-        self.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
+//        self.title = "CITIZENSHIP"
+//        navigationController?.navigationBar.topItem?.title = ""
         
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
             
@@ -108,13 +108,10 @@ class GovernmentViewController: UIViewController,UITableViewDataSource,UITableVi
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
-       // navigationController?.navigationBar.topItem?.title = " "
         navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
         
     }
 

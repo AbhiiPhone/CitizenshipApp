@@ -38,7 +38,12 @@ class FaqViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     override func viewWillAppear(_ animated: Bool) {
         
-         changeTabTitleName(title: "CITIZENSHIP")
+      
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+       
     }
     
 

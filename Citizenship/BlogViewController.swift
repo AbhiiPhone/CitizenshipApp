@@ -62,10 +62,10 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
    
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+        navigationController?.navigationBar.tintColor = UIColor.white
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -77,11 +77,12 @@ class BlogViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let cell = blogTableVw.dequeueReusableCell( withIdentifier: "BlogCell", for: indexPath) as! BlogTableViewCell
         
-         cell.titleLbl.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "title") as! String)
-         cell.titleImg.sd_setImage(with: URL(string: ((blogArray[indexPath.row]) as AnyObject).value(forKey: "image") as! String), placeholderImage: UIImage(named:""))
-       
         self.blogTableVw.separatorColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+         cell.titleLbl.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "title") as! String)
+         cell.titleImg.sd_setImage(with: URL(string: ((blogArray[indexPath.row]) as AnyObject).value(forKey: "image") as! String), placeholderImage: UIImage(named:""))
+       cell.descricptionView.text = ((blogArray[indexPath.row] as AnyObject).value(forKey: "description") as! String)
+       
         
         return cell
     }

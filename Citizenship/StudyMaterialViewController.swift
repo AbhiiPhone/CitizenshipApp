@@ -37,6 +37,7 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
     @IBOutlet var lblLeading: NSLayoutConstraint!
     @IBOutlet var lblHeight: NSLayoutConstraint!
   
+ 
     var player:AVPlayer?
     var playerItem:AVPlayerItem?
     var playButton:UIButton?
@@ -58,7 +59,7 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
          studyTableVw.tableFooterView = UIView(frame: .zero)
         
       
-        
+      
        
         
       if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
@@ -95,13 +96,8 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
     }
    
     override func viewWillAppear(_ animated: Bool) {
+
         self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
-      
-        
     }
     
     
@@ -229,81 +225,95 @@ class StudyMaterialViewController: UIViewController,UITableViewDelegate,UITableV
     @objc func pdfAction(_ sender : UIButton)
     {
         print("Pdf Index ==> ",sender.tag)
+        
+        
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        
+        hud.mode = MBProgressHUDMode.annularDeterminate
+        hud.label.text = "Loading... "
+        
+        
+        let getpdfString =  (studyArray[sender.tag] as AnyObject).value(forKey: "chapter_path") as! String!
+        
+        let urlwithPercentEscapes = getpdfString?.addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+        
+        print(urlwithPercentEscapes!)
+        
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
             
-            //        print("hjdfgkhdj")
-            //
-            ////      //  UIApplication.shared.openURL(URL(string: ((manualArray[sender.tag] as AnyObject).value(forKey: "pdf") as! String))!)
-            //
-            //
-            //        let getpdfString =  (manualArray[sender.tag] as AnyObject).value(forKey: "pdf") as! String!
-            //
-            //        _ = NSURL(string:getpdfString! )
+            let documentsURL :NSURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
             
-            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            print("**** documentUrl: ",documentsURL)
             
-            hud.mode = MBProgressHUDMode.annularDeterminate
-            hud.label.text = "Loading... "
-            
-            
-            let getpdfString =  (studyArray[sender.tag] as AnyObject).value(forKey: "chapter_path") as! String!
-            
-            let destination: DownloadRequest.DownloadFileDestination = { _, _ in
-                
-                let documentsURL :NSURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first! as NSURL
-                
-                print("**** documentUrl: ",documentsURL)
-                
-                // let fileURL = documentsURL.appendingPathComponent("\(0).pdf")
-                
-                let fileURL = documentsURL.appendingPathComponent(((self.studyArray[sender.tag] as AnyObject).value(forKey: "chapter_path") as! String!).components(separatedBy : "/").last!)
-                
-                return (fileURL!, [.removePreviousFile, .createIntermediateDirectories])
-            }
+            let fileURL = documentsURL.appendingPathComponent(((self.studyArray[sender.tag] as AnyObject).value(forKey: "chapter_path") as! String!).components(separatedBy : "/").last!)
             
             
-            //    Alamofire.download(getpdfString!,to:destination).response{ response in
             
-            Alamofire.download(getpdfString!,to:destination).downloadProgress(closure: {(prog) in
+            return (fileURL!, [.removePreviousFile, .createIntermediateDirectories])
+        }
+        
+        
+        //    Alamofire.download(getpdfString!,to:destination).response{ response in
+        
+        Alamofire.download(urlwithPercentEscapes!,to:destination).downloadProgress(closure: {(prog) in
+            
+            hud.progress = Float(prog.fractionCompleted)
+            
+            
+        }).response{ response in
+            
+            print(response)
+            hud.hide(animated:true)
+            if response.error == nil,let filePath = response.destinationURL?.path
+            {
+                //                    print("***sgs",filePath)
+                //                    let viewResumeVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
+                //
+                //                    viewResumeVC.getDownloadlink = filePath
+                //
+                //                    UIView.transition(with: self.view, duration: 1.0, options: UIViewAnimationOptions.transitionCurlUp,
+                //                                      animations: {self.view.addSubview(viewResumeVC.view)}, completion: nil)
+                //
+                //                    viewResumeVC.view.frame = CGRect(x: 0, y: 10 , width: self.view.frame.size.width, height: self.view.frame.size.height)
                 
-                hud.progress = Float(prog.fractionCompleted)
+                let showVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
                 
+                showVC.getDownloadlink = filePath
                 
-            }).response{ response in
-                
-                print(response)
-                hud.hide(animated:true)
-                if response.error == nil,let filePath = response.destinationURL?.path
-                {
-//                    print("***sgs",filePath)
-//                    let viewResumeVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
+//                UIView.transition(with: self.view, duration: 0.5, options: UIViewAnimationOptions.transitionCurlUp,
+//                                  animations: {self.view.addSubview(showVC.view)}, completion: nil)
 //
-//                    viewResumeVC.getDownloadlink = filePath
+//                showVC.view.frame = CGRect(x: 0, y: 64 , width: self.view.frame.size.width, height: (self.view.frame.size.height - 70))
 //
-//                    UIView.transition(with: self.view, duration: 1.0, options: UIViewAnimationOptions.transitionCurlUp,
-//                                      animations: {self.view.addSubview(viewResumeVC.view)}, completion: nil)
-//
-//                    viewResumeVC.view.frame = CGRect(x: 0, y: 10 , width: self.view.frame.size.width, height: self.view.frame.size.height)
-               
-                    let showPDFVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
-                    
-                    showPDFVC.getDownloadlink = filePath
-                    
-                    self.navigationController?.pushViewController(showPDFVC, animated: true)
-                
-                }
-                
+
+            self.navigationController?.pushViewController(showVC, animated: true)
+            
+            
             }
             
         }
+        
+    }
 
         
     @objc func audioAction(_ sender : UIButton)
    {
-       let str = audioArray[sender.tag]
-    playMusic(audioUrl:str as! String)
+      // let str = audioArray[sender.tag]
+  //  playMusic(audioUrl:str as! String)
+    
+    
+    let showVC = self.storyboard?.instantiateViewController(withIdentifier: "AudioController") as! AudioController
+
+    showVC.downloadlink = audioArray[sender.tag] as! String
+   
+   
+  
+    self.navigationController?.present(showVC, animated: true, completion: nil)
+    
+ //   self.view.addSubview(showVC.view)
     
     }
- 
+ //playMusic(audioUrl:str as! String)
     func playMusic(audioUrl:String)
     {
        

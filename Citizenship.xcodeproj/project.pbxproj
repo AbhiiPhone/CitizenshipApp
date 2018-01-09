@@ -262,10 +262,14 @@
 		B70F04E41FF529FD008CA175 /* radio_on.png in Resources */ = {isa = PBXBuildFile; fileRef = B70F04E21FF529F8008CA175 /* radio_on.png */; };
 		B70F04E51FF529FD008CA175 /* radio_off.png in Resources */ = {isa = PBXBuildFile; fileRef = B70F04E31FF529FD008CA175 /* radio_off.png */; };
 		B71677DA1FE3BCA10075BC94 /* SelectedChapterExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71677D91FE3BCA10075BC94 /* SelectedChapterExamController.swift */; };
+		B725928F1FFE7A7400BFDFE4 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B725928E1FFE7A7400BFDFE4 /* appIcon.png */; };
+		B72D9AAF1FFFAC9C005501AD /* newFlashScreen_Citizenship.png in Resources */ = {isa = PBXBuildFile; fileRef = B72D9AAE1FFFAC9B005501AD /* newFlashScreen_Citizenship.png */; };
 		B733B8F31F7A5E1F007ED434 /* headerAdmin.png in Resources */ = {isa = PBXBuildFile; fileRef = B733B8F21F7A5E1F007ED434 /* headerAdmin.png */; };
 		B733B8F51F7A617D007ED434 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B8F41F7A617D007ED434 /* SliderViewController.swift */; };
 		B733B8F71F7A63F1007ED434 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B8F61F7A63F1007ED434 /* SliderTableViewCell.swift */; };
 		B7340D841FED3ABF00034CB8 /* newtextbox.png in Resources */ = {isa = PBXBuildFile; fileRef = B7340D831FED3ABE00034CB8 /* newtextbox.png */; };
+		B73A967C20035E7A006635C3 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = B73A967B20035E7A006635C3 /* Back.png */; };
+		B73A967E20038792006635C3 /* timer 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B73A967D20038791006635C3 /* timer 2.png */; };
 		B75A81811FFB9ED1006F5476 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75A81801FFB9EAA006F5476 /* OpenSans-Semibold.ttf */; };
 		B7754AB91F99D7C100F30FCF /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */; };
 		B7754ABB1F99E8F600F30FCF /* BlogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */; };
@@ -289,6 +293,7 @@
 		B7F877541FF38CA400E1EF88 /* proximanova-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877501FF38CA400E1EF88 /* proximanova-regular-webfont.ttf */; };
 		B7F877551FF38CA400E1EF88 /* Georgia.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877511FF38CA400E1EF88 /* Georgia.ttf */; };
 		B7F877561FF38CA400E1EF88 /* Georgia Regular font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7F877521FF38CA400E1EF88 /* Georgia Regular font.ttf */; };
+		B7FBDD6C1FFCF16700DB54D5 /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FBDD6B1FFCF16700DB54D5 /* PaymentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -551,10 +556,14 @@
 		B70F04E21FF529F8008CA175 /* radio_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_on.png; sourceTree = "<group>"; };
 		B70F04E31FF529FD008CA175 /* radio_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_off.png; sourceTree = "<group>"; };
 		B71677D91FE3BCA10075BC94 /* SelectedChapterExamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedChapterExamController.swift; sourceTree = "<group>"; };
+		B725928E1FFE7A7400BFDFE4 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
+		B72D9AAE1FFFAC9B005501AD /* newFlashScreen_Citizenship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newFlashScreen_Citizenship.png; sourceTree = "<group>"; };
 		B733B8F21F7A5E1F007ED434 /* headerAdmin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerAdmin.png; sourceTree = "<group>"; };
 		B733B8F41F7A617D007ED434 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		B733B8F61F7A63F1007ED434 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
 		B7340D831FED3ABE00034CB8 /* newtextbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newtextbox.png; sourceTree = "<group>"; };
+		B73A967B20035E7A006635C3 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		B73A967D20038791006635C3 /* timer 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer 2.png"; sourceTree = "<group>"; };
 		B75A81801FFB9EAA006F5476 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../../Downloads/open-sans/OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		B7754AB81F99D7C100F30FCF /* BlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B7754ABA1F99E8F600F30FCF /* BlogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailsViewController.swift; sourceTree = "<group>"; };
@@ -578,6 +587,7 @@
 		B7F877501FF38CA400E1EF88 /* proximanova-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "proximanova-regular-webfont.ttf"; path = "Citizenship/Fonts/proximanova-regular-webfont.ttf"; sourceTree = SOURCE_ROOT; };
 		B7F877511FF38CA400E1EF88 /* Georgia.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Georgia.ttf; path = Citizenship/Fonts/Georgia.ttf; sourceTree = SOURCE_ROOT; };
 		B7F877521FF38CA400E1EF88 /* Georgia Regular font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Georgia Regular font.ttf"; path = "Citizenship/Fonts/Georgia Regular font.ttf"; sourceTree = SOURCE_ROOT; };
+		B7FBDD6B1FFCF16700DB54D5 /* PaymentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -828,12 +838,14 @@
 				AAC7210E1F6692EE0055896D /* AppDelegate.swift */,
 				AAC721101F6692EE0055896D /* ViewController.swift */,
 				7278C5201F963390000CACA2 /* AudioViewController.swift */,
+				B73A967D20038791006635C3 /* timer 2.png */,
 				7A77AB9A1F8CE15200E780BA /* AdminViewController.swift */,
 				727169C11F84BD62007FE3A9 /* Menu_SliderTableViewCell.swift */,
 				727169BF1F84BCB3007FE3A9 /* Menu_SliderViewController.swift */,
 				AAC7220F1F669EF70055896D /* SignUpViewController.swift */,
 				B7BE05B31FFBC2A300C3E8FA /* ChangePasswordController.swift */,
 				727169BB1F84AF6A007FE3A9 /* TabViewController.swift */,
+				B7FBDD6B1FFCF16700DB54D5 /* PaymentController.swift */,
 				72F7ECD01F8B510A00BCAB70 /* ExpandGovt */,
 				7287F8D91F9740D500BAEC15 /* Audio */,
 				7272368C1F7249D700042236 /* ExpandableHeaderView */,
@@ -853,6 +865,9 @@
 		AAC721A31F6696870055896D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B73A967B20035E7A006635C3 /* Back.png */,
+				B72D9AAE1FFFAC9B005501AD /* newFlashScreen_Citizenship.png */,
+				B725928E1FFE7A7400BFDFE4 /* appIcon.png */,
 				726E65E51F6FB5E3007B6914 /* Admin_Icon */,
 				726E65521F6FB5DD007B6914 /* Admin_Image */,
 				AAC721E41F6697D90055896D /* icon */,
@@ -1059,8 +1074,9 @@
 				TargetAttributes = {
 					AAC7210A1F6692EE0055896D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = HA76W382R2;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1166,6 +1182,7 @@
 				AAC721971F66966C0055896D /* mContact@2x.png in Resources */,
 				AAC721921F66966C0055896D /* mFaq@3x.png in Resources */,
 				B7F877551FF38CA400E1EF88 /* Georgia.ttf in Resources */,
+				B725928F1FFE7A7400BFDFE4 /* appIcon.png in Resources */,
 				726E65BC1F6FB5DE007B6914 /* mGovernment@3x.png in Resources */,
 				726E659F1F6FB5DE007B6914 /* adminActive.png in Resources */,
 				B7F877561FF38CA400E1EF88 /* Georgia Regular font.ttf in Resources */,
@@ -1194,6 +1211,7 @@
 				726E65C61F6FB5DE007B6914 /* mSupport.png in Resources */,
 				726E65CC1F6FB5DE007B6914 /* pdf.png in Resources */,
 				AAC7217A1F66966C0055896D /* purchase.png in Resources */,
+				B72D9AAF1FFFAC9C005501AD /* newFlashScreen_Citizenship.png in Resources */,
 				726E65C51F6FB5DE007B6914 /* mStudyMaterial@3x.png in Resources */,
 				AAC7220A1F6697D90055896D /* home (1)-min.png in Resources */,
 				726E659C1F6FB5DE007B6914 /* admin.png in Resources */,
@@ -1223,6 +1241,7 @@
 				726E65AA1F6FB5DE007B6914 /* cheatSheets@3x.png in Resources */,
 				726E65A91F6FB5DE007B6914 /* cheatSheets@2x.png in Resources */,
 				726E65A81F6FB5DE007B6914 /* cheatSheets.png in Resources */,
+				B73A967C20035E7A006635C3 /* Back.png in Resources */,
 				AAC721851F66966C0055896D /* mPrivacy.png in Resources */,
 				AAC721C51F66974F0055896D /* home_active.png in Resources */,
 				726E65FA1F6FB5E3007B6914 /* admin-min.png in Resources */,
@@ -1297,6 +1316,7 @@
 				726E65FC1F6FB5E3007B6914 /* admin@3x-min.png in Resources */,
 				AAC721991F66966C0055896D /* mBlog@2x.png in Resources */,
 				AAC721D71F66974F0055896D /* mTerm.png in Resources */,
+				B73A967E20038792006635C3 /* timer 2.png in Resources */,
 				AAC721C81F66974F0055896D /* rarrow.png in Resources */,
 				726E66031F6FB5E4007B6914 /* bullet-min.png in Resources */,
 				727D63D51F738B1E00D65EF9 /* dropdown.jpg in Resources */,
@@ -1425,6 +1445,7 @@
 				B796AF121FE16C6A0020A9E1 /* RegisterController.swift in Sources */,
 				72FF5A3A1F714C8B002BE74F /* TimePeriodViewController.swift in Sources */,
 				7278C5211F963390000CACA2 /* AudioViewController.swift in Sources */,
+				B7FBDD6C1FFCF16700DB54D5 /* PaymentController.swift in Sources */,
 				726E66151F6FECB1007B6914 /* CheatSheetsTableViewCell.swift in Sources */,
 				B733B8F71F7A63F1007ED434 /* SliderTableViewCell.swift in Sources */,
 				B71677DA1FE3BCA10075BC94 /* SelectedChapterExamController.swift in Sources */,
@@ -1489,7 +1510,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chandradip Ghosh (QB3D3DG58K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandradip Ghosh (QB3D3DG58K)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1545,7 +1567,8 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chandradip Ghosh (QB3D3DG58K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandradip Ghosh (QB3D3DG58K)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1572,11 +1595,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HA76W382R2;
 				INFOPLIST_FILE = Citizenship/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.micronix.Citizenship;
+				PRODUCT_BUNDLE_IDENTIFIER = com.micronix.Citizenship1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "33680bd6-f106-4ddb-b0e9-1c60f48ee98e";
+				PROVISIONING_PROFILE_SPECIFIER = "All Dev From micronix";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1589,11 +1617,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HA76W382R2;
 				INFOPLIST_FILE = Citizenship/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.micronix.Citizenship;
+				PRODUCT_BUNDLE_IDENTIFIER = com.micronix.Citizenship1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "33680bd6-f106-4ddb-b0e9-1c60f48ee98e";
+				PROVISIONING_PROFILE_SPECIFIER = "All Dev From micronix";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -74,6 +74,13 @@ class BlogDetailsViewController: UIViewController,UITextViewDelegate,UIWebViewDe
         self.navigationController?.popViewController(animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+    }
+    
 }
 extension BlogDetailsViewController : jsonDataDelegate{
     

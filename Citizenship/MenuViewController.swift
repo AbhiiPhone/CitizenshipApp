@@ -94,12 +94,12 @@ class MenuViewController: UITabBarController,UITabBarControllerDelegate,sliderIn
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
-        navigationController?.navigationBar.tintColor = UIColor.white
+//        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+//
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+//
+//        navigationController?.navigationBar.tintColor = UIColor.white
         
         
     }

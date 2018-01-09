@@ -10,10 +10,6 @@ import UIKit
 
 class AudioViewController: UIViewController{
     
-    
-    
-    
-
     @IBOutlet var audioVw: UIWebView!
     
     var pushValue: String = ""

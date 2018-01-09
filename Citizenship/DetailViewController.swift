@@ -36,9 +36,11 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
        // webView.uiDelegate = self as! WKUIDelegate
         webView.navigationDelegate = self
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.frame = CGRect(origin: CGPoint(x: 16, y: 70), size:  CGSize(width: (self.view.frame.size.width - 10), height: self.view.frame.size.height - 20))
+        webView.frame = CGRect(origin: CGPoint(x: 10, y: 60), size:  CGSize(width: (self.view.frame.size.width - 10), height: self.view.frame.size.height - 70))
         
         self.view.addSubview(webView)
+        
+//        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
         webView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -73,12 +75,11 @@ class DetailViewController: UIViewController,UIWebViewDelegate,WKNavigationDeleg
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
         navigationController?.navigationBar.tintColor = UIColor.white
-        
+
         self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+
     }
    
     
@@ -114,14 +115,12 @@ extension DetailViewController : jsonDataDelegate{
         }
         else{
             
-            DispatchQueue.main.async {
-                
-                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
-            }
-            
             if(((data as! NSDictionary).value(forKey: "success") as! NSString)) == "yes"
             {
-                
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
                 
                 if(getIndex == 0)
                 {
@@ -136,20 +135,20 @@ extension DetailViewController : jsonDataDelegate{
                 {
                     webView.loadHTMLString((((data as! NSDictionary).value(forKey: "data2") as! NSString) as String), baseURL: nil)
                 }
-                
+              
             }
            else
             {
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
                  showAlert(title: " Wait !", message: "Somthing going wrong ,try again..", noOfButton: 1)
                 
             }
             }
             
         }
-        
-    
-    
-    
     
     
     func didFailedtoReceiveData(_ error: Error) {

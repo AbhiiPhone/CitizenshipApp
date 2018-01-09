@@ -26,7 +26,7 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        
         jsonFetch.jsonData = self
         
          if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
@@ -54,7 +54,7 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
         simulationTableVw.tableFooterView = UIView(frame: .zero)
 
         featchData()
-        
+       
     }
 
     
@@ -66,12 +66,8 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
          MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-       
-        
+
+      self.tabBarController?.navigationItem.title = "CITIZENSHIP"
     }
     
     // MARK: - Table View Delegates
@@ -156,6 +152,8 @@ class SimulationTestViewController: UIViewController,UITableViewDelegate,UITable
         {
      
             let takeTestVC = self.storyboard?.instantiateViewController(withIdentifier: "TakeTestController") as! TakeTestController
+          
+            takeTestVC.getIndexValue = sender.tag
             
             self.tabBarController?.navigationController?.pushViewController(takeTestVC, animated: true)
     }

@@ -64,10 +64,8 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.backButtonSelector()
+    //    self.backButtonSelector()
         
-        featchData()
-       
         jsonFetch.jsonData = self
         
        
@@ -101,6 +99,7 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
             
         }
+         featchData()
     }
     
    func featchData()
@@ -122,16 +121,13 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
     
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
+
         navigationController?.navigationBar.tintColor = UIColor.white
         
-        
-        
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+       
+ 
     }
     @IBAction func checkBtnAction(_ sender: UIButton) {
         
@@ -209,7 +205,7 @@ class QuestionViewController: UIViewController,UITableViewDataSource,UITableView
                         blogDetail.getResultType  = getBtnValue
                         blogDetail.getScoreValue = scoreValue
                         
-                        self.tabBarController?.navigationController?.pushViewController(blogDetail, animated: true)
+                        self.navigationController?.pushViewController(blogDetail, animated: true)
                         
                         
                     }

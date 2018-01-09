@@ -25,18 +25,23 @@ class ChangePasswordController: UIViewController {
         // Do any additional setup after loading the view.
         
         jsonFetch.jsonData = self
-       
+     //  changeTabTitleName(title: "CITIZENSHIP")
+        navigationController?.navigationBar.tintColor = UIColor.white
         
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
     }
    
     func featchData()
     {
-        parameters = ["actiontype" :  "forgotpass",
+        parameters = ["actiontype" :  "change_password",
                       "old_password" : self.otpTxtfield.text!,
                       "new_password": passwordTxtField.text!,
                       "user_id"     : UserDefaults.standard.value(forKey:"user_id" ) as! String
                       
         ]
+        
+        print(parameters)
         jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "Change Password")
     }
     @IBAction func submiteAction(_ sender: Any) {
@@ -80,11 +85,11 @@ extension ChangePasswordController : jsonDataDelegate{
             
                 // if (((data as! NSDictionary).value(forKey: "LOGIN") as! NSDictionary).value(forKey: "success") as! NSString) == "yes"
                 
-                if (((data as! NSDictionary).value(forKey: "Status") as! String)) == "Invalid email"
+                if (((data as! NSDictionary).value(forKey: "status") as! String)) == "Password Changed"
                     
                 {
                     MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
-                     self.showAlertMessage(alertTitle: "Error!", alertMsg: "you entered wrong data...")
+                     self.showAlertMessage(alertTitle: "Wait!", alertMsg: "Your password has been changed..")
                     //                  self.showAlertMessage(alertTitle: "Congratulation", alertMsg: " You successfully logged in")
                     
                    
@@ -94,7 +99,7 @@ extension ChangePasswordController : jsonDataDelegate{
                 {
                      MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
                    // self.showAlertMessage(alertTitle: "Error!", alertMsg: "you entered wrong data...")
-                    
+                      self.showAlertMessage(alertTitle: "Error!", alertMsg: "you entered wrong data...")
                 }
                 
             

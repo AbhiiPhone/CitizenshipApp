@@ -95,7 +95,10 @@ class CitizenshipViewController : UIViewController,UITableViewDelegate,UITableVi
    
     override func viewWillAppear(_ animated: Bool) {
        
+        navigationController?.navigationBar.tintColor = UIColor.white
         
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
         
     }
     

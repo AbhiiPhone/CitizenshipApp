@@ -43,17 +43,6 @@ class CheatSheetsViewController: UIViewController,UITableViewDataSource,UITableV
         
         jsonFetch.jsonData = self
 
-        parameters = ["actiontype" :  "cheat_sheets",]
-        
-        print(parameters)
-        
-        
-        let strLink =  "http://bestauctionsoftware.com/citi/json.php"
-        jsonFetch.fetchData(parameters , methodType: "POST", url: strLink, JSONName: "cheat_sheets")
-
-        
-      
-        
         cheatSheetTableVw.delegate=self
         cheatSheetTableVw.dataSource=self
         
@@ -61,35 +50,22 @@ class CheatSheetsViewController: UIViewController,UITableViewDataSource,UITableV
         cheatSheetTableVw.rowHeight = UITableViewAutomaticDimension
         cheatSheetTableVw.estimatedRowHeight = 118
         
+       
+      
         if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
           
-          
-          
-            
         }
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
             
-           
-        
-            
-            lblLeading.constant=8.0
+               lblLeading.constant=8.0
           //  lblTop.constant=52.0
             lblTrailing.constant=8.0
             lblHeight.constant=32.0
             
             
-            
         }
-            
-            
-            
-            
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
             
-           
-            
-//
-//            
 //            lblLeading.constant=16.0
 //            lblTop.constant=52.0
 //            lblTrailing.constant=16.0
@@ -97,13 +73,7 @@ class CheatSheetsViewController: UIViewController,UITableViewDataSource,UITableV
             
             
         }
-            
-            
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
-            
-            
-            
-           
             
             lblLeading.constant=16.0
             lblTop.constant=10.0
@@ -112,22 +82,21 @@ class CheatSheetsViewController: UIViewController,UITableViewDataSource,UITableV
             
         }
         
-        
-        
-        
-        
-
-
-        // Do any additional setup after loading the view.
+          featchData()
     }
 
-    
+    func featchData()
+    {
+        parameters = ["actiontype" :  "cheat_sheets",]
+        
+        print(parameters)
+       
+        jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "cheat_sheets")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+       
+      self.tabBarController?.navigationItem.title = "CITIZENSHIP"
     }
     
     // MARK: - Table View Delegates
@@ -270,14 +239,16 @@ class CheatSheetsViewController: UIViewController,UITableViewDataSource,UITableV
                 {
                     print("***sgs",filePath)
                     
-//                    let viewResumeVC = self.storyboard?.instantiateViewController(withIdentifier: "ResumeViewController") as! ResumeViewController
-//
-//                    viewResumeVC.receivedResumeObj = resumeObj
-//
+                    let showVC = self.storyboard?.instantiateViewController(withIdentifier: "ShowPDFController") as! ShowPDFController
+
+                 showVC.getDownloadlink = filePath
+
 //                    UIView.transition(with: self.view, duration: 0.5, options: UIViewAnimationOptions.transitionCurlUp,
-//                                      animations: {self.view.addSubview(viewResumeVC.view)}, completion: nil)
+//                                      animations: {self.view.addSubview(showVC.view)}, completion: nil)
 //
-//                    viewResumeVC.view.frame = CGRect(x: 0, y: 64 , width: self.view.frame.size.width, height: self.view.frame.size.height)
+//                    showVC.view.frame = CGRect(x: 0, y: 64 , width: self.view.frame.size.width, height: self.view.frame.size.height)
+
+                      self.navigationController?.pushViewController(showVC, animated: true)
                     
                 }
                 

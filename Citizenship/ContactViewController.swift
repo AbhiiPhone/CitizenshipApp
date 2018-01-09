@@ -35,8 +35,8 @@ class ContactViewController: UIViewController,UITextFieldDelegate,UITextViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-        navigationController?.navigationBar.topItem?.title = ""
+//        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+//        navigationController?.navigationBar.topItem?.title = ""
         
          jsonFetch.jsonData = self
         
@@ -51,30 +51,14 @@ class ContactViewController: UIViewController,UITextFieldDelegate,UITextViewDele
         }
         else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone5{
             
-         
-            
-            
+        }
+        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6
+        {
             
         }
+          else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
             
-            
-            
-            
-        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
-            
-       
-
-                    }
-            
-            
-        else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6plus{
-            
-          
-                    }
-        
-
-        
-        // Do any additional setup after loading the view.
+           }
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -120,9 +104,8 @@ class ContactViewController: UIViewController,UITextFieldDelegate,UITextViewDele
     
     override func viewWillAppear(_ animated: Bool) {
        
-        
+          self.tabBarController?.navigationItem.title = "CITIZENSHIP"
     }
-    
     
     @IBAction func sendBtnAction(_ sender: Any) {
         
@@ -146,8 +129,6 @@ class ContactViewController: UIViewController,UITextFieldDelegate,UITextViewDele
         
     }
 
-   
-
 }
 extension ContactViewController : jsonDataDelegate{
     
@@ -170,14 +151,14 @@ extension ContactViewController : jsonDataDelegate{
             
         }
         else{
+            
+            
             //((data as! NSDictionary).value(forKey: "data") as! NSArray).value(forKey: "reviews") as! NSArray
             
 //            print(((data as! NSDictionary).value(forKey: "success") as! String))
 //            print(jsonName)
             
-  
-            
-        }
+       }
         
     }
     

@@ -57,7 +57,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
         
         self.navigationItem.setHidesBackButton(true, animated:true)
         
-       changeTitleName(title: "CITIZENSHIP")
+     
         
     if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
         
@@ -148,7 +148,12 @@ else if UIDevice.Display.typeIsLike == UIDevice.DisplayType.iphone6{
     }
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
+        self.title = "CITIZENSHIP"
+//        navigationController?.navigationBar.topItem?.title = " "
+    }
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         
         if(textField == userTF)

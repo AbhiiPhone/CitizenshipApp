@@ -66,15 +66,17 @@ class SupportViewController: UIViewController,UITextFieldDelegate,UITextViewDele
             
             
         }
-        
+         
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+        navigationController?.navigationBar.tintColor = UIColor.white
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
+  
+  
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField == nameTF)

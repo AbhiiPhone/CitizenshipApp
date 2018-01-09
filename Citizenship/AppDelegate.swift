@@ -32,11 +32,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!, NSAttributedStringKey.foregroundColor:UIColor.white]
-        UINavigationBar.appearance().titleTextAttributes = attributes
+//        let attributes = [NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!, NSAttributedStringKey.foregroundColor:UIColor.white]
+//        UINavigationBar.appearance().titleTextAttributes = attributes
+//
+//        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+//        UINavigationBar.appearance().titleTextAttributes = textAttributes
+
+//
+//        UINavigationBar.appearance().titleTextAttributes = [
+//            NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!,NSAttributedStringKey.foregroundColor:UIColor.white
+//        ]
+
         
-        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+            
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSAttributedStringKey.font: UIFont(name: "Georgia", size: 30)!,NSAttributedStringKey.foregroundColor:UIColor.white
+            ]
+            
+        }
+            
+        else {
+            
+            
+            
+            UINavigationBar.appearance().titleTextAttributes = [
+                NSAttributedStringKey.font: UIFont(name: "Georgia", size: 20)!,NSAttributedStringKey.foregroundColor:UIColor.white
+            ]
+            
+        }
+        
+        
         
         return true
     }

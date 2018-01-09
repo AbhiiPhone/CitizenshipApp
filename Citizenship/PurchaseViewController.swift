@@ -27,103 +27,75 @@ class PurchaseViewController: UIViewController {
     @IBOutlet var lbl1Trailing: NSLayoutConstraint!
     @IBOutlet var lbl1Height: NSLayoutConstraint!
     @IBOutlet var lbl1Top: NSLayoutConstraint!
-    
-    
     @IBOutlet var imgFstLeading: NSLayoutConstraint!
     @IBOutlet var img1Top: NSLayoutConstraint!
     @IBOutlet var img1Leading: NSLayoutConstraint!
     @IBOutlet var img1Height: NSLayoutConstraint!
     @IBOutlet var img1Weight: NSLayoutConstraint!
-    
-    
     @IBOutlet var lbl2Top: NSLayoutConstraint!
     @IBOutlet var lbl2Leading: NSLayoutConstraint!
     @IBOutlet var lbl2Height: NSLayoutConstraint!
     @IBOutlet var lbl2Trailing: NSLayoutConstraint!
-    
     @IBOutlet var img2Leading: NSLayoutConstraint!
     @IBOutlet var img2Top: NSLayoutConstraint!
     @IBOutlet var img2Height: NSLayoutConstraint!
     @IBOutlet var img2Width: NSLayoutConstraint!
-    
-    
     @IBOutlet var lbl3Leading: NSLayoutConstraint!
     @IBOutlet var lbl3Height: NSLayoutConstraint!
     @IBOutlet var lbl3Trailing: NSLayoutConstraint!
     @IBOutlet var lbl3Top: NSLayoutConstraint!
-    
     @IBOutlet var img3Top: NSLayoutConstraint!
     @IBOutlet var img3Leading: NSLayoutConstraint!
     @IBOutlet var img3Width: NSLayoutConstraint!
     @IBOutlet var img3Height: NSLayoutConstraint!
-    
     @IBOutlet var lbl4Leading: NSLayoutConstraint!
     @IBOutlet var lbl4Height: NSLayoutConstraint!
     @IBOutlet var lbl4Top: NSLayoutConstraint!
     @IBOutlet var lbl4Trailing: NSLayoutConstraint!
-    
-    
     @IBOutlet var img4Top: NSLayoutConstraint!
     @IBOutlet var img4Width: NSLayoutConstraint!
     @IBOutlet var img4Height: NSLayoutConstraint!
-    
     @IBOutlet var lbl5Leading: NSLayoutConstraint!
     @IBOutlet var lbl5Trailing: NSLayoutConstraint!
     @IBOutlet var lbl5Height: NSLayoutConstraint!
     @IBOutlet var lbl5Top: NSLayoutConstraint!
-    
     @IBOutlet var img5Top: NSLayoutConstraint!
     @IBOutlet var img5Leading: NSLayoutConstraint!
     @IBOutlet var img5Height: NSLayoutConstraint!
     @IBOutlet var img5Width: NSLayoutConstraint!
-    
     @IBOutlet var lbl6Leading: NSLayoutConstraint!
     @IBOutlet var lbl6Height: NSLayoutConstraint!
     @IBOutlet var lbl6Top: NSLayoutConstraint!
     @IBOutlet var lbl6Trailing: NSLayoutConstraint!
-    
-    
     @IBOutlet var img6Top: NSLayoutConstraint!
     @IBOutlet var img6Leading: NSLayoutConstraint!
     @IBOutlet var imh6Width: NSLayoutConstraint!
     @IBOutlet var img6Height: NSLayoutConstraint!
-    
     @IBOutlet var lbl7Leading: NSLayoutConstraint!
     @IBOutlet var lbl7Height: NSLayoutConstraint!
     @IBOutlet var lbl7Top: NSLayoutConstraint!
     @IBOutlet var lbl7Trailing: NSLayoutConstraint!
-    
-    
     @IBOutlet var img7Top: NSLayoutConstraint!
     @IBOutlet var img7Height: NSLayoutConstraint!
     @IBOutlet var img7Ledaing: NSLayoutConstraint!
     @IBOutlet var img7Width: NSLayoutConstraint!
-    
     @IBOutlet var lbl8Leading: NSLayoutConstraint!
     @IBOutlet var lbl8Height: NSLayoutConstraint!
     @IBOutlet var lbl8Trailng: NSLayoutConstraint!
     @IBOutlet var lbl8Top: NSLayoutConstraint!
-    
     @IBOutlet var priceTop: NSLayoutConstraint!
     @IBOutlet var priceHeight: NSLayoutConstraint!
     @IBOutlet var priceLeading: NSLayoutConstraint!
     @IBOutlet var priceTrailing: NSLayoutConstraint!
-    
     @IBOutlet var buyHeight: NSLayoutConstraint!
     @IBOutlet var buyTop: NSLayoutConstraint!
     @IBOutlet var buyLeading: NSLayoutConstraint!
     @IBOutlet var buyTrailing: NSLayoutConstraint!
-    
-    
     @IBOutlet var paypalTrailing: NSLayoutConstraint!
     @IBOutlet var paypalTop: NSLayoutConstraint!
     @IBOutlet var paypalLeading: NSLayoutConstraint!
     @IBOutlet var paypalHeight: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var titlelblTopcons: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var iconTopcons: NSLayoutConstraint!
     
     
@@ -304,31 +276,21 @@ class PurchaseViewController: UIViewController {
             
             //
         }
-        
-        
     }
 
     
     override func viewWillAppear(_ animated: Bool) {
         
-   
-    changeTabTitleName(title: "CITIZENSHIP")
-    
-    
+     self.tabBarController?.navigationItem.title = "CITIZENSHIP"
     
     }
     
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func buyBtnAction(_ sender: Any) {
+        
+        let qusVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
+        self.tabBarController?.navigationController?.pushViewController(qusVC, animated: true)
+        
+        
     }
-    */
-
+    
 }

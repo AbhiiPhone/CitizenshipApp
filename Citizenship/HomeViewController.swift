@@ -65,19 +65,6 @@ class HomeViewController: UIViewController{
         }
         
         
-//        homeTableVw.delegate=self
-//        homeTableVw.dataSource=self
-        
-//        homeTableVw.tableFooterView = UIView(frame: .zero)
-//
-//        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
-//        navigationController?.navigationBar.topItem?.title = ""
-//
-        
-        //
-        //        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        //        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        
         featchData()
     }
     
@@ -93,15 +80,10 @@ class HomeViewController: UIViewController{
     
     }
     override func viewWillAppear(_ animated: Bool) {
-      //  self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
         
-//        self.tabBarController?.navigationController?.navigationBar.isHidden = false
-        
-        changeTabTitleName(title: "CITIZENSHIP")
-        
+    
     }
     
     

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
 
 class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
@@ -18,8 +20,17 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet weak var selectTitlelbl: UILabel!
     let chapterArray: NSMutableArray = ["Introduction","Chapter1_Basic Rights and Responsibilities Of Canadian Citizenship","Chapter2_About Us","Chapter3_History Of Canada","Chapter4_Modernization Of Canada","Chapter5_ Government Of Canadian","Chapter6_Federal Election Process","Chapter7_The Justice System of Canada","Chapter8_Canada and its Symbols","Chapter9_Econimy Of Canada","Chapter10_Regions of Canada"]
     
+    
+    var parameters: [String: String] = [:]
+    var jsonFetch = JsonFetchClass()
+  var isSelected = Bool()
+    var getChapterId = String()
+    var getChapterValue = NSArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         chapterTableVw.delegate=self
         chapterTableVw.dataSource=self
@@ -32,20 +43,46 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
         chapterTableVw.layer.shadowRadius = 12.0
         chapterTableVw.layer.cornerRadius = 5
         chapterTableVw.layer.borderColor = UIColor.darkGray.cgColor
+        
+          jsonFetch.jsonData = self
+        
+        featchData()
+        
             }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+        navigationController?.navigationBar.tintColor = UIColor.white
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
     }
+    
+    func featchData()
+    {
+       // <<chapter_exam>> 'actiontype'=>'chapter_exam',
+        //'chapter_id'=>'1'
+        
+       
+            parameters = ["actiontype" :  "chapter_list",
+                          
+            ]
+            print(parameters)
+            jsonFetch.fetchData(parameters , methodType: "POST", url: " ", JSONName: "chapter_list")
+        
+       
+      
+        
+        MBProgressHUD.showAdded(to: (self.navigationController?.view)!, animated: true)
+        
+        
+    }
+    
     
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-          return chapterArray.count
+          return getChapterValue.count
         
        
     }
@@ -54,7 +91,7 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
         
         let cell = chapterTableVw.dequeueReusableCell( withIdentifier: "ChapterExamCell", for: indexPath) as! ChapterExamTableViewCell
         
-        cell.chapterLbl.text = chapterArray[indexPath.row] as? String
+        cell.chapterLbl.text = ((getChapterValue[indexPath.row] as AnyObject).value(forKey: "chapter_name") as! String)
         
         self.chapterTableVw.separatorColor = UIColor.clear
         cell.selectionStyle = UITableViewCellSelectionStyle.none
@@ -77,10 +114,12 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
         
         //selectedBtn.setTitle(chapterArray[indexPath.row] as? String, for: .normal)
         
-        selectTitlelbl.text = (chapterArray[indexPath.row] as! String)
+        selectTitlelbl.text = ((getChapterValue[indexPath.row] as AnyObject).value(forKey: "chapter_name") as! String)
+        getChapterId = ((getChapterValue[indexPath.row] as AnyObject).value(forKey: "chapter_id") as! String )
         
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailChapterExamController") as! DetailChapterExamController
         
+        detailVC.getChapterDetailsId = getChapterId
         self.navigationController?.pushViewController(detailVC, animated: true)
         chapterView.isHidden = true
         chapterTableVw.isHidden = true
@@ -90,7 +129,16 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-            return 60
+        if UIDevice.Display.typeIsLike == UIDevice.DisplayType.ipad {
+            
+             return 82
+            
+        }
+        else {
+            
+             return 70
+        }
+       
         
         
     }
@@ -105,4 +153,65 @@ class ChapterExamViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
 
+}
+extension ChapterExamViewController : jsonDataDelegate{
+    
+    func didReceiveData(_ data: Any, jsonName: String) {
+        
+        print(jsonName)
+        
+        print(data)
+        
+        
+        
+        if data as? String ==  "NO INTERNET CONNECTION" {
+            
+            DispatchQueue.main.async {
+                
+                MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+            }
+            
+            showAlert(title: "Network !", message: "Check your internet connection please", noOfButton: 1)
+            
+            
+        }
+        else{
+            if(((data as! NSDictionary).value(forKey: "success") as! String)) ==  "yes"
+            {
+                getChapterValue = ((data as! NSDictionary).value(forKey: "chapter_details") as! NSArray)
+                
+                chapterTableVw.reloadData()
+                
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
+            }
+            
+            else{
+                
+             showAlert(title: "Wait !", message: " Something going wrong,try again..", noOfButton: 1)
+                DispatchQueue.main.async {
+                    
+                    MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+                }
+        }
+        
+    }
+    
+    }
+    
+    func didFailedtoReceiveData(_ error: Error) {
+        
+        print(error)
+        
+        //  showAlert(title: "Error", message: "Something is not going right !", noOfButton: 1, selectorMethod:())
+        
+        DispatchQueue.main.async {
+            
+            MBProgressHUD.hide(for: (self.navigationController?.view)!, animated: true)
+        }
+    }
+    
+    
 }

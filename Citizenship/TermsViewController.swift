@@ -21,9 +21,9 @@ class TermsViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "CITIZENSHIP"
-        
-        navigationController?.navigationBar.topItem?.title = ""
+//        self.title = "CITIZENSHIP"
+//        
+//        navigationController?.navigationBar.topItem?.title = ""
         termsWeb.delegate=self
         featchData()
        
@@ -43,10 +43,10 @@ class TermsViewController: UIViewController,UIWebViewDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         
-        self.tabBarController?.navigationItem.title = "CITIZENSHIP"
+        navigationController?.navigationBar.tintColor = UIColor.white
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.title = "CITIZENSHIP"
+        navigationController?.navigationBar.topItem?.title = " "
     }
     
     func loadHtmlCode() {
